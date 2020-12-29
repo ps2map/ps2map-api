@@ -12,7 +12,6 @@ import asyncio
 import logging
 import os
 
-from ._logging import ForwardHandler
 from ._server import ApiHost
 
 log = logging.getLogger('api')
@@ -73,9 +72,6 @@ if __name__ == '__main__':
         log.setLevel(log_level)
         log.addHandler(fh_)
         log.addHandler(sh_)
-        server_log = logging.getLogger('api.server')
-        uvicorn_log = logging.getLogger('uvicorn')
-        uvicorn_log.handlers = [ForwardHandler(server_log)]
 
     # Run utility
     loop = asyncio.get_event_loop()
