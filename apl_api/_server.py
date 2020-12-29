@@ -17,7 +17,6 @@ import asyncio
 import logging
 import threading
 
-import asyncpg
 import uvicorn
 
 from ._types import Server
@@ -26,14 +25,9 @@ log = logging.getLogger('api.host')
 
 
 class ApiHost:
-    """Helper object to facilitate talking to the uvicorn server.
+    """Helper object to facilitate talking to the uvicorn server."""
 
-    This also hosts the database connection pool used by the API to get
-    the data it needs.
-    """
-
-    def __init__(self, pool: asyncpg.pool.Pool) -> None:
-        self.pool = pool
+    def __init__(self) -> None:
         config = uvicorn.Config('apl_api.app:app', host='127.0.0.1',
                                 port=5000, log_level='info', loop='asyncio')
         server: Server = uvicorn.Server(config=config)  # type: ignore
