@@ -19,11 +19,6 @@ __all__ = [
     'get_pool'
 ]
 
-# Default database configuration
-DEFAULT_DB_HOST = '127.0.0.1'
-DEFAULT_DB_NAME = 'postgres'
-DEFAULT_DB_USER = 'postgres'
-
 # Global pool instance
 _pool: Optional[asyncpg.pool.Pool] = None
 
@@ -37,13 +32,15 @@ async def get_pool() -> asyncpg.pool.Pool:
     """
     global _pool
     if _pool is None:
-        db_name = os.getenv('_DB_NAME', DEFAULT_DB_NAME)
-        db_host = os.getenv('_DB_HOST', DEFAULT_DB_HOST)
-        db_user = os.getenv('_DB_USER', DEFAULT_DB_USER)
-        db_pass = os.getenv('_DB_PASS')
-        if db_pass is None:
-            raise RuntimeError('No database password specified,'
-                               'unable to connect')
+        try:
+            db_name = os.environ['_DB_NAME']
+            db_host = os.environ['_DB_HOST']
+            db_user = os.environ['_DB_USER']
+            db_pass = os.environ['_DB_PASS']
+        except KeyError as err:
+            raise RuntimeError(
+                'Missing database connection information, please run this '
+                'service through its module-level script instead') from err
         _pool = asyncpg.create_pool(  # type: ignore
             user=db_user, password=db_pass, database=db_name, host=db_host)
         # Initialise connection pool
