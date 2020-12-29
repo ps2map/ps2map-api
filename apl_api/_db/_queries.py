@@ -20,7 +20,7 @@ async def get_continents(pool: asyncpg.pool.Pool) -> List[ContinentInfo]:
             FROM
                 "autopl"."Continent"
             ;''')
-    return [ContinentInfo(*r) for r in rows]  # type: ignore
+    return [ContinentInfo(*tuple(r)[0]) for r in rows]  # type: ignore
 
 
 async def get_servers(pool: asyncpg.pool.Pool) -> List[ServerInfo]:
@@ -33,4 +33,4 @@ async def get_servers(pool: asyncpg.pool.Pool) -> List[ServerInfo]:
             FROM
                 "autopl"."Server"
             ;''')
-    return [ServerInfo(*r) for r in rows]  # type: ignore
+    return [ServerInfo(*tuple(r)[0]) for r in rows]  # type: ignore
