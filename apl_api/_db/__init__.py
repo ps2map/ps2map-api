@@ -6,7 +6,7 @@ without interfering with the API, and it also provides a convenient
 hook to add caching and other optimisations down the line
 """
 
-from ._getters import get_continents, get_servers
+from ._queries import get_continents, get_servers
 
 __all__ = [
     'get_continents',
