@@ -1,3 +1,8 @@
+"""Method interfaces for all database interactions.
+
+This module is the only one that should contain any raw SQL.
+"""
+
 from typing import List
 
 import asyncpg
