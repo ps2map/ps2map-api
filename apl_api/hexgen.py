@@ -101,7 +101,7 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
 
 
 async def get_base_svgs(client: auraxium.Client, continent_id: int,
-                        radius: float) -> Dict[int, str]:
+                        radius: float = 115.5) -> Dict[int, str]:
     """Creating a mapping of base IDs to serialised outline SVGs.
 
     This is the primary method exported by this module and allows
@@ -110,10 +110,15 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
     These outlines are provided via serialised SVG elements containing
     a single closed polygon each.
 
+    The output SVG literals will have their Y coordinate flipped
+    relative to the in-game coordinate system to match to the SVG
+    coordinate system, which has the origin at the top left.
+
     Args:
         client (auraxium.Client): The API client to use for the request
         continent_id (int): The ID of the continent to access
-        radius (float): Outer radius of a single hexagon in pixels
+        radius (float, optional): Outer radius of a single hexagon in
+            pixels. Defaults to 115.5.
 
     Returns:
         Dict[int, str]: A mapping of base IDs to its outline as a
@@ -123,13 +128,14 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
     # Get the base outlines as closed polygons
     outlines = await get_base_outlines(client, continent_id, radius)
     # Create SVG elements for each
-    drawings = {}
+    svg_map: Dict[int, str] = {}
     for base_id, outline in outlines.items():
-        drawing = svgwrite.Drawing(debug=True)
-        drawing.add(Polygon([(p.x, p.y) for p in outline]))  # type: ignore
-        drawings[base_id] = drawing
-    # Serialise SVGs
-    return {k: v.tostring() for k, v in drawings.items()}
+        # Get polygon points
+        points = ' '.join((f'{p.x},{-p.y}' for p in outline))
+        # Create and add SVG element
+        svg_map[base_id] = (
+            f'<svg><polygon id="Base_{base_id}" points="{points}" /></svg>')
+    return svg_map
 
 
 def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
