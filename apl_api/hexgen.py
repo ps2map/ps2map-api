@@ -101,7 +101,7 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
 
 
 async def get_base_svgs(client: auraxium.Client, continent_id: int,
-                        radius: float = 115.5) -> Dict[int, str]:
+                        radius: float = 115.5) -> str:
     """Creating a mapping of base IDs to serialised outline SVGs.
 
     This is the primary method exported by this module and allows
@@ -121,21 +121,21 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
             pixels. Defaults to 115.5.
 
     Returns:
-        Dict[int, str]: A mapping of base IDs to its outline as a
-            serialised SVG element
+        str: Serialised SVG element containing the base polygons.
 
     """
     # Get the base outlines as closed polygons
     outlines = await get_base_outlines(client, continent_id, radius)
     # Create SVG elements for each
-    svg_map: Dict[int, str] = {}
+    polygons: List[str] = []
     for base_id, outline in outlines.items():
         # Get polygon points
-        points = ' '.join((f'{p.x},{-p.y}' for p in outline))
-        # Create and add SVG element
-        svg_map[base_id] = (
-            f'<svg><polygon id="Base_{base_id}" points="{points}" /></svg>')
-    return svg_map
+        points = ' '.join((f'{round(p.x + 4096, 3)},{round(-p.y + 4096, 3)}'
+                           for p in outline))
+        # Create and add SVG polygon
+        polygons.append(f'<polygon id="Base_{base_id}" points="{points}" />')
+    # Generate a single SVG from the base polygons
+    return f'<svg>{"".join(polygons)}</svg>'
 
 
 def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
