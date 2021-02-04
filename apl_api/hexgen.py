@@ -130,8 +130,9 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
     polygons: List[str] = []
     for base_id, outline in outlines.items():
         # Get polygon points
-        points = ' '.join((f'{round(p.x + 4096, 3)},{round(-p.y + 4096, 3)}'
-                           for p in outline))
+        points = ' '.join(
+            (f'{round(p.x + 4096, 3)},{round(-p.y + 4096, 3) - radius}'
+             for p in outline))
         # Create and add SVG polygon
         polygons.append(f'<polygon id="Base_{base_id}" points="{points}" />')
     # Generate a single SVG from the base polygons
