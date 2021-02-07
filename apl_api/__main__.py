@@ -45,19 +45,24 @@ async def main(db_host: str, db_user: str, db_pass: str, db_name: str) -> None:
 
 
 if __name__ == '__main__':
+    # Get default values from environment
+    def_db_host = os.getenv('APL_DB_HOST', DEFAULT_DB_HOST)
+    def_db_name = os.getenv('APL_DB_NAME', DEFAULT_DB_NAME)
+    def_db_user = os.getenv('APL_DB_USER', DEFAULT_DB_USER)
+    def_db_pass = os.getenv('APL_DB_PASS')
     # Define command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--db-user', '-U', default=DEFAULT_DB_USER,
+        '--db-user', '-U', default=def_db_user,
         help='The user account to use when connecting to the database')
     parser.add_argument(
-        '--db-pass', '-P', required=True,
+        '--db-pass', '-P', required=def_db_pass is None, default=def_db_pass,
         help='The password to use when connecting to the database')
     parser.add_argument(
-        '--db-host', '-H', default=DEFAULT_DB_HOST,
+        '--db-host', '-H', default=def_db_host,
         help='The address of the database host')
     parser.add_argument(
-        '--db-name', '-N', default=DEFAULT_DB_NAME,
+        '--db-name', '-N', default=def_db_name,
         help='The name of the database to access')
     parser.add_argument(
         '--log-level', '-L', default='INFO',
