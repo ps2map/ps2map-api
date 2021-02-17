@@ -16,11 +16,6 @@ from ._server import ApiHost
 
 log = logging.getLogger('api')
 
-# Default database configuration
-DEFAULT_DB_HOST = '127.0.0.1'
-DEFAULT_DB_NAME = 'postgres'
-DEFAULT_DB_USER = 'postgres'
-
 # Logging configuration
 fmt = logging.Formatter('%(asctime)s [%(levelname)s] %(name)s: %(message)s')
 fh_ = logging.FileHandler(filename='api.log', encoding='utf-8', mode='w+')
@@ -29,41 +24,20 @@ fh_.setFormatter(fmt)
 sh_.setFormatter(fmt)
 
 
-async def main(db_host: str, db_user: str, db_pass: str, db_name: str) -> None:
+async def main() -> None:
     """Asynchronous component of the main listener script.
 
     This coroutine acts much like the ``if __name__ == '__main___':``
     clause below, but supports asynchronous methods.
     """
-    os.environ['_DB_NAME'] = db_name
-    os.environ['_DB_HOST'] = db_host
-    os.environ['_DB_USER'] = db_user
-    os.environ['_DB_PASS'] = db_pass
     host = ApiHost()
     log.info('Starting uvicorn server...')
     await host.start()
 
 
 if __name__ == '__main__':
-    # Get default values from environment
-    def_db_host = os.getenv('APL_DB_HOST', DEFAULT_DB_HOST)
-    def_db_name = os.getenv('APL_DB_NAME', DEFAULT_DB_NAME)
-    def_db_user = os.getenv('APL_DB_USER', DEFAULT_DB_USER)
-    def_db_pass = os.getenv('APL_DB_PASS')
     # Define command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        '--db-user', '-U', default=def_db_user,
-        help='The user account to use when connecting to the database')
-    parser.add_argument(
-        '--db-pass', '-P', required=def_db_pass is None, default=def_db_pass,
-        help='The password to use when connecting to the database')
-    parser.add_argument(
-        '--db-host', '-H', default=def_db_host,
-        help='The address of the database host')
-    parser.add_argument(
-        '--db-name', '-N', default=def_db_name,
-        help='The name of the database to access')
     parser.add_argument(
         '--log-level', '-L', default='INFO',
         choices=['DISABLE', 'ERROR', 'WARNING', 'INFO', 'DEBUG'],
