@@ -2,7 +2,6 @@
 
 import dataclasses
 
-import asyncpg
 import fastapi
 from starlette.responses import JSONResponse
 
