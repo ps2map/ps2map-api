@@ -1,9 +1,8 @@
 """Public API hosting component."""
 
-from . import hexgen, interfaces, types
+from . import interfaces, types
 
 __all__ = [
-    'hexgen',
     'interfaces',
     'types'
 ]
