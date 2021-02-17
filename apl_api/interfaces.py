@@ -16,9 +16,9 @@ class ServerInfo:
 
     server_id: int
     name: str
-    # status: str
+    status: str
     region: str
-    # population: FactionData[float]
+    population: FactionData[float]
 
 
 @dataclasses.dataclass(frozen=True)
@@ -27,7 +27,7 @@ class ContinentInfo:
 
     continent_id: int
     name: str
-    # status: str
+    status: str
 
 
 @dataclasses.dataclass(frozen=True)
