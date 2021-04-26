@@ -1,6 +1,8 @@
 """Endpoint definitions for the API."""
 
+from .bases import router as bases
 from .continents import router as continents
+from .outfits import router as outfit
 from .root import router as root
 from .servers import router as servers
 
@@ -11,7 +13,9 @@ from .servers import router as servers
 # things in the __all__ list necessary.
 
 __all__ = [
+    'bases',
     'continents',
+    'outfit',
     'root',
     'servers'
 ]
