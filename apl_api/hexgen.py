@@ -301,9 +301,10 @@ def _get_hexes_outline(hexes: Iterable[_Tile], radius: float,
     edges = [_get_hex_edge(_tile_to_point(h, radius), radius, i)
              for h in members for i, n in enumerate(_get_hex_neighbours(h))
              if n not in members]
+    # Round coordinates
     digits = max(-int(math.log10(precision)), 0)
     return [tuple(_Point(round(p.x, digits), round(p.y, digits)) for p in e)
-            for e in edges]
+            for e in edges]  # type: ignore
 
 
 def _radius_to_size(radius: float) -> Tuple[float, float]:
