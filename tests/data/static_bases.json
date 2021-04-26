@@ -1,0 +1,4272 @@
+[
+    {
+        "id": 2101,
+        "continent_id": 2,
+        "name": "Hvar",
+        "map_pos": [
+            -656.0273,
+            491.7669
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2102,
+        "continent_id": 2,
+        "name": "Mao",
+        "map_pos": [
+            1810.0,
+            110.0
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2103,
+        "continent_id": 2,
+        "name": "Allatum",
+        "map_pos": [
+            -383.0,
+            443.0
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2104,
+        "continent_id": 2,
+        "name": "Saurva",
+        "map_pos": [
+            2381.5,
+            52.75031
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2105,
+        "continent_id": 2,
+        "name": "Peris",
+        "map_pos": [
+            -2384.115,
+            471.3849
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2106,
+        "continent_id": 2,
+        "name": "Rashnu",
+        "map_pos": [
+            -508.0,
+            398.0
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2107,
+        "continent_id": 2,
+        "name": "Dahaka",
+        "map_pos": [
+            1416.0,
+            151.0
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2108,
+        "continent_id": 2,
+        "name": "Tawrich",
+        "map_pos": [
+            -1937.0,
+            226.0
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2109,
+        "continent_id": 2,
+        "name": "Zurvan",
+        "map_pos": [
+            -432.539001,
+            204.841507
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2201,
+        "continent_id": 2,
+        "name": "Indar Northern Warpgate",
+        "map_pos": [
+            2497.0,
+            77.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2202,
+        "continent_id": 2,
+        "name": "Indar Western Warpgate",
+        "map_pos": [
+            -2275.0,
+            480.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2203,
+        "continent_id": 2,
+        "name": "Indar Eastern Warpgate",
+        "map_pos": [
+            -2436.0,
+            250.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2301,
+        "continent_id": 2,
+        "name": "Camp Connery",
+        "map_pos": [
+            2507.0,
+            75.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2302,
+        "continent_id": 2,
+        "name": "Camp Waterson",
+        "map_pos": [
+            2705.0,
+            49.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2303,
+        "continent_id": 2,
+        "name": "Indar Excavation Site",
+        "map_pos": [
+            999.0,
+            106.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2304,
+        "continent_id": 2,
+        "name": "J908 Impact Site",
+        "map_pos": [
+            1112.449,
+            -86.38023
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2305,
+        "continent_id": 2,
+        "name": "Crimson Bluff Tower",
+        "map_pos": [
+            224.6381,
+            391.722
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2306,
+        "continent_id": 2,
+        "name": "The Crown",
+        "map_pos": [
+            -130.915,
+            392.0261
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2307,
+        "continent_id": 2,
+        "name": "Crossroads Watchtower",
+        "map_pos": [
+            -790.0,
+            399.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2308,
+        "continent_id": 2,
+        "name": "Indar Bay Point",
+        "map_pos": [
+            -1339.0,
+            488.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2309,
+        "continent_id": 2,
+        "name": "Vanu Archives",
+        "map_pos": [
+            -1143.912,
+            495.0154
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2310,
+        "continent_id": 2,
+        "name": "Regent Rock Garrison",
+        "map_pos": [
+            -1763.0,
+            498.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2311,
+        "continent_id": 2,
+        "name": "The Stronghold",
+        "map_pos": [
+            -1579.101,
+            256.757
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2312,
+        "continent_id": 2,
+        "name": "Feldspar Canyon Base",
+        "map_pos": [
+            -1571.195,
+            321.0607
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2313,
+        "continent_id": 2,
+        "name": "Arroyo Torre Station",
+        "map_pos": [
+            -2218.261,
+            260.0384
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2402,
+        "continent_id": 2,
+        "name": "Indar Waste Treatment",
+        "map_pos": [
+            2939.126,
+            54.81305
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2404,
+        "continent_id": 2,
+        "name": "Saurva Overflow Depot",
+        "map_pos": [
+            2397.959,
+            53.69984
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2405,
+        "continent_id": 2,
+        "name": "Helios Solar, Inc.",
+        "map_pos": [
+            1849.832,
+            75.16752
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2406,
+        "continent_id": 2,
+        "name": "Alkali Shipping",
+        "map_pos": [
+            1802.655,
+            95.87053
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2407,
+        "continent_id": 2,
+        "name": "CoraMed Labs",
+        "map_pos": [
+            1257.532715,
+            155.682281
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2408,
+        "continent_id": 2,
+        "name": "Benson Construction",
+        "map_pos": [
+            2541.409,
+            50.26437
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2409,
+        "continent_id": 2,
+        "name": "Alkali Mining Supply",
+        "map_pos": [
+            1867.0,
+            110.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2410,
+        "continent_id": 2,
+        "name": "Crater Firing Range",
+        "map_pos": [
+            1813.0,
+            138.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2411,
+        "continent_id": 2,
+        "name": "Alkali Storage",
+        "map_pos": [
+            2470.0,
+            63.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2412,
+        "continent_id": 2,
+        "name": "Briggs Laboratories",
+        "map_pos": [
+            1328.204,
+            116.2792
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2413,
+        "continent_id": 2,
+        "name": "NS Refinery",
+        "map_pos": [
+            2435.791,
+            59.29038
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2414,
+        "continent_id": 2,
+        "name": "Howling Pass Checkpoint",
+        "map_pos": [
+            857.9293,
+            165.5995
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2415,
+        "continent_id": 2,
+        "name": "Indar Comm. Array",
+        "map_pos": [
+            668.0,
+            347.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2416,
+        "continent_id": 2,
+        "name": "Quartz Ridge Camp",
+        "map_pos": [
+            153.998962,
+            223.444687
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2418,
+        "continent_id": 2,
+        "name": "Seabed Listening Post",
+        "map_pos": [
+            621.0,
+            238.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2419,
+        "continent_id": 2,
+        "name": "Ti Alloys, Inc.",
+        "map_pos": [
+            -125.0,
+            353.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2420,
+        "continent_id": 2,
+        "name": "Ceres Hydroponics",
+        "map_pos": [
+            260.0,
+            224.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2421,
+        "continent_id": 2,
+        "name": "Galaxy Solar Plant",
+        "map_pos": [
+            721.0,
+            176.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2422,
+        "continent_id": 2,
+        "name": "The Palisade",
+        "map_pos": [
+            333.0,
+            353.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2425,
+        "continent_id": 2,
+        "name": "NS Material Storage",
+        "map_pos": [
+            240.0,
+            397.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2427,
+        "continent_id": 2,
+        "name": "NS Secure Data Lab",
+        "map_pos": [
+            -936.0,
+            487.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2428,
+        "continent_id": 2,
+        "name": "Highlands Solar Station",
+        "map_pos": [
+            -1328.0,
+            510.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2429,
+        "continent_id": 2,
+        "name": "Ayani Labs",
+        "map_pos": [
+            -1395.0,
+            473.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2430,
+        "continent_id": 2,
+        "name": "Snake Ravine Lookout",
+        "map_pos": [
+            -831.0,
+            411.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2431,
+        "continent_id": 2,
+        "name": "XenoTech Labs",
+        "map_pos": [
+            -1269.0,
+            419.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2433,
+        "continent_id": 2,
+        "name": "Gravel Pass",
+        "map_pos": [
+            -1239.0,
+            220.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2436,
+        "continent_id": 2,
+        "name": "Rust Mesa Lookout",
+        "map_pos": [
+            -230.45639,
+            400.633179
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2437,
+        "continent_id": 2,
+        "name": "The Old Stockpile",
+        "map_pos": [
+            -996.2921,
+            318.9241
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2438,
+        "continent_id": 2,
+        "name": "Ceres Biotech",
+        "map_pos": [
+            -2320.0,
+            480.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2440,
+        "continent_id": 2,
+        "name": "Highlands Substation",
+        "map_pos": [
+            -2804.0,
+            508.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2443,
+        "continent_id": 2,
+        "name": "Scarred Mesa Skydock",
+        "map_pos": [
+            -2698.0,
+            500.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2447,
+        "continent_id": 2,
+        "name": "Copper Ravine Station",
+        "map_pos": [
+            -2345.0,
+            233.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2448,
+        "continent_id": 2,
+        "name": "Old Auraxium Mines",
+        "map_pos": [
+            -1929.104,
+            292.2917
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2449,
+        "continent_id": 2,
+        "name": "Valley Storage Yard",
+        "map_pos": [
+            -1393.0,
+            311.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2453,
+        "continent_id": 2,
+        "name": "Ceres Farms",
+        "map_pos": [
+            -1768.703,
+            508.1644
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2454,
+        "continent_id": 2,
+        "name": "Peris Barracks",
+        "map_pos": [
+            -2441.974,
+            483.8968
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2455,
+        "continent_id": 2,
+        "name": "Peris Field Tower",
+        "map_pos": [
+            -1993.015,
+            473.8811
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2456,
+        "continent_id": 2,
+        "name": "Peris Eastern Grove",
+        "map_pos": [
+            -2022.999,
+            472.0919
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2457,
+        "continent_id": 2,
+        "name": "Allatum Research Lab",
+        "map_pos": [
+            -361.7674,
+            467.4597
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2458,
+        "continent_id": 2,
+        "name": "Allatum Broadcast Hub",
+        "map_pos": [
+            -108.3359,
+            442.9457
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2459,
+        "continent_id": 2,
+        "name": "Allatum Botany Wing",
+        "map_pos": [
+            -560.3405,
+            451.6867
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2460,
+        "continent_id": 2,
+        "name": "Mao Southeast Gate",
+        "map_pos": [
+            1633.907,
+            82.78875
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2461,
+        "continent_id": 2,
+        "name": "Mao Watchtower",
+        "map_pos": [
+            1945.304,
+            68.48983
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2462,
+        "continent_id": 2,
+        "name": "Mao Southwest Gate",
+        "map_pos": [
+            1754.547,
+            108.93
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2463,
+        "continent_id": 2,
+        "name": "Tawrich Tower",
+        "map_pos": [
+            -1605.565,
+            214.7612
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2464,
+        "continent_id": 2,
+        "name": "Tawrich Recycling",
+        "map_pos": [
+            -2105.782,
+            219.3971
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2465,
+        "continent_id": 2,
+        "name": "Tawrich Depot",
+        "map_pos": [
+            -1710.768,
+            225.063
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2466,
+        "continent_id": 2,
+        "name": "Rashnu Watchtower",
+        "map_pos": [
+            -241.8272,
+            421.6388
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2467,
+        "continent_id": 2,
+        "name": "Rashnu Cavern",
+        "map_pos": [
+            -242.8177,
+            401.4805
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2468,
+        "continent_id": 2,
+        "name": "Rashnu Southern Pass",
+        "map_pos": [
+            -749.2546,
+            395.0005
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2469,
+        "continent_id": 2,
+        "name": "Zurvan Network Complex",
+        "map_pos": [
+            -625.7628,
+            228.084
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2470,
+        "continent_id": 2,
+        "name": "Zurvan Pump Station",
+        "map_pos": [
+            -419.6224,
+            211.3201
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2471,
+        "continent_id": 2,
+        "name": "Zurvan Storage Yard",
+        "map_pos": [
+            -97.41698,
+            206.6847
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2472,
+        "continent_id": 2,
+        "name": "Saurva Data Storage",
+        "map_pos": [
+            2747.485,
+            33.14049
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2473,
+        "continent_id": 2,
+        "name": "Saurva South Fortress",
+        "map_pos": [
+            1998.099,
+            70.20764
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2474,
+        "continent_id": 2,
+        "name": "Hvar Databank",
+        "map_pos": [
+            -606.125122,
+            491.815918
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2475,
+        "continent_id": 2,
+        "name": "Hvar Western Post",
+        "map_pos": [
+            -886.838135,
+            515.59552
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2476,
+        "continent_id": 2,
+        "name": "Hvar Physics Lab",
+        "map_pos": [
+            -861.4577,
+            506.275
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 2477,
+        "continent_id": 2,
+        "name": "Dahaka Uplink Hub",
+        "map_pos": [
+            1280.267,
+            147.7859
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 2478,
+        "continent_id": 2,
+        "name": "Dahaka Southern Post",
+        "map_pos": [
+            1049.639,
+            150.5795
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 2479,
+        "continent_id": 2,
+        "name": "Dahaka Pump Station",
+        "map_pos": [
+            1405.415,
+            181.273
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4101,
+        "continent_id": 4,
+        "name": "Sharpe's Run",
+        "map_pos": [
+            1355.880493,
+            47.429688
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4102,
+        "continent_id": 4,
+        "name": "Edgewater Overlook",
+        "map_pos": [
+            1338.956,
+            61.572
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4103,
+        "continent_id": 4,
+        "name": "Last Hold",
+        "map_pos": [
+            2112.503418,
+            77.063301
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4104,
+        "continent_id": 4,
+        "name": "Wainwright Armory",
+        "map_pos": [
+            982.746765,
+            40.17625
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4105,
+        "continent_id": 4,
+        "name": "The Offal Pit",
+        "map_pos": [
+            2626.842285,
+            3.797127
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4106,
+        "continent_id": 4,
+        "name": "Kessel's Crossing",
+        "map_pos": [
+            3185.979,
+            26.20848
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4107,
+        "continent_id": 4,
+        "name": "Hossin BioChem, Inc.",
+        "map_pos": [
+            2841.118896,
+            28.645786
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4108,
+        "continent_id": 4,
+        "name": "VEX BioLogics",
+        "map_pos": [
+            2033.7146,
+            61.567184
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4109,
+        "continent_id": 4,
+        "name": "Bunker J993",
+        "map_pos": [
+            857.322449,
+            81.801033
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4110,
+        "continent_id": 4,
+        "name": "Fallbridge Chemical",
+        "map_pos": [
+            1518.861816,
+            5.892097
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4111,
+        "continent_id": 4,
+        "name": "Halcyon Watch",
+        "map_pos": [
+            2330.0,
+            75.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4112,
+        "continent_id": 4,
+        "name": "Bridgewater Shipping Yard",
+        "map_pos": [
+            1120.911255,
+            58.979736
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4113,
+        "continent_id": 4,
+        "name": "OMR Terraforming",
+        "map_pos": [
+            -57.844524,
+            63.886196
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4114,
+        "continent_id": 4,
+        "name": "Iron Quay",
+        "map_pos": [
+            342.3697,
+            9.04604
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4115,
+        "continent_id": 4,
+        "name": "Broken Vale Garrison",
+        "map_pos": [
+            517.051,
+            160.4547
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4116,
+        "continent_id": 4,
+        "name": "Woodman ASE Labs",
+        "map_pos": [
+            887.6013,
+            106.307
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4117,
+        "continent_id": 4,
+        "name": "Johari Cove",
+        "map_pos": [
+            -1252.280151,
+            29.067974
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4118,
+        "continent_id": 4,
+        "name": "Roothouse Distillery",
+        "map_pos": [
+            -1492.96,
+            3.906586
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4119,
+        "continent_id": 4,
+        "name": "Hunter's Blind",
+        "map_pos": [
+            -1767.461548,
+            -12.758247
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4120,
+        "continent_id": 4,
+        "name": "Gourney Dam",
+        "map_pos": [
+            -663.1986,
+            137.8467
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4121,
+        "continent_id": 4,
+        "name": "SRP Hydroponics, Inc.",
+        "map_pos": [
+            -1536.903076,
+            34.400906
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4122,
+        "continent_id": 4,
+        "name": "The Ziggurat",
+        "map_pos": [
+            -570.813232,
+            10.615234
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4123,
+        "continent_id": 4,
+        "name": "Nettlemire Gardens",
+        "map_pos": [
+            -1139.473022,
+            4.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4124,
+        "continent_id": 4,
+        "name": "Whispering Pass",
+        "map_pos": [
+            -2755.65,
+            5.92041
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4125,
+        "continent_id": 4,
+        "name": "SRP Nanite Relay Station",
+        "map_pos": [
+            -2597.571,
+            20.29149
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4126,
+        "continent_id": 4,
+        "name": "Four Fingers",
+        "map_pos": [
+            -3205.175,
+            15.59608
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4127,
+        "continent_id": 4,
+        "name": "Kestral Watch",
+        "map_pos": [
+            -2571.105,
+            58.47634
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4130,
+        "continent_id": 4,
+        "name": "Genudine Holographics",
+        "map_pos": [
+            698.7863,
+            117.2206
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4131,
+        "continent_id": 4,
+        "name": "Fort Drexler",
+        "map_pos": [
+            -739.217896,
+            29.677734
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4132,
+        "continent_id": 4,
+        "name": "Cairn Station",
+        "map_pos": [
+            -1339.238037,
+            7.860434
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4133,
+        "continent_id": 4,
+        "name": "Southgate Checkpoint",
+        "map_pos": [
+            -2563.266,
+            22.37783
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4134,
+        "continent_id": 4,
+        "name": "Genesis Terraforming Plant",
+        "map_pos": [
+            -793.579,
+            18.6718
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4135,
+        "continent_id": 4,
+        "name": "Bravata PMC Compound",
+        "map_pos": [
+            -3.031891,
+            22.128429
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4136,
+        "continent_id": 4,
+        "name": "Matsuda Genetics",
+        "map_pos": [
+            2443.277,
+            11.60689
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4137,
+        "continent_id": 4,
+        "name": "Hayd Skydock",
+        "map_pos": [
+            2281.435,
+            29.48964
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4138,
+        "continent_id": 4,
+        "name": "Hatcher Airstation",
+        "map_pos": [
+            1528.477,
+            37.65943
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4139,
+        "continent_id": 4,
+        "name": "Nason's Defiance",
+        "map_pos": [
+            -15.675148,
+            157.980591
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4140,
+        "continent_id": 4,
+        "name": "Naum",
+        "map_pos": [
+            2397.267822,
+            16.101931
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4141,
+        "continent_id": 4,
+        "name": "Naum Ravine Overpass",
+        "map_pos": [
+            2642.908203,
+            39.101212
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4142,
+        "continent_id": 4,
+        "name": "Naum Marsh Compound",
+        "map_pos": [
+            2115.025879,
+            14.3377
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4143,
+        "continent_id": 4,
+        "name": "Naum Forward Barracks",
+        "map_pos": [
+            2263.150391,
+            15.912388
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4150,
+        "continent_id": 4,
+        "name": "Hurakan",
+        "map_pos": [
+            -404.065063,
+            73.752747
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4151,
+        "continent_id": 4,
+        "name": "Hurakan Secure Storage",
+        "map_pos": [
+            -77.25874,
+            112.5849
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4152,
+        "continent_id": 4,
+        "name": "Hurakan Western Pass",
+        "map_pos": [
+            -340.624,
+            95.32407
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4153,
+        "continent_id": 4,
+        "name": "Hurakan Southern Depot",
+        "map_pos": [
+            -703.9125,
+            70.34908
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4160,
+        "continent_id": 4,
+        "name": "Ixtab",
+        "map_pos": [
+            -469.0049,
+            55.88142
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4161,
+        "continent_id": 4,
+        "name": "Ixtab Power Regulation",
+        "map_pos": [
+            -478.7307,
+            80.71923
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4162,
+        "continent_id": 4,
+        "name": "Ixtab Water Purification",
+        "map_pos": [
+            -177.7653,
+            59.99991
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4163,
+        "continent_id": 4,
+        "name": "Ixtab Southern Pass",
+        "map_pos": [
+            -774.3772,
+            86.84877
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4170,
+        "continent_id": 4,
+        "name": "Acan",
+        "map_pos": [
+            1135.100952,
+            119.943176
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4171,
+        "continent_id": 4,
+        "name": "East Acan Storage Depot",
+        "map_pos": [
+            1170.853394,
+            90.212921
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4172,
+        "continent_id": 4,
+        "name": "Acan Data Hub",
+        "map_pos": [
+            1473.683105,
+            133.368988
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4173,
+        "continent_id": 4,
+        "name": "Acan Southern Labs",
+        "map_pos": [
+            786.318909,
+            122.168098
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4180,
+        "continent_id": 4,
+        "name": "Bitol",
+        "map_pos": [
+            -2159.799316,
+            5.424654
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4181,
+        "continent_id": 4,
+        "name": "Bitol Stockpile",
+        "map_pos": [
+            -2028.892578,
+            20.78772
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4182,
+        "continent_id": 4,
+        "name": "Bitol Northern Outpost",
+        "map_pos": [
+            -1897.288452,
+            36.900871
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4183,
+        "continent_id": 4,
+        "name": "Bitol Eastern Depot",
+        "map_pos": [
+            -2085.203125,
+            27.460793
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4190,
+        "continent_id": 4,
+        "name": "Zotz",
+        "map_pos": [
+            486.858429,
+            14.897891
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4191,
+        "continent_id": 4,
+        "name": "Zotz North Garden",
+        "map_pos": [
+            725.937,
+            14.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4192,
+        "continent_id": 4,
+        "name": "Zotz Arboretum",
+        "map_pos": [
+            473.908875,
+            -37.468807
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4193,
+        "continent_id": 4,
+        "name": "Zotz Agriculture Lab",
+        "map_pos": [
+            266.6301,
+            14.48802
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4200,
+        "continent_id": 4,
+        "name": "Ghanan",
+        "map_pos": [
+            -677.638489,
+            9.643489
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4201,
+        "continent_id": 4,
+        "name": "Ghanan Southern Crossing",
+        "map_pos": [
+            -1062.403,
+            10.83291
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4202,
+        "continent_id": 4,
+        "name": "Ghanan Research Labs",
+        "map_pos": [
+            -410.7588,
+            42.3
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4203,
+        "continent_id": 4,
+        "name": "Ghanan Eastern Gatehouse",
+        "map_pos": [
+            -853.4761,
+            25.77377
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4210,
+        "continent_id": 4,
+        "name": "Mulac",
+        "map_pos": [
+            -1873.173218,
+            17.789253
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4211,
+        "continent_id": 4,
+        "name": "Mulac Pass",
+        "map_pos": [
+            -1462.455933,
+            31.170313
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4212,
+        "continent_id": 4,
+        "name": "Mulac Foundry",
+        "map_pos": [
+            -1843.732056,
+            19.268036
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4213,
+        "continent_id": 4,
+        "name": "Mulac Purification Site",
+        "map_pos": [
+            -2238.982178,
+            10.100885
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4220,
+        "continent_id": 4,
+        "name": "Chac",
+        "map_pos": [
+            2970.179199,
+            12.755198
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4221,
+        "continent_id": 4,
+        "name": "Chac Fusion Lab",
+        "map_pos": [
+            3088.505127,
+            2.633946
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4222,
+        "continent_id": 4,
+        "name": "Chac Water Purification",
+        "map_pos": [
+            3097.351074,
+            7.239565
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4223,
+        "continent_id": 4,
+        "name": "Chac Intel Hub",
+        "map_pos": [
+            2707.071045,
+            9.482571
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4230,
+        "continent_id": 4,
+        "name": "Hossin Western Warpgate",
+        "map_pos": [
+            2046.572876,
+            14.930534
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4240,
+        "continent_id": 4,
+        "name": "Hossin Eastern Warpgate",
+        "map_pos": [
+            2036.770996,
+            12.005138
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4250,
+        "continent_id": 4,
+        "name": "Hossin Southern Warpgate",
+        "map_pos": [
+            -3302.816406,
+            17.942417
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4260,
+        "continent_id": 4,
+        "name": "Construction Site Alpha",
+        "map_pos": [
+            796.077393,
+            17.260582
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4261,
+        "continent_id": 4,
+        "name": "Construction Site Beta",
+        "map_pos": [
+            2011.421753,
+            63.117371
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4262,
+        "continent_id": 4,
+        "name": "Construction Site Gamma",
+        "map_pos": [
+            1923.290527,
+            2.196446
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4263,
+        "continent_id": 4,
+        "name": "Takkon Storage",
+        "map_pos": [
+            -1159.890869,
+            10.945744
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 4264,
+        "continent_id": 4,
+        "name": "Construction Site Zeta",
+        "map_pos": [
+            -2088.809082,
+            27.607361
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4265,
+        "continent_id": 4,
+        "name": "Eastern Substation",
+        "map_pos": [
+            -417.65274,
+            6.357099
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4266,
+        "continent_id": 4,
+        "name": "Fort Liberty",
+        "map_pos": [
+            1688.744507,
+            2.196446
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 4267,
+        "continent_id": 4,
+        "name": "Construction Site Epsilon",
+        "map_pos": [
+            852.752563,
+            129.485825
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4268,
+        "continent_id": 4,
+        "name": "Mossridge Command Center",
+        "map_pos": [
+            429.691406,
+            62.36496
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4269,
+        "continent_id": 4,
+        "name": "Construction Site Omega",
+        "map_pos": [
+            1019.214355,
+            50.040604
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4270,
+        "continent_id": 4,
+        "name": "Outpost Lambda",
+        "map_pos": [
+            -1128.12793,
+            2.196446
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 4271,
+        "continent_id": 4,
+        "name": "Construction Site Sigma",
+        "map_pos": [
+            -2268.660156,
+            42.875595
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6001,
+        "continent_id": 6,
+        "name": "Amerish Western Warpgate",
+        "map_pos": [
+            2807.917236,
+            63.160645
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6002,
+        "continent_id": 6,
+        "name": "Amerish Eastern Warpgate",
+        "map_pos": [
+            2501.734131,
+            70.97168
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6003,
+        "continent_id": 6,
+        "name": "Amerish Southern Warpgate",
+        "map_pos": [
+            -2868.86377,
+            55.776306
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6101,
+        "continent_id": 6,
+        "name": "Kwahtee",
+        "map_pos": [
+            1305.857544,
+            63.487366
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6102,
+        "continent_id": 6,
+        "name": "Ikanam",
+        "map_pos": [
+            1649.284424,
+            68.147888
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6103,
+        "continent_id": 6,
+        "name": "Heyoka",
+        "map_pos": [
+            -81.141495,
+            70.901558
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6111,
+        "continent_id": 6,
+        "name": "Sungrey",
+        "map_pos": [
+            2311.400879,
+            60.579769
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6112,
+        "continent_id": 6,
+        "name": "Mekala",
+        "map_pos": [
+            231.565918,
+            68.718071
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6113,
+        "continent_id": 6,
+        "name": "Onatha",
+        "map_pos": [
+            396.259308,
+            60.554138
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6121,
+        "continent_id": 6,
+        "name": "Wokuk",
+        "map_pos": [
+            -1969.289185,
+            60.350159
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6122,
+        "continent_id": 6,
+        "name": "Tumas",
+        "map_pos": [
+            -1807.582,
+            81.847
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6123,
+        "continent_id": 6,
+        "name": "Xelas",
+        "map_pos": [
+            -1555.773315,
+            56.756042
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6201,
+        "continent_id": 6,
+        "name": "LithCorp Secure Mine",
+        "map_pos": [
+            1969.765259,
+            107.67469
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6202,
+        "continent_id": 6,
+        "name": "The NC Arsenal",
+        "map_pos": [
+            2073.250732,
+            68.411224
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6203,
+        "continent_id": 6,
+        "name": "Crux Mining Operation",
+        "map_pos": [
+            1180.592773,
+            121.279297
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6204,
+        "continent_id": 6,
+        "name": "Crux Headquarters",
+        "map_pos": [
+            1017.312988,
+            79.405777
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6205,
+        "continent_id": 6,
+        "name": "The Bastion",
+        "map_pos": [
+            464.03299,
+            116.506477
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6206,
+        "continent_id": 6,
+        "name": "Auraxis Firearms Corp.",
+        "map_pos": [
+            -1212.78125,
+            115.552956
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6207,
+        "continent_id": 6,
+        "name": "Splitpeak Pass",
+        "map_pos": [
+            -719.208496,
+            159.570038
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6208,
+        "continent_id": 6,
+        "name": "West Pass Watchtower",
+        "map_pos": [
+            -1052.092163,
+            76.263252
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6209,
+        "continent_id": 6,
+        "name": "Granite Valley Garrison",
+        "map_pos": [
+            -1903.0,
+            90.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6301,
+        "continent_id": 6,
+        "name": "Stoneridge Reserve",
+        "map_pos": [
+            2798.045654,
+            69.814743
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6302,
+        "continent_id": 6,
+        "name": "North Grove Post",
+        "map_pos": [
+            2856.104248,
+            61.524124
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6303,
+        "continent_id": 6,
+        "name": "Jagged Lance Mine",
+        "map_pos": [
+            2803.240234,
+            69.495331
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6304,
+        "continent_id": 6,
+        "name": "Hidden Ridge Mining",
+        "map_pos": [
+            2767.351074,
+            68.245651
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6305,
+        "continent_id": 6,
+        "name": "SolTech Charging Station",
+        "map_pos": [
+            2243.76123,
+            63.057365
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6306,
+        "continent_id": 6,
+        "name": "Deserted Mineshaft",
+        "map_pos": [
+            2023.971191,
+            79.171074
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6307,
+        "continent_id": 6,
+        "name": "AuraxiCom Network Hub",
+        "map_pos": [
+            1001.048767,
+            72.760277
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6308,
+        "continent_id": 6,
+        "name": "Amerish ARX Reserve",
+        "map_pos": [
+            1703.290161,
+            82.993088
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6309,
+        "continent_id": 6,
+        "name": "Genudine Physics Lab",
+        "map_pos": [
+            416.504333,
+            84.834106
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6310,
+        "continent_id": 6,
+        "name": "Cobalt Communications",
+        "map_pos": [
+            212.572,
+            139.176
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6311,
+        "continent_id": 6,
+        "name": "West Foothills Airdock",
+        "map_pos": [
+            1314.221069,
+            174.770203
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6312,
+        "continent_id": 6,
+        "name": "DeepCore Geolab",
+        "map_pos": [
+            389.078003,
+            135.737793
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6313,
+        "continent_id": 6,
+        "name": "Blackshard Tungsten Mine",
+        "map_pos": [
+            1298.538086,
+            195.672775
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6314,
+        "continent_id": 6,
+        "name": "Shadespire Farms",
+        "map_pos": [
+            1254.880371,
+            67.902695
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6316,
+        "continent_id": 6,
+        "name": "Rockslide Outlook",
+        "map_pos": [
+            399.056213,
+            220.392807
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6317,
+        "continent_id": 6,
+        "name": "East Hills Checkpoint",
+        "map_pos": [
+            -43.087044,
+            133.307205
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6318,
+        "continent_id": 6,
+        "name": "Silver Valley Arsenal",
+        "map_pos": [
+            -308.573853,
+            53.901035
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6319,
+        "continent_id": 6,
+        "name": "Chimney Rock Depot",
+        "map_pos": [
+            -852.0,
+            74.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6320,
+        "continent_id": 6,
+        "name": "AuraxiCom Substation",
+        "map_pos": [
+            -683.22,
+            98.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6323,
+        "continent_id": 6,
+        "name": "Torremar Storage Yard",
+        "map_pos": [
+            -2511.082031,
+            71.161423
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6324,
+        "continent_id": 6,
+        "name": "Highroads Station",
+        "map_pos": [
+            -1775.0,
+            135.0
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6325,
+        "continent_id": 6,
+        "name": "Aramax Chemical Co.",
+        "map_pos": [
+            -2738.894043,
+            71.679527
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6326,
+        "continent_id": 6,
+        "name": "The Auraxian Cryobank",
+        "map_pos": [
+            -2479.385498,
+            99.760406
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6328,
+        "continent_id": 6,
+        "name": "Raven Landing",
+        "map_pos": [
+            -636.242188,
+            270.583588
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6329,
+        "continent_id": 6,
+        "name": "The Ascent",
+        "map_pos": [
+            -0.25,
+            437.43
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6330,
+        "continent_id": 6,
+        "name": "LithCorp Fortress",
+        "map_pos": [
+            2371.836426,
+            70.525337
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6331,
+        "continent_id": 6,
+        "name": "Moss Ravine",
+        "map_pos": [
+            2736.126221,
+            67.055717
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6332,
+        "continent_id": 6,
+        "name": "The Auger",
+        "map_pos": [
+            1646.699,
+            62.61347
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6333,
+        "continent_id": 6,
+        "name": "Shrouded Skyway",
+        "map_pos": [
+            -27.343304,
+            67.910309
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6334,
+        "continent_id": 6,
+        "name": "The Scarfield Reliquary",
+        "map_pos": [
+            -431.255402,
+            63.174469
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6335,
+        "continent_id": 6,
+        "name": "LithCorp Central",
+        "map_pos": [
+            -174.495117,
+            410.915863
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6336,
+        "continent_id": 6,
+        "name": "Eastshore Training Camp",
+        "map_pos": [
+            111.953629,
+            53.683918
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6337,
+        "continent_id": 6,
+        "name": "Solus Nature Annex",
+        "map_pos": [
+            -825.85,
+            64.8
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6338,
+        "continent_id": 6,
+        "name": "Barrik Electrical Station",
+        "map_pos": [
+            -2194.523193,
+            149.279724
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6339,
+        "continent_id": 6,
+        "name": "SolTech Gorge",
+        "map_pos": [
+            1689.591,
+            55.72833
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6340,
+        "continent_id": 6,
+        "name": "Kwahtee West Pass",
+        "map_pos": [
+            1385.954346,
+            55.796524
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6341,
+        "continent_id": 6,
+        "name": "Kwahtee Fortress",
+        "map_pos": [
+            1172.366,
+            54.11232
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6342,
+        "continent_id": 6,
+        "name": "Kwahtee Mountain Complex",
+        "map_pos": [
+            993.954895,
+            113.956421
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6343,
+        "continent_id": 6,
+        "name": "Ikanam Motor Pool",
+        "map_pos": [
+            1914.245,
+            61.60606
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6344,
+        "continent_id": 6,
+        "name": "Ikanam Garrison",
+        "map_pos": [
+            1846.274,
+            65.12027
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6345,
+        "continent_id": 6,
+        "name": "Ikanam Triage Station",
+        "map_pos": [
+            1298.999,
+            60.94609
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6346,
+        "continent_id": 6,
+        "name": "Heyoka Armory",
+        "map_pos": [
+            323.471741,
+            111.41938
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6347,
+        "continent_id": 6,
+        "name": "Heyoka Chemical Lab",
+        "map_pos": [
+            -363.920593,
+            79.557236
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6348,
+        "continent_id": 6,
+        "name": "Sungrey West Gate",
+        "map_pos": [
+            2217.72876,
+            84.741791
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6349,
+        "continent_id": 6,
+        "name": "Sungrey Power Hub",
+        "map_pos": [
+            2718.543457,
+            52.013233
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6350,
+        "continent_id": 6,
+        "name": "Sungrey Overwatch",
+        "map_pos": [
+            2329.64624,
+            92.06395
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6351,
+        "continent_id": 6,
+        "name": "Mekala Cart Mining",
+        "map_pos": [
+            644.107178,
+            73.211754
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6352,
+        "continent_id": 6,
+        "name": "Mekala's Auxiliary Compound",
+        "map_pos": [
+            -267.638,
+            96.616943
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6353,
+        "continent_id": 6,
+        "name": "Onatha North Gate",
+        "map_pos": [
+            748.658997,
+            82.076485
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6354,
+        "continent_id": 6,
+        "name": "East Onatha Comm. Array",
+        "map_pos": [
+            607.358215,
+            80.271957
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6355,
+        "continent_id": 6,
+        "name": "Onatha Southwest Gate",
+        "map_pos": [
+            249.210693,
+            71.226189
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6356,
+        "continent_id": 6,
+        "name": "Wokuk Ecological Preserve",
+        "map_pos": [
+            -1497.875122,
+            63.092102
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6357,
+        "continent_id": 6,
+        "name": "Wokuk Shipping Dock",
+        "map_pos": [
+            -1405.513,
+            51.14082
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 6358,
+        "continent_id": 6,
+        "name": "Wokuk Watchtower",
+        "map_pos": [
+            -1862.503296,
+            68.970978
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6359,
+        "continent_id": 6,
+        "name": "Tumas Skylance Battery",
+        "map_pos": [
+            -1500.633545,
+            82.496033
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6360,
+        "continent_id": 6,
+        "name": "Tumas Cargo Facility",
+        "map_pos": [
+            -1499.432129,
+            75.628754
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6361,
+        "continent_id": 6,
+        "name": "Xelas West Air Dock",
+        "map_pos": [
+            -1481.090576,
+            127.82634
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 6362,
+        "continent_id": 6,
+        "name": "Xelas North Gate",
+        "map_pos": [
+            -1250.950562,
+            55.882324
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 6363,
+        "continent_id": 6,
+        "name": "Xelas South Bridge",
+        "map_pos": [
+            -1891.44873,
+            63.580002
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18001,
+        "continent_id": 8,
+        "name": "Palos Solar Array",
+        "map_pos": [
+            1369.664,
+            76.02497
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18002,
+        "continent_id": 8,
+        "name": "Crystal Ridge Comm Array",
+        "map_pos": [
+            1511.381,
+            80.96583
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18003,
+        "continent_id": 8,
+        "name": "Haven Outpost",
+        "map_pos": [
+            2265.325,
+            107.0744
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18004,
+        "continent_id": 8,
+        "name": "Aurora Materials Lab",
+        "map_pos": [
+            1523.074,
+            131.3031
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18005,
+        "continent_id": 8,
+        "name": "Apex Genetics",
+        "map_pos": [
+            1099.279,
+            135.9144
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18007,
+        "continent_id": 8,
+        "name": "Grey Heron Shipping",
+        "map_pos": [
+            915.4762,
+            12.00377
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18008,
+        "continent_id": 8,
+        "name": "The Traverse",
+        "map_pos": [
+            311.391479,
+            64.407578
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18010,
+        "continent_id": 8,
+        "name": "Pale Canyon Chemical",
+        "map_pos": [
+            -477.7838,
+            123.2229
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18011,
+        "continent_id": 8,
+        "name": "Old Shore Checkpoint",
+        "map_pos": [
+            -1711.926,
+            17.19081
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18013,
+        "continent_id": 8,
+        "name": "Eastwake Harborage",
+        "map_pos": [
+            -750.881958,
+            73.248695
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18014,
+        "continent_id": 8,
+        "name": "Elli Forest Pass",
+        "map_pos": [
+            -1904.355,
+            112.771
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18015,
+        "continent_id": 8,
+        "name": "Frostfall Overlook",
+        "map_pos": [
+            -1216.208,
+            78.38409
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18016,
+        "continent_id": 8,
+        "name": "Snowshear Fort",
+        "map_pos": [
+            1003.725,
+            103.55
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18017,
+        "continent_id": 8,
+        "name": "Mattherson's Triumph",
+        "map_pos": [
+            161.4596,
+            125.3721
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18019,
+        "continent_id": 8,
+        "name": "Saerro Listening Post",
+        "map_pos": [
+            220.3131,
+            120.4251
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18020,
+        "continent_id": 8,
+        "name": "Waterson's Redemption",
+        "map_pos": [
+            -688.1417,
+            113.9208
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18022,
+        "continent_id": 8,
+        "name": "Andvari Ruins",
+        "map_pos": [
+            82.0,
+            112.0
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18024,
+        "continent_id": 8,
+        "name": "Freyr",
+        "map_pos": [
+            1123.68,
+            146.75
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18025,
+        "continent_id": 8,
+        "name": "Eisa",
+        "map_pos": [
+            70.712578,
+            139.827225
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18027,
+        "continent_id": 8,
+        "name": "Nott Communications",
+        "map_pos": [
+            -40.150677,
+            59.454502
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18028,
+        "continent_id": 8,
+        "name": "Ymir",
+        "map_pos": [
+            -1953.992,
+            83.76463
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18029,
+        "continent_id": 8,
+        "name": "Esamir Northern Warpgate",
+        "map_pos": [
+            2250.667,
+            99.214
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18030,
+        "continent_id": 8,
+        "name": "Esamir Southern Warpgate",
+        "map_pos": [
+            -2387.216,
+            89.134
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18031,
+        "continent_id": 8,
+        "name": "The Shattered Warpgate",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": null,
+        "type_name": null,
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18032,
+        "continent_id": 8,
+        "name": "Echo Valley Substation",
+        "map_pos": [
+            -342.963776,
+            168.766052
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18033,
+        "continent_id": 8,
+        "name": "Bridge-ward",
+        "map_pos": [
+            -1130.017,
+            22.80325
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18034,
+        "continent_id": 8,
+        "name": "Frostbite Harbor",
+        "map_pos": [
+            -1470.94,
+            4.942247
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18036,
+        "continent_id": 8,
+        "name": "Jaeger's Fist",
+        "map_pos": [
+            -839.5956,
+            32.10573
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18037,
+        "continent_id": 8,
+        "name": "Two Stone Beach",
+        "map_pos": [
+            -1604.49,
+            42.64167
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18038,
+        "continent_id": 8,
+        "name": "Terran BL-4 Crash Site",
+        "map_pos": [
+            -1181.333,
+            43.25488
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18046,
+        "continent_id": 8,
+        "name": "Andvari Barracks",
+        "map_pos": [
+            458.46463,
+            102.134766
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18048,
+        "continent_id": 8,
+        "name": "Andvari South Bank",
+        "map_pos": [
+            -349.21,
+            100.75
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18049,
+        "continent_id": 8,
+        "name": "Elli Tower",
+        "map_pos": [
+            -1730.97,
+            84.17827
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18058,
+        "continent_id": 8,
+        "name": "Mani Processing Plant",
+        "map_pos": [
+            2416.213,
+            88.19893
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18060,
+        "continent_id": 8,
+        "name": "Mani Lake Outpost",
+        "map_pos": [
+            1860.761,
+            123.973
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18062,
+        "continent_id": 8,
+        "name": "Esamir Eastern Warpgate",
+        "map_pos": [
+            233.934998,
+            10.178646
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18063,
+        "continent_id": 8,
+        "name": "Genudine Gardens",
+        "map_pos": [
+            310.721252,
+            120.967918
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18067,
+        "continent_id": 8,
+        "name": "Rime Analytics",
+        "map_pos": [
+            723.092,
+            130.515
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18068,
+        "continent_id": 8,
+        "name": "The Rink",
+        "map_pos": [
+            716.0898,
+            102.7103
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18204,
+        "continent_id": 6,
+        "name": "Cobalt Geological Outpost",
+        "map_pos": [
+            -559.74,
+            68.37
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18205,
+        "continent_id": 2,
+        "name": "Berjess Overlook",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18206,
+        "continent_id": 2,
+        "name": "Sunken Relay Station",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18207,
+        "continent_id": 2,
+        "name": "Lowland Trading Post",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18208,
+        "continent_id": 8,
+        "name": "BL-4 Recovery Point",
+        "map_pos": [
+            -694.31,
+            25.4
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18209,
+        "continent_id": 8,
+        "name": "Tapp Waystation",
+        "map_pos": [
+            -426.41,
+            125.05
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 5,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18210,
+        "continent_id": 8,
+        "name": "Untapped Reservoir",
+        "map_pos": [
+            669.816833,
+            145.961075
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18249,
+        "continent_id": 8,
+        "name": "The Wash",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": null,
+        "type_name": null,
+        "resource_amount": 5,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    },
+    {
+        "id": 18250,
+        "continent_id": 8,
+        "name": "Baldur",
+        "map_pos": [
+            -843.338135,
+            119.208771
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 10,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18251,
+        "continent_id": 8,
+        "name": "Vidar Observation Site",
+        "map_pos": [
+            910.731567,
+            -4.591265
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 10,
+        "resource_id": 2,
+        "resource_name": "Synthium"
+    },
+    {
+        "id": 18252,
+        "continent_id": 8,
+        "name": "Excavion DS-01E",
+        "map_pos": [
+            -2047.06,
+            103.53
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 25,
+        "resource_id": 3,
+        "resource_name": "Polystellarite"
+    },
+    {
+        "id": 18253,
+        "continent_id": 8,
+        "name": "Jord",
+        "map_pos": [
+            -440.229645,
+            156.246552
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 25,
+        "resource_id": 1,
+        "resource_name": "Auraxium"
+    }
+]
