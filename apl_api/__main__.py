@@ -10,7 +10,6 @@ with the ``--help`` flag set.
 import argparse
 import asyncio
 import logging
-import os
 
 from ._server import ApiHost
 

@@ -45,17 +45,17 @@ class BaseInfo(_Static):
     # Outfit resources
     # NOTE: Rewards are not consistent within a base type.
     resource_amount: int
-    resource_id: ResourceId
-    resource_name: str
+    resource_id: Optional[ResourceId]
+    resource_name: Optional[str]
 
 
 @dataclasses.dataclass(frozen=True)
-class BaseUpdate(_Dynamic):
+class BaseStatus(_Dynamic):
     """Dynamic base state update."""
 
     id: BaseId
     population: FactionData[int]
-    owning_faction: FactionId
+    owning_faction: Optional[FactionId]
     owning_outfit: Optional[OutfitId]
     held_since: int
 
@@ -75,7 +75,7 @@ class ContinentInfo(_Static):
 
 
 @dataclasses.dataclass(frozen=True)
-class ContinentUpdate(_Dynamic):
+class ContinentStatus(_Dynamic):
     """Dynamic continent state update."""
 
     id: ContinentId
@@ -84,9 +84,9 @@ class ContinentUpdate(_Dynamic):
     locked_by: Optional[int]
     # Alert status
     alert_active: bool
-    alert_started: int
-    alert_ends: int
-    alert_status: FactionData[float]
+    alert_started: Optional[int]
+    alert_ends: Optional[int]
+    alert_status: Optional[FactionData[float]]
 
 
 @dataclasses.dataclass(frozen=True)
@@ -99,7 +99,7 @@ class ServerInfo(_Static):
 
 
 @dataclasses.dataclass(frozen=True)
-class ServerUpdate(_Dynamic):
+class ServerStatus(_Dynamic):
     """Dynamic server state update."""
 
     id: ServerId
@@ -116,4 +116,4 @@ class OutfitInfo(_Static):
     faction_id: FactionId
     server_id: ServerId
     name: str
-    tag: OutfitTag
+    tag: Optional[OutfitTag]
