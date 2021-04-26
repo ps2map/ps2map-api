@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Connery",
+        "region": "US West"
+    },
+    {
+        "id": 10,
+        "name": "Miller",
+        "region": "EU"
+    },
+    {
+        "id": 13,
+        "name": "Cobalt",
+        "region": "EU"
+    },
+    {
+        "id": 17,
+        "name": "Emerald",
+        "region": "US East"
+    },
+    {
+        "id": 40,
+        "name": "SolTech",
+        "region": "Asia"
+    }
+]

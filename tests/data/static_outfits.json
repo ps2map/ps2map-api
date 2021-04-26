@@ -1,0 +1,30 @@
+[
+    {
+        "id": 37566723466738093,
+        "faction_id": 2,
+        "server_id": 10,
+        "name": "Deathwatch Marines ",
+        "tag": "DTWM"
+    },
+    {
+        "id": 37562834348261261,
+        "faction_id": 4,
+        "server_id": 13,
+        "name": "Cyberdyne Industries",
+        "tag": "DYNE"
+    },
+    {
+        "id": 37578635483296804,
+        "faction_id": 1,
+        "server_id": 13,
+        "name": "Yet Another Cobalt Outfit",
+        "tag": "YACO"
+    },
+    {
+        "id": 37524390589238163,
+        "faction_id": 3,
+        "server_id": 17,
+        "name": "TheAssassins",
+        "tag": null
+    }
+]
