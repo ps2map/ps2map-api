@@ -25,7 +25,6 @@ import math
 from typing import Dict, Iterable, Iterator, List, NamedTuple, Set, Tuple
 
 import auraxium
-from svgwrite.shapes import Polygon
 
 
 # pylint: disable=invalid-name

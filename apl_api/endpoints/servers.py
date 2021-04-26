@@ -1,20 +1,75 @@
 """API endpoints for PS2 game servers."""
 
 import dataclasses
+import random
+from typing import List, cast
 
-import asyncpg
 import fastapi
 from starlette.responses import JSONResponse
 
-from .. import _db as database
+from ..interfaces import ServerInfo, ServerStatus
+from ..types import ContinentId, FactionData, ServerId
+from ._utils import IdListQuery, ids_from_string, static_from_json
+
 
 router = fastapi.APIRouter(prefix='/servers')
 
-_dep_pool = fastapi.Depends(database.get_pool)  # type: ignore
+_STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
 @router.get('/')  # type: ignore
-async def get_servers(pool: asyncpg.pool.Pool = _dep_pool) -> JSONResponse:
-    server_list = [dataclasses.asdict(d)
-                   for d in await database.get_servers(pool)]
-    return JSONResponse({'server_list': server_list})
+async def root() -> JSONResponse:
+    return JSONResponse(
+        [dataclasses.asdict(d) for d in _STATIC_SERVER_DATA.values()])
+
+
+@router.get('/info')  # type: ignore
+async def server_info(server_id: str = IdListQuery  # type: ignore
+                      ) -> JSONResponse:
+    # Parse input
+    server_ids = ids_from_string(server_id)
+    # Validate input
+    if not server_ids:
+        raise fastapi.HTTPException(
+            400, 'At least one server_id must be specified')
+    # Retrieve server data
+    data: List[ServerInfo] = []
+    for id_ in server_ids:
+        try:
+            data.append(_STATIC_SERVER_DATA[id_])
+        except KeyError as err:
+            msg = f'Unknown server ID: {id_}'
+            raise fastapi.HTTPException(status_code=404, detail=msg) from err
+    return JSONResponse([dataclasses.asdict(d) for d in data])
+
+
+@router.get('/status')  # type: ignore
+async def server_status(server_id: str = IdListQuery  # type: ignore
+                        ) -> JSONResponse:
+    # Parse input
+    server_ids = ids_from_string(server_id)
+    # Validate input
+    if not server_ids:
+        raise fastapi.HTTPException(
+            400, 'At least one server_id must be specified')
+    # Retrieve server data
+    data: List[ServerStatus] = []
+    for id_ in server_ids:
+        if id_ not in _STATIC_SERVER_DATA:
+            msg = f'Unknown server ID: {id_}'
+            raise fastapi.HTTPException(status_code=404, detail=msg)
+        # Make up random data
+        status = 'online' if random.random() < 0.9 else 'locked'
+        base_pop = random.randint(10, 300)
+        population = FactionData(
+            base_pop + random.randint(0, 100),
+            base_pop + random.randint(0, 100),
+            base_pop + random.randint(0, 100),
+            int(base_pop*0.05))
+        continents = [cast(ContinentId, i)
+                      for i in (2, 4, 6, 8) if random.random() < 0.5]
+        if not continents:
+            continents.append(cast(ContinentId, 2))
+        data.append(
+            ServerStatus(cast(ServerId, id_), status, population, continents))
+    return JSONResponse([dataclasses.asdict(d) for d in data])

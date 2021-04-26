@@ -1,6 +1,3 @@
 auraxium
-asyncpg >= 0.21
 fastapi >= 0.62.0
-svgwrite >= 1.4
-tlru_cache
 uvicorn >= 0.13.2
