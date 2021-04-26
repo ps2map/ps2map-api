@@ -54,6 +54,7 @@ class BaseStatus(_Dynamic):
     """Dynamic base state update."""
 
     id: BaseId
+    server_id: ServerId
     population: FactionData[int]
     owning_faction: Optional[FactionId]
     owning_outfit: Optional[OutfitId]
@@ -79,6 +80,7 @@ class ContinentStatus(_Dynamic):
     """Dynamic continent state update."""
 
     id: ContinentId
+    server_id: ServerId
     population: FactionData[int]
     status: str
     locked_by: Optional[int]
@@ -86,7 +88,6 @@ class ContinentStatus(_Dynamic):
     alert_active: bool
     alert_started: Optional[int]
     alert_ends: Optional[int]
-    alert_status: Optional[FactionData[float]]
 
 
 @dataclasses.dataclass(frozen=True)
