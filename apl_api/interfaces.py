@@ -4,7 +4,7 @@ Types are not enforced as of this version.
 """
 
 import dataclasses
-from typing import List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
                     OutfitId, OutfitTag, ResourceId, ServerId)
@@ -68,10 +68,8 @@ class ContinentInfo(_Static):
     id: ContinentId
     name: str
     description: str
-    bases: List[BaseInfo]
     lattice_links: List[Tuple[int, int]]
-    # TODO: Should these be part of this type? How'd the CDN work?
-    map_outlines_svg: str  # Map outline SVG
+    map_base_svgs: Dict[str, str]  # Base outline SVGs
     map_tileset: str  # Unique tileset identifier for the frontend
 
 
