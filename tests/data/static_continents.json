@@ -3,36 +3,32 @@
         "id": 2,
         "name": "Indar",
         "description": "The arid continent of Indar is home to multiple biomes, providing unique challenges for its combatants.",
-        "bases": [],
         "lattice_links": [],
-        "map_outlines_svg": "",
+        "map_base_svgs": {},
         "map_tileset": "Indar"
     },
     {
         "id": 4,
         "name": "Hossin",
         "description": "Hossin's dense mangrove and willow forests provide air cover along its many swamps and highlands.",
-        "bases": [],
         "lattice_links": [],
-        "map_outlines_svg": "",
+        "map_base_svgs": {},
         "map_tileset": "Hossin"
     },
     {
         "id": 6,
         "name": "Amerish",
         "description": "Amerish's lush groves and rocky outcroppings provide ample cover between its rolling plains and mountain passes.",
-        "bases": [],
         "lattice_links": [],
-        "map_outlines_svg": "",
+        "map_base_svgs": {},
         "map_tileset": "Amerish"
     },
     {
         "id": 8,
         "name": "Esamir",
         "description": "Esamir's expanses of frigid tundra and craggy mountains provide little cover from airborne threats.",
-        "bases": [],
         "lattice_links": [],
-        "map_outlines_svg": "",
+        "map_base_svgs": {},
         "map_tileset": "Esamir"
     }
 ]
