@@ -11,6 +11,7 @@ import logging
 
 import fastapi
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from . import endpoints
 from ._logging import ForwardHandler
@@ -32,6 +33,9 @@ app = fastapi.FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_ORIGINS)
+
+# Add static file route
+app.mount('/static/map', StaticFiles(directory='map'), name='map')
 
 # NOTE: The fragmentation of the endpoints is mostly to simplify adaptions, it
 # has a neglegible performance impact upon startup and is just as speedy as a
