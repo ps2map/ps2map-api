@@ -4,7 +4,7 @@ Types are not enforced as of this version.
 """
 
 import dataclasses
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Literal, Optional, Tuple
 
 from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
                     OutfitId, OutfitTag, ResourceId, ServerId)
@@ -80,7 +80,7 @@ class ContinentStatus(_Dynamic):
     id: ContinentId
     server_id: ServerId
     population: FactionData[int]
-    status: str
+    status: Literal['open', 'locked']
     locked_by: Optional[int]
     # Alert status
     alert_active: bool
@@ -94,7 +94,7 @@ class ServerInfo(_Static):
 
     id: ServerId
     name: str
-    region: str
+    region: Literal['Asia', 'EU', 'US West', 'US East']
 
 
 @dataclasses.dataclass(frozen=True)
@@ -102,7 +102,7 @@ class ServerStatus(_Dynamic):
     """Dynamic server state update."""
 
     id: ServerId
-    status: str
+    status: Literal['online', 'locked']
     population: FactionData[int]
     open_continents: List[ContinentId]
 
