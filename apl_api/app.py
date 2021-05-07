@@ -34,8 +34,9 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=_ORIGINS)
 
-# Add static file route
-app.mount('/static/map', StaticFiles(directory='map'), name='map')
+# Add static file routes
+app.mount('/static/tile', StaticFiles(directory='public/tile'), name='tile')
+app.mount('/static/hex', StaticFiles(directory='public/hex'), name='hex')
 
 # NOTE: The fragmentation of the endpoints is mostly to simplify adaptions, it
 # has a neglegible performance impact upon startup and is just as speedy as a
