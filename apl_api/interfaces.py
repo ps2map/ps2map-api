@@ -67,9 +67,9 @@ class ContinentInfo(_Static):
 
     id: ContinentId
     name: str
+    code: str  # internal identifier used for map-specific assets
     description: str
     lattice_links: List[Tuple[int, int]]
-    map_tileset: str  # Unique tileset identifier for the frontend
 
 
 @dataclasses.dataclass(frozen=True)
