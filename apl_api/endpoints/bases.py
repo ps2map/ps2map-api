@@ -1,7 +1,6 @@
 """API endpoints for map bases."""
 
 import datetime
-import dataclasses
 import random
 from typing import List, Optional, cast
 
@@ -28,8 +27,7 @@ async def root() -> JSONResponse:
     may be retired in upcoming versions for performance reasons. Use
     the `bases/info` endpoint instead.
     """
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_BASE_DATA.values()])
+    return JSONResponse(list(_STATIC_BASE_DATA.values()))
 
 
 @router.get('/info')  # type: ignore
@@ -66,7 +64,7 @@ async def base_info(base_id: str = IdListQuery,  # type: ignore
         for base in _STATIC_BASE_DATA.values():
             if base.continent_id == id_:
                 data.append(base)
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return JSONResponse(data)
 
 
 @router.get('/status')  # type: ignore
@@ -110,18 +108,21 @@ async def base_status(base_id: str = IdListQuery,  # type: ignore
         for base_ in _STATIC_BASE_DATA:
             if base_ids and base_ not in base_ids:
                 continue
-            population = FactionData(
-                random.randint(0, 50),
-                random.randint(0, 50),
-                random.randint(0, 50),
-                random.randint(0, 5))
+            population: FactionData[int] = FactionData(
+                vs=random.randint(0, 50),
+                tr=random.randint(0, 50),
+                nc=random.randint(0, 50),
+                nso=random.randint(0, 5))
             faction = cast(FactionId, random.randint(1, 3))
             outfit: Optional[OutfitId] = None
             if random.random() < 0.75:
                 outfit = random.choice(list(OUTFITS.values())).id
             data.append(
                 BaseStatus(
-                    cast(BaseId, base_), cast(ServerId, id_),
-                    population, faction, outfit,
+                    id=cast(BaseId, base_),
+                    server_id=cast(ServerId, id_),
+                    population=population,
+                    owning_faction=faction,
+                    owning_outfit=outfit,
                     held_since=int(datetime.datetime.now().timestamp())))
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return JSONResponse(data)

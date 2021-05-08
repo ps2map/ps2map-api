@@ -3,8 +3,9 @@
 This includes basic data classes.
 """
 
-import dataclasses
 from typing import Generic, NewType, TypeVar
+
+import pydantic
 
 _T = TypeVar('_T')
 
@@ -19,8 +20,7 @@ ServerId = NewType('ServerId', int)
 OutfitTag = NewType('OutfitTag', str)
 
 
-@dataclasses.dataclass(frozen=True)
-class FactionData(Generic[_T]):
+class FactionData(Generic[_T], pydantic.BaseModel):
     """Generic container for faction-specific data."""
 
     vs: _T

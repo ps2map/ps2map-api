@@ -1,6 +1,5 @@
 """API endpoints for PS2 game servers."""
 
-import dataclasses
 import random
 from typing import List, cast
 
@@ -19,8 +18,7 @@ _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 @router.get('/')  # type: ignore
 async def root() -> JSONResponse:
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_SERVER_DATA.values()])
+    return JSONResponse(list(_STATIC_SERVER_DATA.values()))
 
 
 @router.get('/info')  # type: ignore
@@ -40,7 +38,7 @@ async def server_info(server_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown server ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return JSONResponse(data)
 
 
 @router.get('/status')  # type: ignore
@@ -61,15 +59,19 @@ async def server_status(server_id: str = IdListQuery  # type: ignore
         # Make up random data
         status = 'online' if random.random() < 0.9 else 'locked'
         base_pop = random.randint(10, 300)
-        population = FactionData(
-            base_pop + random.randint(0, 100),
-            base_pop + random.randint(0, 100),
-            base_pop + random.randint(0, 100),
-            int(base_pop*0.05))
+        population: FactionData[int] = FactionData(
+            vs=base_pop + random.randint(0, 100),
+            nc=base_pop + random.randint(0, 100),
+            tr=base_pop + random.randint(0, 100),
+            nso=int(base_pop*0.05))
         continents = [cast(ContinentId, i)
                       for i in (2, 4, 6, 8) if random.random() < 0.5]
         if not continents:
             continents.append(cast(ContinentId, 2))
         data.append(
-            ServerStatus(cast(ServerId, id_), status, population, continents))
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+            ServerStatus(
+                id=cast(ServerId, id_),
+                status=status,
+                population=population,
+                open_continents=continents))
+    return JSONResponse(data)

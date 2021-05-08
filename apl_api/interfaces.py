@@ -3,15 +3,15 @@
 Types are not enforced as of this version.
 """
 
-import dataclasses
 from typing import List, Literal, Optional, Tuple
+
+import pydantic
 
 from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
                     OutfitId, OutfitTag, ResourceId, ServerId)
 
 
-@dataclasses.dataclass(frozen=True)
-class _Static:
+class _Static(pydantic.BaseModel):
     """Base class for static map data.
 
     This includes base or continent names, map hex outlines and other
@@ -20,8 +20,7 @@ class _Static:
     """
 
 
-@dataclasses.dataclass(frozen=True)
-class _Dynamic:
+class _Dynamic(pydantic.BaseModel):
     """Base class for dynamic map data.
 
     This includes current population, facility ownership and the
@@ -31,7 +30,6 @@ class _Dynamic:
     """
 
 
-@dataclasses.dataclass(frozen=True)
 class BaseInfo(_Static):
     """Static, unchanging base data."""
 
@@ -48,8 +46,12 @@ class BaseInfo(_Static):
     resource_id: Optional[ResourceId]
     resource_name: Optional[str]
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class BaseStatus(_Dynamic):
     """Dynamic base state update."""
 
@@ -60,8 +62,12 @@ class BaseStatus(_Dynamic):
     owning_outfit: Optional[OutfitId]
     held_since: int
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class ContinentInfo(_Static):
     """Static, unchanging continent data."""
 
@@ -71,8 +77,12 @@ class ContinentInfo(_Static):
     description: str
     lattice_links: List[Tuple[int, int]]
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class ContinentStatus(_Dynamic):
     """Dynamic continent state update."""
 
@@ -86,8 +96,12 @@ class ContinentStatus(_Dynamic):
     alert_started: Optional[int]
     alert_ends: Optional[int]
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class ServerInfo(_Static):
     """Static, unchanging server data."""
 
@@ -95,8 +109,12 @@ class ServerInfo(_Static):
     name: str
     region: Literal['Asia', 'EU', 'US West', 'US East']
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class ServerStatus(_Dynamic):
     """Dynamic server state update."""
 
@@ -105,8 +123,12 @@ class ServerStatus(_Dynamic):
     population: FactionData[int]
     open_continents: List[ContinentId]
 
+    class Config:
+        """Pydantic model configuration."""
 
-@dataclasses.dataclass(frozen=True)
+        allow_mutation = False
+
+
 class OutfitInfo(_Static):
     """Static, unchanging outfit data."""
 
@@ -115,3 +137,8 @@ class OutfitInfo(_Static):
     server_id: ServerId
     name: str
     tag: Optional[OutfitTag]
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False

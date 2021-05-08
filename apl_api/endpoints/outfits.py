@@ -1,6 +1,5 @@
 """API endpoints for PS2 player outfits."""
 
-import dataclasses
 from typing import List
 
 import fastapi
@@ -22,8 +21,7 @@ async def root() -> JSONResponse:
     may be retired in upcoming versions for performance reasons. Use
     the `outfits/info` endpoint instead.
     """
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_OUTFIT_DATA.values()])
+    return JSONResponse(list(_STATIC_OUTFIT_DATA.values()))
 
 
 @router.get('/info')  # type: ignore
@@ -49,4 +47,4 @@ async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown outfit ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return JSONResponse(data)
