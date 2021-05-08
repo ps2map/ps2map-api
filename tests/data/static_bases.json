@@ -3885,11 +3885,11 @@
             0.0,
             0.0
         ],
-        "type_id": null,
-        "type_name": null,
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "type_id": 0,
+        "type_name": "No Man's Land",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18032,
@@ -4207,11 +4207,11 @@
             0.0,
             0.0
         ],
-        "type_id": null,
-        "type_name": null,
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "type_id": 0,
+        "type_name": "No Man's Land",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18250,
