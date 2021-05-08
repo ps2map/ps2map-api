@@ -22,6 +22,12 @@ _STATIC_BASE_DATA = static_from_json(BaseInfo, 'static_bases.json')
 
 @router.get('/')  # type: ignore
 async def root() -> JSONResponse:
+    """Return a list of all static base data.
+
+    Please note that this endpoint produces a large return object and
+    may be retired in upcoming versions for performance reasons. Use
+    the `bases/info` endpoint instead.
+    """
     return JSONResponse(
         [dataclasses.asdict(d) for d in _STATIC_BASE_DATA.values()])
 
@@ -30,6 +36,14 @@ async def root() -> JSONResponse:
 async def base_info(base_id: str = IdListQuery,  # type: ignore
                     continent_id: str = IdListQuery,  # type: ignore
                     ) -> JSONResponse:
+    """Return static data for a given base.
+
+    This includes properties like the base name or type. API consumers
+    are expected to aggressively cache the returned data as they will
+    only change with major game updates.
+
+    Can be queried by either the `base_id` or `continent_id` field.
+    """
     # Parse input
     base_ids = ids_from_string(base_id)
     continent_ids = ids_from_string(continent_id)
@@ -60,6 +74,17 @@ async def base_status(base_id: str = IdListQuery,  # type: ignore
                       continent_id: str = IdListQuery,  # type: ignore
                       server_id: str = IdListQuery,  # type: ignore
                       ) -> JSONResponse:
+    """Return momentary status data for a base.
+
+    Return the current status digest of a given base. This includes
+    volatile data such as population or current ownership.
+
+    This endpoint will likely be moved to or replicated in a WebSocket
+    endpoint future versions.
+
+    Can be queried by either the `base_id` or `continent_id` field. A
+    valid `server_id` must always be provided.
+    """
     # Parse input
     base_ids = ids_from_string(base_id)
     continent_ids = ids_from_string(continent_id)

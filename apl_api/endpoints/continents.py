@@ -21,6 +21,12 @@ _STATIC_CONTINENT_DATA = static_from_json(
 
 @router.get('/')  # type: ignore
 async def root() -> JSONResponse:
+    """Return a list of all static continent data.
+
+    Please note that this endpoint produces a large return object and
+    may be retired in upcoming versions for performance reasons. Use
+    the `continents/info` endpoint instead.
+    """
     return JSONResponse(
         [dataclasses.asdict(d) for d in _STATIC_CONTINENT_DATA.values()])
 
@@ -28,6 +34,12 @@ async def root() -> JSONResponse:
 @router.get('/info')  # type: ignore
 async def continent_info(continent_id: str = IdListQuery  # type: ignore
                          ) -> JSONResponse:
+    """Return static data for a given continent.
+
+    This includes properties like the continent name or description.
+    API consumers are expected to aggressively cache the returned data
+    as they will only change with major game updates.
+    """
     # Parse input
     continent_ids = ids_from_string(continent_id)
     # Validate input
@@ -49,6 +61,14 @@ async def continent_info(continent_id: str = IdListQuery  # type: ignore
 async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                            server_id: str = IdListQuery  # type: ignore
                            ) -> JSONResponse:
+    """Return momentary status data for a continent.
+
+    Return the current status digest of a given continent. This
+    includes volatile data such as population or ongoing alerts.
+
+    This endpoint will likely be moved to or replicated in a WebSocket
+    endpoint in future versions.
+    """
     # Parse input
     continent_ids = ids_from_string(continent_id)
     server_ids = ids_from_string(server_id)

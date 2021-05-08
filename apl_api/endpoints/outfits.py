@@ -16,6 +16,12 @@ _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 @router.get('/')  # type: ignore
 async def root() -> JSONResponse:
+    """Return a list of all cached outfit data.
+
+    Please note that this endpoint produces a large return object and
+    may be retired in upcoming versions for performance reasons. Use
+    the `outfits/info` endpoint instead.
+    """
     return JSONResponse(
         [dataclasses.asdict(d) for d in _STATIC_OUTFIT_DATA.values()])
 
@@ -23,6 +29,12 @@ async def root() -> JSONResponse:
 @router.get('/info')  # type: ignore
 async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
                       ) -> JSONResponse:
+    """Return static data for a given outfit.
+
+    This includes basic fields for display on the map, like the outfit
+    name, faction, or tag. API consumers are expected to cache the
+    returned data.
+    """
     # Parse input
     outfit_ids = ids_from_string(outfit_id)
     # Validate input
