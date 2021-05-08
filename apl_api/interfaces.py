@@ -11,26 +11,7 @@ from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
                     OutfitId, OutfitTag, ResourceId, ServerId)
 
 
-class _Static(pydantic.BaseModel):
-    """Base class for static map data.
-
-    This includes base or continent names, map hex outlines and other
-    information that only changes with game upates (i.e. in-between app
-    launches).
-    """
-
-
-class _Dynamic(pydantic.BaseModel):
-    """Base class for dynamic map data.
-
-    This includes current population, facility ownership and the
-    continents available for each server. Data of this type can either
-    be polled or received via a WebSocket interface whenever it
-    changes.
-    """
-
-
-class BaseInfo(_Static):
+class BaseInfo(pydantic.BaseModel):
     """Static, unchanging base data."""
 
     id: BaseId
@@ -52,7 +33,7 @@ class BaseInfo(_Static):
         allow_mutation = False
 
 
-class BaseStatus(_Dynamic):
+class BaseStatus(pydantic.BaseModel):
     """Dynamic base state update."""
 
     id: BaseId
@@ -68,7 +49,7 @@ class BaseStatus(_Dynamic):
         allow_mutation = False
 
 
-class ContinentInfo(_Static):
+class ContinentInfo(pydantic.BaseModel):
     """Static, unchanging continent data."""
 
     id: ContinentId
@@ -83,7 +64,7 @@ class ContinentInfo(_Static):
         allow_mutation = False
 
 
-class ContinentStatus(_Dynamic):
+class ContinentStatus(pydantic.BaseModel):
     """Dynamic continent state update."""
 
     id: ContinentId
@@ -102,7 +83,7 @@ class ContinentStatus(_Dynamic):
         allow_mutation = False
 
 
-class ServerInfo(_Static):
+class ServerInfo(pydantic.BaseModel):
     """Static, unchanging server data."""
 
     id: ServerId
@@ -115,7 +96,7 @@ class ServerInfo(_Static):
         allow_mutation = False
 
 
-class ServerStatus(_Dynamic):
+class ServerStatus(pydantic.BaseModel):
     """Dynamic server state update."""
 
     id: ServerId
@@ -129,7 +110,7 @@ class ServerStatus(_Dynamic):
         allow_mutation = False
 
 
-class OutfitInfo(_Static):
+class OutfitInfo(pydantic.BaseModel):
     """Static, unchanging outfit data."""
 
     id: OutfitId

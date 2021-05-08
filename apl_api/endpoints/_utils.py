@@ -5,14 +5,12 @@ from typing import Dict, List, Type, TypeVar
 
 from fastapi.params import Query
 
-from ..interfaces import _Static as Static
-
 __all__ = [
     'IdListQuery',
     'id_from_string'
 ]
 
-_DataT = TypeVar('_DataT', bound=Static)
+_DataT = TypeVar('_DataT')
 
 # Validator for comma-separated ID lists (positive integers only)
 IdListQuery = Query('', regex='^\\d+(,\\d+)*$')
