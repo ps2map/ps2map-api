@@ -3,7 +3,6 @@
 from typing import List
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import OutfitInfo
 from ._utils import IdListQuery, ids_from_string, static_from_json
@@ -14,19 +13,19 @@ _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 
 @router.get('/')  # type: ignore
-async def root() -> JSONResponse:
+async def outfit_list() -> List[OutfitInfo]:
     """Return a list of all cached outfit data.
 
     Please note that this endpoint produces a large return object and
     may be retired in upcoming versions for performance reasons. Use
     the `outfits/info` endpoint instead.
     """
-    return JSONResponse(list(_STATIC_OUTFIT_DATA.values()))
+    return list(_STATIC_OUTFIT_DATA.values())
 
 
 @router.get('/info')  # type: ignore
 async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
-                      ) -> JSONResponse:
+                      ) -> List[OutfitInfo]:
     """Return static data for a given outfit.
 
     This includes basic fields for display on the map, like the outfit
@@ -47,4 +46,4 @@ async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown outfit ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse(data)
+    return data

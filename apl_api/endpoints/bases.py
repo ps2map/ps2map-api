@@ -5,7 +5,6 @@ import random
 from typing import List, Optional, cast
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import BaseInfo, BaseStatus
 from ..types import BaseId, FactionData, FactionId, OutfitId, ServerId
@@ -20,20 +19,20 @@ _STATIC_BASE_DATA = static_from_json(BaseInfo, 'static_bases.json')
 
 
 @router.get('/')  # type: ignore
-async def root() -> JSONResponse:
+async def base_list() -> List[BaseInfo]:
     """Return a list of all static base data.
 
     Please note that this endpoint produces a large return object and
     may be retired in upcoming versions for performance reasons. Use
     the `bases/info` endpoint instead.
     """
-    return JSONResponse(list(_STATIC_BASE_DATA.values()))
+    return list(_STATIC_BASE_DATA.values())
 
 
 @router.get('/info')  # type: ignore
 async def base_info(base_id: str = IdListQuery,  # type: ignore
                     continent_id: str = IdListQuery,  # type: ignore
-                    ) -> JSONResponse:
+                    ) -> List[BaseInfo]:
     """Return static data for a given base.
 
     This includes properties like the base name or type. API consumers
@@ -64,14 +63,14 @@ async def base_info(base_id: str = IdListQuery,  # type: ignore
         for base in _STATIC_BASE_DATA.values():
             if base.continent_id == id_:
                 data.append(base)
-    return JSONResponse(data)
+    return data
 
 
 @router.get('/status')  # type: ignore
 async def base_status(base_id: str = IdListQuery,  # type: ignore
                       continent_id: str = IdListQuery,  # type: ignore
                       server_id: str = IdListQuery,  # type: ignore
-                      ) -> JSONResponse:
+                      ) -> List[BaseStatus]:
     """Return momentary status data for a base.
 
     Return the current status digest of a given base. This includes
@@ -88,7 +87,7 @@ async def base_status(base_id: str = IdListQuery,  # type: ignore
     continent_ids = ids_from_string(continent_id)
     server_ids = ids_from_string(server_id)
     # Validate parameters
-    if bool(base_ids) ^ bool(continent_ids):
+    if bool(base_ids) and bool(continent_ids):
         if base_ids:
             raise fastapi.HTTPException(
                 400, 'Either base_id or continent_id must be specified')
@@ -125,4 +124,4 @@ async def base_status(base_id: str = IdListQuery,  # type: ignore
                     owning_faction=faction,
                     owning_outfit=outfit,
                     held_since=int(datetime.datetime.now().timestamp())))
-    return JSONResponse(data)
+    return data

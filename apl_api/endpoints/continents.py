@@ -5,7 +5,6 @@ import random
 from typing import List, cast
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import ContinentInfo, ContinentStatus
 from ..types import ContinentId, FactionData, FactionId, ServerId
@@ -19,19 +18,19 @@ _STATIC_CONTINENT_DATA = static_from_json(
 
 
 @router.get('/')  # type: ignore
-async def root() -> JSONResponse:
+async def continent_list() -> List[ContinentInfo]:
     """Return a list of all static continent data.
 
     Please note that this endpoint produces a large return object and
     may be retired in upcoming versions for performance reasons. Use
     the `continents/info` endpoint instead.
     """
-    return JSONResponse(list(_STATIC_CONTINENT_DATA.values()))
+    return list(_STATIC_CONTINENT_DATA.values())
 
 
 @router.get('/info')  # type: ignore
 async def continent_info(continent_id: str = IdListQuery  # type: ignore
-                         ) -> JSONResponse:
+                         ) -> List[ContinentInfo]:
     """Return static data for a given continent.
 
     This includes properties like the continent name or description.
@@ -52,13 +51,13 @@ async def continent_info(continent_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown continent ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse(data)
+    return data
 
 
 @router.get('/status')  # type: ignore
 async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                            server_id: str = IdListQuery  # type: ignore
-                           ) -> JSONResponse:
+                           ) -> List[ContinentStatus]:
     """Return momentary status data for a continent.
 
     Return the current status digest of a given continent. This
@@ -122,4 +121,4 @@ async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                     alert_active=alert_active,
                     alert_started=alert_started,
                     alert_ends=alert_ends))
-    return JSONResponse(data)
+    return data

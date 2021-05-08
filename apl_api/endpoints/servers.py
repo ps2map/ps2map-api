@@ -4,7 +4,6 @@ import random
 from typing import List, cast
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import ServerInfo, ServerStatus
 from ..types import ContinentId, FactionData, ServerId
@@ -17,13 +16,13 @@ _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
 @router.get('/')  # type: ignore
-async def root() -> JSONResponse:
-    return JSONResponse(list(_STATIC_SERVER_DATA.values()))
+async def server_list() -> List[ServerInfo]:
+    return list(_STATIC_SERVER_DATA.values())
 
 
 @router.get('/info')  # type: ignore
 async def server_info(server_id: str = IdListQuery  # type: ignore
-                      ) -> JSONResponse:
+                      ) -> List[ServerInfo]:
     # Parse input
     server_ids = ids_from_string(server_id)
     # Validate input
@@ -38,12 +37,12 @@ async def server_info(server_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown server ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse(data)
+    return data
 
 
 @router.get('/status')  # type: ignore
 async def server_status(server_id: str = IdListQuery  # type: ignore
-                        ) -> JSONResponse:
+                        ) -> List[ServerStatus]:
     # Parse input
     server_ids = ids_from_string(server_id)
     # Validate input
@@ -74,4 +73,4 @@ async def server_status(server_id: str = IdListQuery  # type: ignore
                 status=status,
                 population=population,
                 open_continents=continents))
-    return JSONResponse(data)
+    return data
