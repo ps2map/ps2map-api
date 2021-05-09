@@ -6,8 +6,8 @@ from typing import List, cast
 import fastapi
 
 from ..interfaces import ServerInfo, ServerStatus
-from ..types import ContinentId, Population, ServerId
-from ._utils import IdListQuery, ids_from_string, static_from_json
+from ..types import ContinentId, Population
+from ._utils import static_from_json
 
 
 router = fastapi.APIRouter(prefix='/servers')
@@ -15,46 +15,26 @@ router = fastapi.APIRouter(prefix='/servers')
 _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
-@router.get('/', response_model=List[ServerInfo])  # type: ignore
-async def server_list() -> List[ServerInfo]:
+@router.get('/info', response_model=List[ServerInfo])  # type: ignore
+async def server_info() -> List[ServerInfo]:
+    """Return the list of servers.
+
+    This payload contains unchanging properties like the server name or
+    region. API consumers are expected to aggressively cache the
+    returned data as they will only change with major game updates.
+    """
     return list(_STATIC_SERVER_DATA.values())
 
 
-@router.get('/info', response_model=List[ServerInfo])  # type: ignore
-async def server_info(server_id: str = IdListQuery  # type: ignore
-                      ) -> List[ServerInfo]:
-    # Parse input
-    server_ids = ids_from_string(server_id)
-    # Validate input
-    if not server_ids:
-        raise fastapi.HTTPException(
-            400, 'At least one server_id must be specified')
-    # Retrieve server data
-    data: List[ServerInfo] = []
-    for id_ in server_ids:
-        try:
-            data.append(_STATIC_SERVER_DATA[id_])
-        except KeyError as err:
-            msg = f'Unknown server ID: {id_}'
-            raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return data
-
-
 @router.get('/status', response_model=List[ServerStatus])  # type: ignore
-async def server_status(server_id: str = IdListQuery  # type: ignore
-                        ) -> List[ServerStatus]:
-    # Parse input
-    server_ids = ids_from_string(server_id)
-    # Validate input
-    if not server_ids:
-        raise fastapi.HTTPException(
-            400, 'At least one server_id must be specified')
-    # Retrieve server data
+async def server_status() -> List[ServerStatus]:
+    """Return a momentary status digest for all servers.
+
+    This endpoint will likely be moved to or replicated in a WebSocket
+    endpoint in future versions.
+    """
     data: List[ServerStatus] = []
-    for id_ in server_ids:
-        if id_ not in _STATIC_SERVER_DATA:
-            msg = f'Unknown server ID: {id_}'
-            raise fastapi.HTTPException(status_code=404, detail=msg)
+    for server in _STATIC_SERVER_DATA.values():
         # Make up random data
         status = 'online' if random.random() < 0.9 else 'locked'
         base_pop = random.randint(10, 300)
@@ -69,7 +49,7 @@ async def server_status(server_id: str = IdListQuery  # type: ignore
             continents.append(cast(ContinentId, 2))
         data.append(
             ServerStatus(
-                id=cast(ServerId, id_),
+                id=server.id,
                 status=status,
                 population=population,
                 open_continents=continents))
