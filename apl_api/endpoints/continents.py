@@ -35,7 +35,7 @@ async def continent_status(
     server_id: PositiveInt = Query(  # type: ignore
         ...,
         title='Server ID',
-        description='Unique identifier of the server for which to return a'
+        description='Unique identifier of the server for which to return a '
         'continent status digest.'
     )
 ) -> List[ContinentStatus]:

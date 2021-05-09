@@ -178,7 +178,7 @@ class ContinentStatus(pydantic.BaseModel):
         'population estimate.',
         example={'vs': 123, 'nc': 112, 'tr': 126, 'nso': 8})
     status: Literal['open', 'locked'] = Field(
-        title='Statis',
+        title='Status',
         description='A string value representing the current status of the '
         'continent. More values may be added, use comparisons to the string '
         '`"locked"` to determine whether the continent is open.',
