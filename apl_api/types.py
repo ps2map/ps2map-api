@@ -3,10 +3,9 @@
 This includes basic data classes.
 """
 
-import dataclasses
-from typing import Generic, NewType, TypeVar
+from typing import NewType
 
-_T = TypeVar('_T')
+from pydantic import BaseModel, Field
 
 
 BaseId = NewType('BaseId', int)
@@ -19,11 +18,22 @@ ServerId = NewType('ServerId', int)
 OutfitTag = NewType('OutfitTag', str)
 
 
-@dataclasses.dataclass(frozen=True)
-class FactionData(Generic[_T]):
-    """Generic container for faction-specific data."""
+class Population(BaseModel):
+    """Population estimates mapped by faction identifier."""
 
-    vs: _T
-    nc: _T
-    tr: _T
-    nso: _T
+    vs: int = Field(
+        title='VS',
+        description='Estimated Vanu Sovereignty population',
+        example=31)
+    nc: int = Field(
+        title='NC',
+        description='Estimated New Conglomerate population',
+        example=11)
+    tr: int = Field(
+        title='TR',
+        description='Estimated Terran Republic population',
+        example=26)
+    nso: int = Field(
+        title='NSO',
+        description='Estimated Nanite Systems Operatives population',
+        example=4)

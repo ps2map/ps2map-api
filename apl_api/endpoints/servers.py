@@ -1,14 +1,12 @@
 """API endpoints for PS2 game servers."""
 
-import dataclasses
 import random
 from typing import List, cast
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import ServerInfo, ServerStatus
-from ..types import ContinentId, FactionData, ServerId
+from ..types import ContinentId, Population, ServerId
 from ._utils import IdListQuery, ids_from_string, static_from_json
 
 
@@ -17,15 +15,14 @@ router = fastapi.APIRouter(prefix='/servers')
 _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
-@router.get('/')  # type: ignore
-async def root() -> JSONResponse:
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_SERVER_DATA.values()])
+@router.get('/', response_model=List[ServerInfo])  # type: ignore
+async def server_list() -> List[ServerInfo]:
+    return list(_STATIC_SERVER_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[ServerInfo])  # type: ignore
 async def server_info(server_id: str = IdListQuery  # type: ignore
-                      ) -> JSONResponse:
+                      ) -> List[ServerInfo]:
     # Parse input
     server_ids = ids_from_string(server_id)
     # Validate input
@@ -40,12 +37,12 @@ async def server_info(server_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown server ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return data
 
 
-@router.get('/status')  # type: ignore
+@router.get('/status', response_model=List[ServerStatus])  # type: ignore
 async def server_status(server_id: str = IdListQuery  # type: ignore
-                        ) -> JSONResponse:
+                        ) -> List[ServerStatus]:
     # Parse input
     server_ids = ids_from_string(server_id)
     # Validate input
@@ -61,15 +58,19 @@ async def server_status(server_id: str = IdListQuery  # type: ignore
         # Make up random data
         status = 'online' if random.random() < 0.9 else 'locked'
         base_pop = random.randint(10, 300)
-        population = FactionData(
-            base_pop + random.randint(0, 100),
-            base_pop + random.randint(0, 100),
-            base_pop + random.randint(0, 100),
-            int(base_pop*0.05))
+        population = Population(
+            vs=base_pop + random.randint(0, 100),
+            nc=base_pop + random.randint(0, 100),
+            tr=base_pop + random.randint(0, 100),
+            nso=int(base_pop*0.05))
         continents = [cast(ContinentId, i)
                       for i in (2, 4, 6, 8) if random.random() < 0.5]
         if not continents:
             continents.append(cast(ContinentId, 2))
         data.append(
-            ServerStatus(cast(ServerId, id_), status, population, continents))
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+            ServerStatus(
+                id=cast(ServerId, id_),
+                status=status,
+                population=population,
+                open_continents=continents))
+    return data

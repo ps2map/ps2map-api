@@ -1,15 +1,13 @@
 """API endpoints for PS2 continents/zones."""
 
-import dataclasses
 import datetime
 import random
 from typing import List, cast
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import ContinentInfo, ContinentStatus
-from ..types import ContinentId, FactionData, FactionId, ServerId
+from ..types import ContinentId, FactionId, Population, ServerId
 from ._utils import IdListQuery, ids_from_string, static_from_json
 from .servers import _STATIC_SERVER_DATA as SERVERS
 
@@ -19,15 +17,26 @@ _STATIC_CONTINENT_DATA = static_from_json(
     ContinentInfo, 'static_continents.json')
 
 
-@router.get('/')  # type: ignore
-async def root() -> JSONResponse:
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_CONTINENT_DATA.values()])
+@router.get('/', response_model=List[ContinentInfo])  # type: ignore
+async def continent_list() -> List[ContinentInfo]:
+    """Return a list of all static continent data.
+
+    Please note that this endpoint produces a large return object and
+    may be retired in upcoming versions for performance reasons. Use
+    the `continents/info` endpoint instead.
+    """
+    return list(_STATIC_CONTINENT_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[ContinentInfo])  # type: ignore
 async def continent_info(continent_id: str = IdListQuery  # type: ignore
-                         ) -> JSONResponse:
+                         ) -> List[ContinentInfo]:
+    """Return static data for a given continent.
+
+    This includes properties like the continent name or description.
+    API consumers are expected to aggressively cache the returned data
+    as they will only change with major game updates.
+    """
     # Parse input
     continent_ids = ids_from_string(continent_id)
     # Validate input
@@ -42,13 +51,21 @@ async def continent_info(continent_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown continent ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return data
 
 
-@router.get('/status')  # type: ignore
+@router.get('/status', response_model=List[ContinentStatus])  # type: ignore
 async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                            server_id: str = IdListQuery  # type: ignore
-                           ) -> JSONResponse:
+                           ) -> List[ContinentStatus]:
+    """Return momentary status data for a continent.
+
+    Return the current status digest of a given continent. This
+    includes volatile data such as population or ongoing alerts.
+
+    This endpoint will likely be moved to or replicated in a WebSocket
+    endpoint in future versions.
+    """
     # Parse input
     continent_ids = ids_from_string(continent_id)
     server_ids = ids_from_string(server_id)
@@ -71,17 +88,18 @@ async def continent_status(continent_id: str = IdListQuery,  # type: ignore
             status = 'locked' if random.random() < 0.6 else 'open'
             locked = bool(status == 'locked')
             if locked:
-                population = FactionData(0, 0, 0, 0)
+                population = Population(
+                    vs=0, nc=0, tr=0, nso=0)
                 locked_by = cast(FactionId, random.randint(1, 3))
                 alert_active = False
                 alert_started = None
                 alert_ends = None
             else:
-                population = FactionData(
-                    random.randint(50, 300),
-                    random.randint(50, 300),
-                    random.randint(50, 300),
-                    random.randint(0, 10))
+                population = Population(
+                    vs=random.randint(50, 300),
+                    nc=random.randint(50, 300),
+                    tr=random.randint(50, 300),
+                    nso=random.randint(0, 10))
                 locked_by = None
                 alert_active = random.random() < 0.5
                 alert_started = None
@@ -95,9 +113,12 @@ async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                         (start + datetime.timedelta(minutes=90)).timestamp())
             data.append(
                 ContinentStatus(
-                    cast(ContinentId, cont), cast(ServerId, id_),
-                    population, status, locked_by,
-                    alert_active,
-                    alert_started,
-                    alert_ends))
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+                    id=cast(ContinentId, cont),
+                    server_id=cast(ServerId, id_),
+                    population=population,
+                    status=status,
+                    locked_by=locked_by,
+                    alert_active=alert_active,
+                    alert_started=alert_started,
+                    alert_ends=alert_ends))
+    return data

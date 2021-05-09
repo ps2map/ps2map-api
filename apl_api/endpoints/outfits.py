@@ -1,10 +1,8 @@
 """API endpoints for PS2 player outfits."""
 
-import dataclasses
 from typing import List
 
 import fastapi
-from starlette.responses import JSONResponse
 
 from ..interfaces import OutfitInfo
 from ._utils import IdListQuery, ids_from_string, static_from_json
@@ -14,15 +12,26 @@ router = fastapi.APIRouter(prefix='/outfits')
 _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 
-@router.get('/')  # type: ignore
-async def root() -> JSONResponse:
-    return JSONResponse(
-        [dataclasses.asdict(d) for d in _STATIC_OUTFIT_DATA.values()])
+@router.get('/', response_model=List[OutfitInfo])  # type: ignore
+async def outfit_list() -> List[OutfitInfo]:
+    """Return a list of all cached outfit data.
+
+    Please note that this endpoint produces a large return object and
+    may be retired in upcoming versions for performance reasons. Use
+    the `outfits/info` endpoint instead.
+    """
+    return list(_STATIC_OUTFIT_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[OutfitInfo])  # type: ignore
 async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
-                      ) -> JSONResponse:
+                      ) -> List[OutfitInfo]:
+    """Return static data for a given outfit.
+
+    This includes basic fields for display on the map, like the outfit
+    name, faction, or tag. API consumers are expected to cache the
+    returned data.
+    """
     # Parse input
     outfit_ids = ids_from_string(outfit_id)
     # Validate input
@@ -37,4 +46,4 @@ async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
         except KeyError as err:
             msg = f'Unknown outfit ID: {id_}'
             raise fastapi.HTTPException(status_code=404, detail=msg) from err
-    return JSONResponse([dataclasses.asdict(d) for d in data])
+    return data

@@ -3,115 +3,304 @@
 Types are not enforced as of this version.
 """
 
-import dataclasses
+import datetime
 from typing import List, Literal, Optional, Tuple
 
-from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
+import pydantic
+from pydantic import Field
+
+from .types import (BaseId, BaseTypeId, ContinentId, FactionId, Population,
                     OutfitId, OutfitTag, ResourceId, ServerId)
 
+# Used for example timestamps
+_now = int(datetime.datetime.now().timestamp())
 
-@dataclasses.dataclass(frozen=True)
-class _Static:
-    """Base class for static map data.
 
-    This includes base or continent names, map hex outlines and other
-    information that only changes with game upates (i.e. in-between app
-    launches).
+class BaseInfo(pydantic.BaseModel):
+    """Static information for a given base.
+
+    The contents of this payload only change with major game updates.
+    API consumers can and should heavily cache the data returned to
+    reduce API load (cache lifetime of hours to days).
     """
 
-
-@dataclasses.dataclass(frozen=True)
-class _Dynamic:
-    """Base class for dynamic map data.
-
-    This includes current population, facility ownership and the
-    continents available for each server. Data of this type can either
-    be polled or received via a WebSocket interface whenever it
-    changes.
-    """
-
-
-@dataclasses.dataclass(frozen=True)
-class BaseInfo(_Static):
-    """Static, unchanging base data."""
-
-    id: BaseId
-    continent_id: ContinentId
-    name: str
-    map_pos: Tuple[float, float]
+    id: int = Field(
+        title='Base ID',
+        description='Unique identifier of this base.',
+        example=18204)
+    continent_id: ContinentId = Field(
+        title='Continent ID',
+        description='The continent containing this base.',
+        example=6)
+    name: str = Field(
+        title='Display Name',
+        description='Display name of the base.',
+        example='Cobalt Geological Outpost')
+    map_pos: Tuple[float, float] = Field(
+        title='Map Position',
+        description='A two-value tuple containing the X and Y coordinates at '
+        'which the base marker should be placed on the map.',
+        example=(-2602.2, -559.74))
     # Base type (BioLab, Small Outpost, etc.)
-    type_id: BaseTypeId
-    type_name: str
+    type_id: BaseTypeId = Field(
+        title='Type ID',
+        description='Unique identifier of the facility type of the base.',
+        example=9)
+    type_name: str = Field(
+        title='Type Name',
+        description='Display name of the facility type of the base.',
+        example='Construciton Outpost')
     # Outfit resources
-    # NOTE: Rewards are not consistent within a base type.
-    resource_amount: int
-    resource_id: Optional[ResourceId]
-    resource_name: Optional[str]
+    resource_amount: int = Field(
+        title='Resource Amount',
+        description='The amount of outfit resources awarded for capturing '
+        'this base.',
+        example=10)
+    resource_id: Optional[ResourceId] = Field(
+        title='Resource ID',
+        description='Unique identifier of the outfit resource type awarded '
+        'for capturing this base.',
+        example=2)
+    resource_name: Optional[str] = Field(
+        title='Resource Name',
+        description='Display name of the outfit resource type awarded for '
+        'capturing this base.',
+        example='Synthium')
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class BaseStatus(_Dynamic):
-    """Dynamic base state update."""
+class BaseStatus(pydantic.BaseModel):
+    """A dynamic update message for a given base.
 
-    id: BaseId
-    server_id: ServerId
-    population: FactionData[int]
-    owning_faction: Optional[FactionId]
-    owning_outfit: Optional[OutfitId]
-    held_since: int
+    The contents of this payload are dynamic and will change regularly.
+
+    This payload will likely be replicated in or moved to a WebSocket
+    endpoint in an upcoming API version.
+    """
+
+    id: BaseId = Field(
+        title='Base ID',
+        description='Unique identifier of the base being updated.',
+        example=18025)
+    server_id: ServerId = Field(
+        title='Server ID',
+        description='Unique identifier of the server for which the base '
+        'should be updated.',
+        example=13)
+    population: Population = Field(
+        title='Population',
+        description='A mapping of faction identifiers to the current '
+        'population estimate.',
+        example={'vs': 37, 'nc': 28, 'tr': 13, 'nso': 5})
+    owning_faction: Optional[FactionId] = Field(
+        title='Owning Faction',
+        description='Unique identifier of the faction currently in control of '
+        'the facility. Locked or otherwise inaccessible facilities will '
+        'return NULL rather than 0.',
+        example=2)
+    owning_outfit: Optional[OutfitId] = Field(example=None)
+    held_since: int = Field(example=_now)
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class ContinentInfo(_Static):
-    """Static, unchanging continent data."""
+class ContinentInfo(pydantic.BaseModel):
+    """Static information for a given continent.
 
-    id: ContinentId
-    name: str
-    code: str  # internal identifier used for map-specific assets
-    description: str
-    lattice_links: List[Tuple[int, int]]
+    The contents of this payload only change with major game updates.
+    API consumers can and should heavily cache the data returned to
+    reduce API load (cache lifetime of hours to days).
+    """
+
+    id: ContinentId = Field(
+        title='Continent ID',
+        description='Unique identifier of this continent.',
+        example=2)
+    name: str = Field(
+        title='Name',
+        description='Display name of the continent.',
+        example='Indar')
+    # internal identifier used for map-specific assets
+    code: str = Field(
+        title='Asset Code',
+        description='Internal identifier used for API-hosted art assets. '
+        'See the API repository '
+        '[README](https://github.com/auto-pl/apl-api/blob/main/README.md) '
+        'for details.',
+        example='indar')
+    description: str = Field(
+        title='Description',
+        description='A flavour text/description for the continent. Can be '
+        'to fill in empty space on the map switcher.',
+        example='The arid continent of Indar is home to multiple biomes, '
+        'providing unique challenges for its combatants.')
+    lattice_links: List[Tuple[int, int]] = Field(
+        title='Lattice Links',
+        description='A list of two-value integer tuples representing base '
+        'connectivity. The integers represent the base IDs, the order of the '
+        'base IDs is arbitrary.',
+        example=[])
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class ContinentStatus(_Dynamic):
-    """Dynamic continent state update."""
+class ContinentStatus(pydantic.BaseModel):
+    """A dynamic update message for a given continent.
 
-    id: ContinentId
-    server_id: ServerId
-    population: FactionData[int]
-    status: Literal['open', 'locked']
-    locked_by: Optional[int]
+    The contents of this payload are dynamic and will change regularly.
+
+    This payload will likely be replicated in or moved to a WebSocket
+    endpoint in an upcoming API version.
+    """
+
+    id: ContinentId = Field(
+        title='Continent ID',
+        description='Unique identifier of the continent being updated.',
+        example=4)
+    server_id: ServerId = Field(
+        title='Server ID',
+        description='Unique identifier of the server for which the continent '
+        'should be updated.',
+        example=10)
+    population: Population = Field(
+        title='Population',
+        description='A mapping of faction identifiers to the current '
+        'population estimate.',
+        example={'vs': 123, 'nc': 112, 'tr': 126, 'nso': 8})
+    status: Literal['open', 'locked'] = Field(
+        title='Statis',
+        description='A string value representing the current status of the '
+        'continent. More values may be added, use comparisons to the string '
+        '`"locked"` to determine whether the continent is open.',
+        example='open')
+    locked_by: Optional[int] = Field(
+        title='Locked By',
+        description='For continents whose `status` is `"locked"`, this field '
+        'specifies which empire locked the continent. NULL for open '
+        'continents.',
+        example=None)
     # Alert status
-    alert_active: bool
-    alert_started: Optional[int]
-    alert_ends: Optional[int]
+    alert_active: bool = Field(
+        title='Alert Active Flag',
+        description='Whether there is an ongoing alert on the continent.',
+        example=True)
+    alert_started: Optional[int] = Field(
+        title='Alert Start Timestamp',
+        description='UTC timestamp of when the ongoing alert started. NULL '
+        'whenever the `alert_active` flag is false.',
+        example=_now)
+    alert_ends: Optional[int] = Field(
+        title='Alert End Timestamp',
+        description='UTC timestamp of when the ongoing alert is scheduled to '
+        'end. NULL whenever the `alert_active` flag is false.',
+        example=_now + 5400)
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class ServerInfo(_Static):
-    """Static, unchanging server data."""
+class ServerInfo(pydantic.BaseModel):
+    """Static information for a given server.
 
-    id: ServerId
-    name: str
-    region: Literal['Asia', 'EU', 'US West', 'US East']
+    The contents of this payload only change with major game updates.
+    API consumers can and should heavily cache the data returned to
+    reduce API load (cache lifetime of hours to days).
+    """
+
+    id: ServerId = Field(
+        title='Server ID',
+        description='Unique identifier of this server.',
+        example=13)
+    name: str = Field(
+        title='Display Name',
+        description='Display name of the server.',
+        example='Cobalt')
+    region: Literal['Asia', 'EU', 'US West', 'US East'] = Field(
+        title='Server Region',
+        description='Geographical location of the server.',
+        example='EU')
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class ServerStatus(_Dynamic):
-    """Dynamic server state update."""
+class ServerStatus(pydantic.BaseModel):
+    """A dynamic update message for a given base.
 
-    id: ServerId
-    status: Literal['online', 'locked']
-    population: FactionData[int]
-    open_continents: List[ContinentId]
+    The contents of this payload are dynamic and will change regularly.
+
+    This payload will likely be replicated in or moved to a WebSocket
+    endpoint in an upcoming API version.
+    """
+
+    id: ServerId = Field(
+        title='Server ID',
+        description='Unique identifier of the server being updated',
+        example=40)
+    status: Literal['online', 'locked'] = Field(
+        title='Server Status',
+        description='Current status of the server. The literals listed as the '
+        'type are tentative and may change in future versions.',
+        example='online')
+    population: Population = Field(
+        title='Population',
+        description='A mapping of faction identifiers to the current '
+        'population estimate.',
+        example={'vs': 251, 'nc': 221, 'tr': 246, 'nso': 16})
+    open_continents: List[ContinentId] = Field(example=[2, 6])
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
 
 
-@dataclasses.dataclass(frozen=True)
-class OutfitInfo(_Static):
-    """Static, unchanging outfit data."""
+class OutfitInfo(pydantic.BaseModel):
+    """Static information for a given outfit.
 
-    id: OutfitId
-    faction_id: FactionId
-    server_id: ServerId
-    name: str
-    tag: Optional[OutfitTag]
+    The contents of this payload may change from one day to the next.
+    API consumers are still recommended to cache the data returned, but
+    cache lifetime should only be a few hours as outfit tags can change
+    at any time.
+    """
+
+    id: OutfitId = Field(
+        title='Outfit ID',
+        description='Unique identifier of this outfit.',
+        example=37578635483296804)
+    faction_id: FactionId = Field(
+        title='Faction ID',
+        description='Unique identifier of the faction this outfit is on.',
+        example=1)
+    server_id: ServerId = Field(
+        title='Server ID',
+        description='Unique identifier of the server on which this outfit '
+        'lives.',
+        example=13)
+    name: str = Field(
+        title='Outfit Name',
+        description='The custom name of this outfit.',
+        example='Yet Another Cobalt Outfit')
+    tag: Optional[OutfitTag] = Field(
+        title='Outfit Tag',
+        description='The unique tag of the outfit.',
+        example='YACO')
+
+    class Config:
+        """Pydantic model configuration."""
+
+        allow_mutation = False
