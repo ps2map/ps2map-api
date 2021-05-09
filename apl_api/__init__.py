@@ -6,3 +6,4 @@ __all__ = [
     'interfaces',
     'types'
 ]
+__version__ = '0.1.0b1'

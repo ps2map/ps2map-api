@@ -13,7 +13,7 @@ import fastapi
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from . import endpoints
+from . import endpoints, __version__ as _version
 from ._logging import ForwardHandler
 
 # List of remote hosts for which CORS reponses headers should be included
@@ -27,7 +27,14 @@ _uvicorn_log = logging.getLogger('uvicorn')
 _uvicorn_log.handlers = [ForwardHandler(_api_log)]
 
 # Create the API application
-app = fastapi.FastAPI()
+app = fastapi.FastAPI(
+    title='AutoPL API',
+    version=_version,
+    description='A standalone, sanitised API for PlanetSide 2 maps.\n\n'
+    'For additional information, please refer to the project repository at '
+    '<https://github.com/auto-pl/apl-api>.',
+    docs_url=None,
+    redoc_url='/docs')
 
 # Add CORS middleware to inject appropriate response headers
 app.add_middleware(
