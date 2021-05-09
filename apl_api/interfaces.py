@@ -9,7 +9,7 @@ from typing import List, Literal, Optional, Tuple
 import pydantic
 from pydantic import Field
 
-from .types import (BaseId, BaseTypeId, ContinentId, FactionId, FactionData,
+from .types import (BaseId, BaseTypeId, ContinentId, FactionId, Population,
                     OutfitId, OutfitTag, ResourceId, ServerId)
 
 # Used for example timestamps
@@ -91,7 +91,7 @@ class BaseStatus(pydantic.BaseModel):
         description='Unique identifier of the server for which the base '
         'should be updated.',
         example=13)
-    population: FactionData[int] = Field(
+    population: Population = Field(
         title='Population',
         description='A mapping of faction identifiers to the current '
         'population estimate.',
@@ -170,7 +170,7 @@ class ContinentStatus(pydantic.BaseModel):
         description='Unique identifier of the server for which the continent '
         'should be updated.',
         example=10)
-    population: FactionData[int] = Field(
+    population: Population = Field(
         title='Population',
         description='A mapping of faction identifiers to the current '
         'population estimate.',
@@ -254,7 +254,7 @@ class ServerStatus(pydantic.BaseModel):
         description='Current status of the server. The literals listed as the '
         'type are tentative and may change in future versions.',
         example='online')
-    population: FactionData[int] = Field(
+    population: Population = Field(
         title='Population',
         description='A mapping of faction identifiers to the current '
         'population estimate.',

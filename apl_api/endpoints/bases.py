@@ -7,7 +7,7 @@ from typing import List, Optional, cast
 import fastapi
 
 from ..interfaces import BaseInfo, BaseStatus
-from ..types import BaseId, FactionData, FactionId, OutfitId, ServerId
+from ..types import BaseId, FactionId, OutfitId, Population, ServerId
 from ._utils import IdListQuery, ids_from_string, static_from_json
 from .outfits import _STATIC_OUTFIT_DATA as OUTFITS
 from .servers import _STATIC_SERVER_DATA as SERVERS
@@ -107,7 +107,7 @@ async def base_status(base_id: str = IdListQuery,  # type: ignore
         for base_ in _STATIC_BASE_DATA:
             if base_ids and base_ not in base_ids:
                 continue
-            population: FactionData[int] = FactionData(
+            population = Population(
                 vs=random.randint(0, 50),
                 tr=random.randint(0, 50),
                 nc=random.randint(0, 50),

@@ -6,7 +6,7 @@ from typing import List, cast
 import fastapi
 
 from ..interfaces import ServerInfo, ServerStatus
-from ..types import ContinentId, FactionData, ServerId
+from ..types import ContinentId, Population, ServerId
 from ._utils import IdListQuery, ids_from_string, static_from_json
 
 
@@ -58,7 +58,7 @@ async def server_status(server_id: str = IdListQuery  # type: ignore
         # Make up random data
         status = 'online' if random.random() < 0.9 else 'locked'
         base_pop = random.randint(10, 300)
-        population: FactionData[int] = FactionData(
+        population = Population(
             vs=base_pop + random.randint(0, 100),
             nc=base_pop + random.randint(0, 100),
             tr=base_pop + random.randint(0, 100),

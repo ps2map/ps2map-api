@@ -7,7 +7,7 @@ from typing import List, cast
 import fastapi
 
 from ..interfaces import ContinentInfo, ContinentStatus
-from ..types import ContinentId, FactionData, FactionId, ServerId
+from ..types import ContinentId, FactionId, Population, ServerId
 from ._utils import IdListQuery, ids_from_string, static_from_json
 from .servers import _STATIC_SERVER_DATA as SERVERS
 
@@ -88,14 +88,14 @@ async def continent_status(continent_id: str = IdListQuery,  # type: ignore
             status = 'locked' if random.random() < 0.6 else 'open'
             locked = bool(status == 'locked')
             if locked:
-                population: FactionData[int] = FactionData(
+                population = Population(
                     vs=0, nc=0, tr=0, nso=0)
                 locked_by = cast(FactionId, random.randint(1, 3))
                 alert_active = False
                 alert_started = None
                 alert_ends = None
             else:
-                population: FactionData[int] = FactionData(
+                population = Population(
                     vs=random.randint(50, 300),
                     nc=random.randint(50, 300),
                     tr=random.randint(50, 300),
