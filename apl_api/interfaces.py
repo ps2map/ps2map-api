@@ -130,8 +130,10 @@ class ContinentInfo(pydantic.BaseModel):
     # internal identifier used for map-specific assets
     code: str = Field(
         title='Asset Code',
-        description='Internal identifier used for API-hosted art assets. See '
-        'the API repository README for details.',
+        description='Internal identifier used for API-hosted art assets. '
+        'See the API repository '
+        '[README](https://github.com/auto-pl/apl-api/blob/main/README.md) '
+        'for details.',
         example='indar')
     description: str = Field(
         title='Description',
