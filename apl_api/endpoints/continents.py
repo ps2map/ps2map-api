@@ -17,7 +17,7 @@ _STATIC_CONTINENT_DATA = static_from_json(
     ContinentInfo, 'static_continents.json')
 
 
-@router.get('/')  # type: ignore
+@router.get('/', response_model=List[ContinentInfo])  # type: ignore
 async def continent_list() -> List[ContinentInfo]:
     """Return a list of all static continent data.
 
@@ -28,7 +28,7 @@ async def continent_list() -> List[ContinentInfo]:
     return list(_STATIC_CONTINENT_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[ContinentInfo])  # type: ignore
 async def continent_info(continent_id: str = IdListQuery  # type: ignore
                          ) -> List[ContinentInfo]:
     """Return static data for a given continent.
@@ -54,7 +54,7 @@ async def continent_info(continent_id: str = IdListQuery  # type: ignore
     return data
 
 
-@router.get('/status')  # type: ignore
+@router.get('/status', response_model=List[ContinentStatus])  # type: ignore
 async def continent_status(continent_id: str = IdListQuery,  # type: ignore
                            server_id: str = IdListQuery  # type: ignore
                            ) -> List[ContinentStatus]:

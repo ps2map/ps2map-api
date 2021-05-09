@@ -15,12 +15,12 @@ router = fastapi.APIRouter(prefix='/servers')
 _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
-@router.get('/')  # type: ignore
+@router.get('/', response_model=List[ServerInfo])  # type: ignore
 async def server_list() -> List[ServerInfo]:
     return list(_STATIC_SERVER_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[ServerInfo])  # type: ignore
 async def server_info(server_id: str = IdListQuery  # type: ignore
                       ) -> List[ServerInfo]:
     # Parse input
@@ -40,7 +40,7 @@ async def server_info(server_id: str = IdListQuery  # type: ignore
     return data
 
 
-@router.get('/status')  # type: ignore
+@router.get('/status', response_model=List[ServerStatus])  # type: ignore
 async def server_status(server_id: str = IdListQuery  # type: ignore
                         ) -> List[ServerStatus]:
     # Parse input

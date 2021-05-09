@@ -12,7 +12,7 @@ router = fastapi.APIRouter(prefix='/outfits')
 _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 
-@router.get('/')  # type: ignore
+@router.get('/', response_model=List[OutfitInfo])  # type: ignore
 async def outfit_list() -> List[OutfitInfo]:
     """Return a list of all cached outfit data.
 
@@ -23,7 +23,7 @@ async def outfit_list() -> List[OutfitInfo]:
     return list(_STATIC_OUTFIT_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[OutfitInfo])  # type: ignore
 async def outfit_info(outfit_id: str = IdListQuery  # type: ignore
                       ) -> List[OutfitInfo]:
     """Return static data for a given outfit.

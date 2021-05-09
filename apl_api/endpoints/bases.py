@@ -18,7 +18,7 @@ router = fastapi.APIRouter(prefix='/bases')
 _STATIC_BASE_DATA = static_from_json(BaseInfo, 'static_bases.json')
 
 
-@router.get('/')  # type: ignore
+@router.get('/', response_model=List[BaseInfo])  # type: ignore
 async def base_list() -> List[BaseInfo]:
     """Return a list of all static base data.
 
@@ -29,7 +29,7 @@ async def base_list() -> List[BaseInfo]:
     return list(_STATIC_BASE_DATA.values())
 
 
-@router.get('/info')  # type: ignore
+@router.get('/info', response_model=List[BaseInfo])  # type: ignore
 async def base_info(base_id: str = IdListQuery,  # type: ignore
                     continent_id: str = IdListQuery,  # type: ignore
                     ) -> List[BaseInfo]:
@@ -66,7 +66,7 @@ async def base_info(base_id: str = IdListQuery,  # type: ignore
     return data
 
 
-@router.get('/status')  # type: ignore
+@router.get('/status', response_model=List[BaseStatus])  # type: ignore
 async def base_status(base_id: str = IdListQuery,  # type: ignore
                       continent_id: str = IdListQuery,  # type: ignore
                       server_id: str = IdListQuery,  # type: ignore
