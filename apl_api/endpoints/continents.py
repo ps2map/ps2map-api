@@ -5,6 +5,7 @@ import random
 from typing import List, cast
 
 import fastapi
+from fastapi.params import Query
 from pydantic.types import PositiveInt
 
 from ..interfaces import ContinentInfo, ContinentStatus
@@ -30,8 +31,14 @@ async def continent_info() -> List[ContinentInfo]:
 
 
 @router.get('/status', response_model=List[ContinentStatus])  # type: ignore
-async def continent_status(server_id: PositiveInt
-                           ) -> List[ContinentStatus]:
+async def continent_status(
+    server_id: PositiveInt = Query(  # type: ignore
+        ...,
+        title='Server ID',
+        description='Unique identifier of the server for which to return a'
+        'continent status digest.'
+    )
+) -> List[ContinentStatus]:
     """Return a momentary status digest for all continents.
 
     This endpoint will likely be moved to or replicated in a WebSocket

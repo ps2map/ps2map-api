@@ -15,8 +15,13 @@ _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 
 @router.get('/info', response_model=List[OutfitInfo])  # type: ignore
-async def outfit_info(outfit_id: List[int] = Query(...)  # type: ignore
-                      ) -> List[OutfitInfo]:
+async def outfit_info(
+    outfit_id: List[int] = Query(  # type: ignore
+        ...,
+        title='Outfit ID',
+        description='Unique identifier of the outfit to return. May be '
+        'specified multiple times to retrieve data for multiple outfits.')
+) -> List[OutfitInfo]:
     """Return static data for the given outfit.
 
     This includes basic fields for display on the map, like the outfit

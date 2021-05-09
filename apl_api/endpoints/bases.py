@@ -5,6 +5,7 @@ import random
 from typing import List, Optional, cast
 
 import fastapi
+from fastapi.params import Query
 from pydantic.types import PositiveInt
 
 from ..interfaces import BaseInfo, BaseStatus
@@ -20,8 +21,13 @@ _STATIC_BASE_DATA = static_from_json(BaseInfo, 'static_bases.json')
 
 
 @router.get('/info', response_model=List[BaseInfo])  # type: ignore
-async def base_info(continent_id: PositiveInt,
-                    ) -> List[BaseInfo]:
+async def base_info(
+    continent_id: PositiveInt = Query(  # type: ignore
+        ...,
+        title='Continent ID',
+        description='Unique identifier of the continent for which to return '
+        'base information.'),
+) -> List[BaseInfo]:
     """Return the list of bases for a given continent.
 
     This payload contains unchanging properties like the base name or
@@ -39,9 +45,18 @@ async def base_info(continent_id: PositiveInt,
 
 
 @router.get('/status', response_model=List[BaseStatus])  # type: ignore
-async def base_status(continent_id: PositiveInt,
-                      server_id: PositiveInt
-                      ) -> List[BaseStatus]:
+async def base_status(
+    continent_id: PositiveInt = Query(  # type: ignore
+        ...,
+        title='Continent ID',
+        description='Unique identifier of the continent for which to return '
+        'a base status digest.'),
+    server_id: PositiveInt = Query(  # type: ignore
+        ...,
+        title='Server ID',
+        description='Unique identifier of the server for which to return a '
+        'base status digest.')
+) -> List[BaseStatus]:
     """Return a momentary status digest for all bases on a continent.
 
     This endpoint will likely be moved to or replicated in a WebSocket
