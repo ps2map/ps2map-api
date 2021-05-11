@@ -53,7 +53,7 @@ Tile endpoit example:
 
 ### Map Hexes
 
-The map hexes are stored in a single SVG file with all base outlines having their own SVG. The SVG view box has no offset and a size of 8192 pixels.
+The map hexes are stored in a single SVG file with all base outlines having their own path. The SVG view box has no offset and a size of 8192 pixels.
 
 Each base outline is stored as a polygon whose `id` matches that of the base it represents.
 
