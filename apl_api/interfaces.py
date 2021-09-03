@@ -141,6 +141,11 @@ class ContinentInfo(pydantic.BaseModel):
         'to fill in empty space on the map switcher.',
         example='The arid continent of Indar is home to multiple biomes, '
         'providing unique challenges for its combatants.')
+    map_size: int = Field(
+        title='Map Size',
+        description='Base size of the map in in-game units. This is equal to '
+        '8192 for most continents.',
+        example=8192)
     lattice_links: List[Tuple[int, int]] = Field(
         title='Lattice Links',
         description='A list of two-value integer tuples representing base '
