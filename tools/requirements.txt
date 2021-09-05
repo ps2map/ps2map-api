@@ -1,1 +1,4 @@
 auraxium >= 0.2.0b4
+pillow>=8.3.2
+# DbgPack is not on PyPI, so we have to specify the repo directly
+git+https://github.com/brhumphe/dbg-pack#egg=DbgPack
