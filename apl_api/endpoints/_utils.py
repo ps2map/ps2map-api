@@ -4,8 +4,7 @@ import pathlib
 from typing import Dict, Type, TypeVar
 
 __all__ = [
-    'IdListQuery',
-    'id_from_string'
+    'static_from_json'
 ]
 
 _DataT = TypeVar('_DataT')
