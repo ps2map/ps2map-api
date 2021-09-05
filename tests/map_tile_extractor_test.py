@@ -4,7 +4,7 @@ import math
 import unittest
 from typing import Any, Tuple
 
-from apl_api.hexgen import (  # pylint: disable=import-error
+from tools.map_hex_generator import (  # pylint: disable=import-error
     _Point as Point,
     _Tile as Tile,
     _get_hex_corner as get_hex_corner,
