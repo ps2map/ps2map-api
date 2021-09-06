@@ -30,5 +30,13 @@
         "description": "Esamir's expanses of frigid tundra and craggy mountains provide little cover from airborne threats.",
         "map_size": 8192,
         "lattice_links": []
+    },
+    {
+        "id": 40,
+        "name": "Koltyr",
+        "code": "koltyr",
+        "description": "The small island of Koltyr retains little tactical value in the Auraxian War, and factions will often send new recruits here to hone their combat skills.",
+        "map_size": 4096,
+        "lattice_links": []
     }
 ]

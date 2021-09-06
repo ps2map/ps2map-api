@@ -4394,5 +4394,131 @@
         "resource_amount": 0,
         "resource_id": 0,
         "resource_name": null
+    },
+    {
+        "id": 400014,
+        "continent_id": 40,
+        "name": "Koltyr Northern Warpgate",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400015,
+        "continent_id": 40,
+        "name": "Koltyr Eastern Warpgate",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400016,
+        "continent_id": 40,
+        "name": "Koltyr Southern Warpgate",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 7,
+        "type_name": "Warpgate",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400017,
+        "continent_id": 40,
+        "name": "Zorja",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 2,
+        "type_name": "Amp Station",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400018,
+        "continent_id": 40,
+        "name": "Xander",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 3,
+        "type_name": "Bio Lab",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400019,
+        "continent_id": 40,
+        "name": "Svarog",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 4,
+        "type_name": "Tech Plant",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400020,
+        "continent_id": 40,
+        "name": "Koltyr Tech Plant Outpost",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400021,
+        "continent_id": 40,
+        "name": "Koltyr Biolab Outpost",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
+    },
+    {
+        "id": 400022,
+        "continent_id": 40,
+        "name": "Koltyr Amp Station Outpost",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 5,
+        "type_name": "Large Outpost",
+        "resource_amount": 0,
+        "resource_id": 0,
+        "resource_name": null
     }
 ]
