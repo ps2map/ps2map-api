@@ -21,7 +21,10 @@ accessed from the web app as needed.
 # <https://www.redblobgames.com/grids/hexagons/>
 # Mad props to the author, the entire page is a masterpiece! <3
 
+import argparse
+import asyncio
 import math
+import os
 from typing import Dict, Iterable, Iterator, List, NamedTuple, Set, Tuple
 
 import auraxium
@@ -134,7 +137,7 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
         # Create and add SVG polygon
         polygons.append(f'<polygon id="Base_{base_id}" points="{points}" />')
     # Generate a single SVG from the base polygons
-    return f'<svg viewBox="0 0 8192 8192>{"".join(polygons)}</svg>'
+    return f'<svg viewBox="0 0 8192 8192">{"".join(polygons)}</svg>'
 
 
 def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
@@ -348,3 +351,31 @@ def _tile_to_point(tile: _Tile, radius: float) -> _Point:
     pos_x = width * (tile.u + tile.v * 0.5)
     pos_y = tile.v * height * 0.75
     return _Point(pos_x, pos_y)
+
+
+async def main(service_id: str, output_dir: str) -> None:
+    """Asynchronous component of the script component."""
+    zone_ids = [2, 4, 6, 8]
+    async with auraxium.Client(service_id=service_id) as client:
+        zone_list = await client.find(
+            auraxium.ps2.Zone, zone_id=','.join((str(i) for i in zone_ids)))
+        for zone in zone_list:
+            zone_svg = await get_base_svgs(client, zone.id)
+            filename = os.path.join(
+                output_dir, f'{zone.code.lower()}_hexes.svg')
+            with open(filename, 'w') as out_file:
+                out_file.write(zone_svg)
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--service-id', '-s', default='s:example',
+        help='The service ID to use for requests. For once-off script runs, '
+        'using the default service ID should not exceed the rate limit')
+    parser.add_argument(
+        '--output-dir', '-o', default='.',
+        help='Output directory to save the exported SVGs to.')
+    kwargs = vars(parser.parse_args())
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main(**kwargs))
