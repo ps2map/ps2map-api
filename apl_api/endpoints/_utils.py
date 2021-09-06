@@ -21,6 +21,6 @@ def static_from_json(cls: Type[_DataT], filename: str) -> Dict[int, _DataT]:
         Dict[int, Any]: A mapping of IDs to data classes.
 
     """
-    data_dir = os.path.join(pathlib.Path(__file__).parents[2], 'tests', 'data')
+    data_dir = os.path.join(pathlib.Path(__file__).parents[2], 'data')
     with open(os.path.join(data_dir, filename)) as _data:
         return {d['id']: cls(**d) for d in json.load(_data)}
