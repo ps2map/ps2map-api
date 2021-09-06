@@ -134,7 +134,7 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
         # Create and add SVG polygon
         polygons.append(f'<polygon id="Base_{base_id}" points="{points}" />')
     # Generate a single SVG from the base polygons
-    return f'<svg viewBox="0 0 8192 8192>{"".join(polygons)}</svg>'
+    return f'<svg viewBox="0 0 8192 8192">{"".join(polygons)}</svg>'
 
 
 def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
