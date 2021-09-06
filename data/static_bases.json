@@ -4280,7 +4280,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4294,7 +4294,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4308,7 +4308,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4322,7 +4322,7 @@
         "type_id": 2,
         "type_name": "Amp Station",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4336,7 +4336,7 @@
         "type_id": 3,
         "type_name": "Bio Lab",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4350,7 +4350,7 @@
         "type_id": 4,
         "type_name": "Tech Plant",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4364,7 +4364,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4378,7 +4378,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4392,7 +4392,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4406,7 +4406,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4420,7 +4420,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4434,7 +4434,7 @@
         "type_id": 7,
         "type_name": "Warpgate",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4448,7 +4448,7 @@
         "type_id": 2,
         "type_name": "Amp Station",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4462,7 +4462,7 @@
         "type_id": 3,
         "type_name": "Bio Lab",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4476,7 +4476,7 @@
         "type_id": 4,
         "type_name": "Tech Plant",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4490,7 +4490,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4504,7 +4504,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     },
     {
@@ -4518,7 +4518,7 @@
         "type_id": 5,
         "type_name": "Large Outpost",
         "resource_amount": 0,
-        "resource_id": 0,
+        "resource_id": null,
         "resource_name": null
     }
 ]

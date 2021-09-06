@@ -56,7 +56,7 @@ class BaseInfo(pydantic.BaseModel):
         description='The amount of outfit resources awarded for capturing '
         'this base.',
         example=10)
-    resource_id: ResourceId = Field(
+    resource_id: Optional[ResourceId] = Field(
         title='Resource ID',
         description='Unique identifier of the outfit resource type awarded '
         'for capturing this base.',
@@ -64,7 +64,7 @@ class BaseInfo(pydantic.BaseModel):
     resource_name: Optional[str] = Field(
         title='Resource Name',
         description='Display name of the outfit resource type awarded for '
-        'capturing this base. This is equal to NULL if resource_id is 0.',
+        'capturing this base.',
         example='Synthium')
 
     class Config:
