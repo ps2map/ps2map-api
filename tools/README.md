@@ -1,0 +1,28 @@
+# Tools and Scripts
+
+This directory contains utilities and helper scripts used to maintain the API host. They are generally standalone and not tied to the APL project unless specified otherwise.
+
+The requirements for each tool are listed in the sections below. Alternatively you can install the requirements for all utilities using the `requirements.txt` file in this directory.
+
+## Map Hex Generator
+
+A Python script for generating SVGs for the PlanetSide 2 continent maps.
+
+Like the rest of the APL project, this utility uses "base IDs". These generally match the in-game "map region" IDs.
+
+This utility requires [`auraxium`](https://github.com/leonhard-s/auraxium) version 0.2.0b4 or greater.
+
+### Script
+
+The script portion of this utility generates SVG assets for the four main continents (Indar, Hossin, Amerish, and Esamir). The SVG is generated using a view box of `0 0 8192 8192` with all polygon coordinates matching the in-game coordinate system.
+
+This script sends one request per continent and should stay beneath the API rate limit for single runs. A custom service ID can be specified using the `--service-id` command line switch.
+
+### Module
+
+Alternatively, the module can also be imported and targeted from other Python modules. The only two public methods are the two coroutines `get_base_svgs` and `get_base_outlines.
+
+`get_base_svgs` is the endpoint targeted by the script mode and returns a string literal to be written to an SVG file. `get_base_outlines` returns a mapping of base IDs to coordinates making up that hex outline.
+
+For detailed usage instructions for these methods, please refer to the
+corresponding docstrings in the source.
