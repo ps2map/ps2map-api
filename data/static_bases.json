@@ -4520,5 +4520,173 @@
         "resource_amount": 0,
         "resource_id": null,
         "resource_name": null
+    },
+    {
+        "id": 18215,
+        "continent_id": "299",
+        "name": "Nothern Command Center",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 21,
+        "type_name": "Command Center",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18216,
+        "continent_id": "299",
+        "name": "Southwest Command Center",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 21,
+        "type_name": "Command Center",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18217,
+        "continent_id": "299",
+        "name": "Southeast Command Center",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 21,
+        "type_name": "Command Center",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18221,
+        "continent_id": "299",
+        "name": "Relic Akka",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18222,
+        "continent_id": "299",
+        "name": "Relic Bane",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18224,
+        "continent_id": "299",
+        "name": "Relic Chiron",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18225,
+        "continent_id": "299",
+        "name": "Relic Deimos",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18226,
+        "continent_id": "299",
+        "name": "Relic Etna",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18227,
+        "continent_id": "299",
+        "name": "Relic Feros",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18228,
+        "continent_id": "299",
+        "name": "Relic Gamma",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18229,
+        "continent_id": "299",
+        "name": "Relic Hosk",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18230,
+        "continent_id": "299",
+        "name": "Relic Ibri",
+        "map_pos": [
+            0.0,
+            0.0
+        ],
+        "type_id": 22,
+        "type_name": "Relic",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     }
 ]
