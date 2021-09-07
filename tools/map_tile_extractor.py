@@ -63,7 +63,7 @@ PS2_TILE_SIZE = 256
 APL_TILE_SIZE = 1024
 
 
-def _bytesToString(bytes_: bytes) -> str:
+def _bytes_to_string(bytes_: bytes) -> str:
     """Convert a UTF-8 encoded bytes object into a native string.
 
     Args:
@@ -76,7 +76,7 @@ def _bytesToString(bytes_: bytes) -> str:
     return bytes_.decode('utf-8')
 
 
-def _strToBytes(string: str) -> bytes:
+def _str_to_bytes(string: str) -> bytes:
     """Convert a native string to a UTF-8 encoded bytes object.
 
     Args:
@@ -141,7 +141,7 @@ def _get_tile_namelist(paths: Iterable[pathlib.Path]) -> List[str]:
         List[str]: A list of filenames matching the map tile format
 
     """
-    tile_asset_pattern = re.compile(_strToBytes(TILE_ASSET_REGEX))
+    tile_asset_pattern = re.compile(_str_to_bytes(TILE_ASSET_REGEX))
     namelist: Set[str] = set()
     # Process asset definitions
     manager = AssetManager(list(paths))
@@ -151,7 +151,7 @@ def _get_tile_namelist(paths: Iterable[pathlib.Path]) -> List[str]:
         matches = tile_asset_pattern.findall(asset_data)
         for match in matches:
             filename = match[0]
-            namelist.add(_bytesToString(filename))
+            namelist.add(_bytes_to_string(filename))
     return sorted(namelist)
 
 
@@ -246,7 +246,7 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
     raise NotImplementedError('NYI')
 
 
-def main(format: str, dir: Optional[str], output: str, namelist: bool) -> None:
+def main(format_: str, dir_: Optional[str], output: str, namelist: bool) -> None:
     """Main script for tile extraction."""
     # Create the output directory if it does not exist yet
     out_path = pathlib.Path(output)
@@ -255,10 +255,10 @@ def main(format: str, dir: Optional[str], output: str, namelist: bool) -> None:
 
     # Locate the PS2 installation and asset folder
     print('\nLocating PlanetSide 2 install directory...')
-    if dir is None:
+    if dir_ is None:
         print(' >> No directory specified, searching common install paths')
     else:
-        print(f' >> Using provided installation directory at "{dir}"')
+        print(f' >> Using provided installation directory at "{dir_}"')
     ps2_dir = _find_game_folder()
     print(' >> PlanetSide 2 executable found')
     asset_dir = ps2_dir / 'Resources' / 'Assets'
@@ -295,19 +295,19 @@ def main(format: str, dir: Optional[str], output: str, namelist: bool) -> None:
             manager = AssetManager([asset_dir / archive], namelist=names)
             _unpack_files(manager, temp_path)
 
-        print(f'\n >> Processing files using format "{format}"...')
+        print(f'\n >> Processing files using format "{format_}"...')
 
         # Recombine the small assets into larger blocks
-        if format == 'raw':
+        if format_ == 'raw':
             _process_raw(temp_path, out_path)
-        elif format == 'convert':
+        elif format_ == 'convert':
             _process_convert(temp_path, out_path)
-        elif format == 'apl':
+        elif format_ == 'apl':
             _process_apl(temp_path, out_path)
-        elif format == 'merge':
+        elif format_ == 'merge':
             _process_merge(temp_path, out_path)
         else:
-            raise RuntimeError(f'Unhandled format: {format}')
+            raise RuntimeError(f'Unhandled format: {format_}')
 
         print('\ndone\n')
 
@@ -315,14 +315,14 @@ def main(format: str, dir: Optional[str], output: str, namelist: bool) -> None:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'format', default='convert', nargs='?',
+        'format_', default='raw', nargs='?',
         choices=['raw', 'convert', 'apl', 'merge'],
         help='The export format to use. raw: export files in 256 px DDS. '
         'convert: flip files and export them as 256 px PNGs. apl: '
         'export files in 1024 px JPEG. merge: merge all tiles into a '
         'single large PNG image.')
     parser.add_argument(
-        '--dir', '-d', nargs=1, default=None, type=str,
+        '--dir_', '-d', nargs=1, default=None, type=str,
         help='The directory containing the PlanetSide 2 executable.')
     parser.add_argument(
         '--output', '-o', nargs=1, default='./map_assets', type=str,
