@@ -222,6 +222,26 @@ def _iter_map_grid(map_size: int, lod: int
             yield start_x, start_y
 
 
+def _merge_assets(map_size: int, lod: int, tiles: _TileMap) -> Image.Image:
+    """Create a single, merged image asset from the given tiles."""
+    num_tiles = _map_tile_count(map_size, lod)
+    merged_size = int(math.sqrt(num_tiles) * PS2_TILE_SIZE)
+    # Create a pixel buffer for the full map image
+    merged = Image.new('RGB', (merged_size, merged_size))
+    # Place the individual map tiles in the buffer
+    _, max_x = _map_grid_limits(map_size, lod)
+    cur_x = cur_y = 0
+    for tile_x, tile_y in _iter_map_grid(map_size, lod):
+        img_tile = Image.open(tiles[(tile_x, tile_y)])
+        merged.paste(img_tile, (cur_x, cur_y))
+        cur_x += PS2_TILE_SIZE
+        # Jump to next grid row
+        if tile_x == max_x:
+            cur_y += PS2_TILE_SIZE
+            cur_x = 0
+    return merged
+
+
 def _group_tiles(path: pathlib.Path) -> _LodTileMap:
     """Group the tiles in the given directory by map and LOD level.
 
@@ -351,7 +371,39 @@ def _process_apl(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         out_path (pathlib.Path): Output directory
 
     """
-    raise NotImplementedError('NYI')
+    # Group tiles by map name and lod level
+    grouped: _LodTileMap = _group_tiles(temp_path)
+    # Calculate the base map sizes (i.e. those for LOD 0)
+    base_sizes: Dict[str, int] = {}
+    for (map_name, lod), tiles in grouped.items():
+        if lod == 0:
+            base_sizes[map_name] = _map_size(tiles)
+    # Process each map LOD group
+    for (map_name, lod), tiles in grouped.items():
+        print(f' >> Regrouping tiles for "{map_name}" (LOD {lod})')
+        map_size = base_sizes[map_name]
+        img_merged = _merge_assets(map_size, lod, tiles)
+        # Un-mirror the merged image
+        img_merged = img_merged.transpose(Image.FLIP_TOP_BOTTOM)
+        # Cut the merged image back into tiles
+        apl_grid_size = img_merged.width // APL_TILE_SIZE
+        for tile_y in range(0, apl_grid_size):
+            start_y = tile_y * APL_TILE_SIZE
+            end_y = start_y + APL_TILE_SIZE
+            if tile_y >= apl_grid_size // 2 and lod != 3:
+                tile_y += 1
+            for tile_x in range(0, apl_grid_size):
+                start_x = tile_x * APL_TILE_SIZE
+                end_x = start_x + APL_TILE_SIZE
+                if tile_x >= apl_grid_size // 2 and lod != 3:
+                    tile_x += 1
+                img_tile = img_merged.crop((start_x, start_y, end_x, end_y))
+                filename = (f'lod{lod}_{tile_x - apl_grid_size // 2}_'
+                            f'{-tile_y + apl_grid_size // 2}.jpg')
+                if not (out_path / map_name.lower()).exists():
+                    os.makedirs(out_path / map_name.lower())
+                img_tile.save(out_path / map_name.lower() / filename,
+                              quality=95, subsampling=0)
 
 
 def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
@@ -375,33 +427,19 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
             base_sizes[map_name] = _map_size(tiles)
     # Process each map LOD group
     for (map_name, lod), tiles in grouped.items():
-        map_size = base_sizes[map_name]
         print(f' >> Merging map tiles for "{map_name}" (LOD {lod})')
-        # Create a merged image for this map LOD group
-        num_tiles = _map_tile_count(map_size, lod)
-        merged_size = int(math.sqrt(num_tiles) * PS2_TILE_SIZE)
-        img_merged = Image.new('RGB', (merged_size, merged_size))
-        # Place map tiles in grid
-        _, max_x = _map_grid_limits(map_size, lod)
-        cur_x = cur_y = 0
-        for tile_x, tile_y in _iter_map_grid(map_size, lod):
-            tile_img = Image.open(tiles[(tile_x, tile_y)])
-            img_merged.paste(tile_img, (cur_x, cur_y))
-            cur_x += PS2_TILE_SIZE
-            # Jump to next grid row
-            if tile_x == max_x:
-                cur_y += PS2_TILE_SIZE
-                cur_x = 0
+        map_size = base_sizes[map_name]
+        img_merged = _merge_assets(map_size, lod, tiles)
         # Un-mirror the merged image
         img_merged = img_merged.transpose(Image.FLIP_TOP_BOTTOM)
         filename = f'{map_name}_LOD{lod}.png'
         img_merged.save(out_path / filename)
 
 
-def main(format_: str, dir_: Optional[str], output: str, namelist: bool) -> None:
+def main(format_: str, dir_: Optional[str], output: List[str], namelist: bool) -> None:
     """Main script for tile extraction."""
     # Create the output directory if it does not exist yet
-    out_path = pathlib.Path(output)
+    out_path = pathlib.Path(output[0])
     if not out_path.exists():
         os.makedirs(out_path)
 

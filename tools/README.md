@@ -45,11 +45,11 @@ This utility requires [Pillow](https://python-pillow.org/) version 8.3 or greate
 
 ### Formats
 
-This script converts three modes:
+This script supports four modes:
 
 - **raw**: Only extract the map tiles, leaving them as 256 px tiles in DDS format.
 - **convert**: Extract the map tiles and export them as 256 px tiles in PNG format.
-- **apl**: Export the map tiles and save them as 1024 px JPEG images using the APL naming scheme.
+- ~~**apl**: Export the map tiles and save them as 1024 px JPEG images using the APL naming scheme.~~ APL will move to the in-game coordinate system soon. As a result, this mode is deprecated and will be replaced soon.
 - **merge**: Merge the map tiles into a single large PNG image.
 
 For detailed information on the command line switches available, please refer to the script's help (invoked via the `--help` switch).
