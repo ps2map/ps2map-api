@@ -28,14 +28,12 @@ own risk.
 # <https://github.com/RhettVX/forgelight-toolbox>
 
 import argparse
-import dataclasses
-import math
 import os
 import pathlib
 import re
 import sys
 import tempfile
-from typing import Dict, Iterable, List, Optional, Set
+from typing import Iterable, List, Optional, Set
 
 from DbgPack import AssetManager  # type: ignore
 from PIL import Image
@@ -63,31 +61,6 @@ PS2_EXCUTABLE_NAME = 'PlanetSide2_x64.exe'
 # Base size of in-game map tiles
 PS2_TILE_SIZE = 256
 APL_TILE_SIZE = 1024
-
-# Type aliases
-_LodTileMap = Dict[int, List['_MapTile']]
-
-
-@dataclasses.dataclass()
-class _MapTile:
-    """Helper object containing map tile data."""
-
-    # pylint: disable=invalid-name
-
-    u: int
-    v: int
-    lod: int
-    path: pathlib.Path
-
-
-@dataclasses.dataclass()
-class _TileMinMax:
-    """Helper object storing min/max tile coordinates."""
-
-    min_u: int
-    max_U: int
-    min_v: int
-    max_V: int
 
 
 def _bytesToString(bytes_: bytes) -> str:
@@ -204,140 +177,34 @@ def _unpack_files(manager: AssetManager, output_dir: pathlib.Path) -> None:
         (output_dir / asset.name).write_bytes(asset_data)
 
 
-def _validate_map_tiles(tile_map: _LodTileMap) -> bool:
-    """Validate a collection of map tiles.
-
-    This tool ensures the tiles span a valid, square grid without any
-    holes.
-
-    Args:
-        tile_map (Dict[int, List[_MapTile]]): A collection of map tiles
-            to validate
-
-    Returns:
-        bool: true if the tiles make up a valid map grid, otherwise
-            false
-
-    """
-    # Find extreme coordinate values for each map LOD
-    extremes: Dict[int, _TileMinMax] = {}
-    for lod, tile_list in tile_map.items():
-        for tile in tile_list:
-            # If the current LOD is not yet stored in the dict, create a dict
-            # of initial values
-            if not lod in extremes:
-                extremes[lod] = _TileMinMax(tile.u, tile.u, tile.v, tile.v)
-                continue
-            lod_extremes = extremes[lod]
-            # Update extreme values
-            if tile.u < lod_extremes.min_u:
-                lod_extremes.min_u = tile.u
-            elif tile.u > lod_extremes.max_U:
-                lod_extremes.max_U = tile.u
-            if tile.v < lod_extremes.min_v:
-                lod_extremes.min_v = tile.v
-            elif tile.v > lod_extremes.max_V:
-                lod_extremes.max_V = tile.v
-
-    # Validate that each LOD makes up a valid grid
-    for lod, lod_extremes in extremes.items():
-        # Calculate the step size used in-between tile coordinates
-        lod_step_size = 2 ** (lod+2)
-        # Ensure the grid is square
-        if (lod_extremes.min_u != lod_extremes.min_v
-                or lod_extremes.max_U != lod_extremes.max_V):
-            return False
-        # Create a grid of all tile coordinates to test
-        grid: Dict[int, Dict[int, bool]] = {}
-        min_, max_ = lod_extremes.min_u, lod_extremes.max_U
-        for u in range(min_, max_ + 1, lod_step_size):
-            grid[u] = {}
-            for v in range(min_, max_ + 1, lod_step_size):
-                grid[u][v] = False
-        # Update the grid with all coordinates from the map tiles
-        for tile in (t for t in tile_map[lod] if t.lod == lod):
-            grid[tile.u][tile.v] = True
-        # Check the test grid and ensure every position was hit
-        for u in range(min_, max_ + 1, lod_step_size):
-            for v in range(min_, max_ + 1, lod_step_size):
-                if not grid[u][v]:
-                    return False
-    return True
-
-
-def _group_tiles(temp_path: pathlib.Path) -> Dict[str, _LodTileMap]:
-    """Group map tile assets by map name.
-
-    Args:
-        temp_path (pathlib.Path): Directory containing the map tiles
-
-    Returns:
-        Dict[str, Dict[int, List[_MapTile]]]: A mapping of nested
-            dictionaries. The outer dict key represents the name of the
-            map, the inner dictionary groups the map's tiles by LOD
-            level.
-
-    """
-    map_tiles: Dict[str, Dict[int, List[_MapTile]]] = {}
-    for filename in os.listdir(temp_path):
-        # Extract tile properties from the asset's filename
-        name, _, coord_u, coord_v, lod_str = filename.split('.')[0].split('_')
-        lod = int(lod_str[-1])
-        tile = _MapTile(int(coord_u), int(coord_v), lod, temp_path / filename)
-        # Get the dictionary containing the map tiles
-        try:
-            lod_tiles = map_tiles[name]
-        except KeyError:
-            lod_tiles = {}
-            map_tiles[name] = lod_tiles
-        # Add the tile to the list of tiles for this LOD level
-        try:
-            lod_tiles[lod].append(tile)
-        except KeyError:
-            lod_tiles[lod] = [tile]
-    return map_tiles
-
-
-def _merge_tiles(temp_path: pathlib.Path) -> Dict[str, Dict[int, Image.Image]]:
-    """Merge all tiles.
-
-    Args:
-        temp_path (pathlib.Path): Directory containing the map tiles
-
-    Returns:
-        Dict[str, Dict[int, Image.Image]]: A mapping of nested
-            dictionaries. The outer dict key represents the name of the
-            map, the inner dictionary groups the map's tiles by LOD
-            level.
-    """
-    print(' >> Grouping map tiles...')
-    grouped: Dict[str, _LodTileMap] = _group_tiles(temp_path)
-    # Generate merged tiles
-    output: Dict[str, Dict[int, Image.Image]] = {}
-    for name, lod_tiles in grouped.items():
-        print(f' >> Merging map tiles for "{name}"...')
-        output[name] = {}
-        _validate_map_tiles(lod_tiles)
-        for lod, tiles in lod_tiles.items():
-            merged_size = int(math.sqrt(len(tiles))) * PS2_TILE_SIZE
-            img = Image.new('RGB', (merged_size, merged_size))
-            for tile in tiles:
-                tile_img = Image.open(tile.path)
-                tile_u = int((64 + tile.u) / (2 ** (lod+2))) * PS2_TILE_SIZE
-                tile_v = int((64 + tile.v) / (2 ** (lod+2))) * PS2_TILE_SIZE
-                img.paste(tile_img, (tile_u, tile_v))
-            output[name][lod] = img.transpose(Image.FLIP_TOP_BOTTOM)
-    return output
-
-
 def _process_raw(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "raw" format."""
+    """Script handler for "raw" format.
+
+    This simply copies all extracted DDS assets to the target
+    directory.
+
+    Args:
+        temp_path (pathlib.Path): Directory containing the exported DDS
+            assets
+        out_path (pathlib.Path): Output directory
+
+    """
     for filename in os.listdir(temp_path):
         os.rename(temp_path / filename, out_path / filename)
 
 
 def _process_convert(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "convert" format."""
+    """Script handler for "convert" format.
+
+    This reads all extracted DDS assets, flips them, and exports them
+    to the target directory in PNG format.
+
+    Args:
+        temp_path (pathlib.Path): Directory containing the exported DDS
+            assets
+        out_path (pathlib.Path): Output directory
+
+    """
     files = os.listdir(temp_path)
     total = len(files)
     for index, filename in enumerate(files):
@@ -349,35 +216,34 @@ def _process_convert(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
 
 
 def _process_apl(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "apl" format."""
-    images_merged = _merge_tiles(temp_path)
-    for name, lod_images in images_merged.items():
-        for lod, image in lod_images.items():
-            assert image.height == image.width
-            # Calculate the number of slices
-            for start_x in range(0, image.height, APL_TILE_SIZE):
-                end_x = start_x + APL_TILE_SIZE
-                tile_x = start_x / APL_TILE_SIZE - 4
-                if start_x >= image.height / 2:
-                    tile_x += 1
-                for start_y in range(0, image.height, APL_TILE_SIZE):
-                    end_y = start_y + APL_TILE_SIZE
-                    tile_y = start_y / APL_TILE_SIZE - 4
-                    if start_x >= image.height / 2:
-                        tile_y += 1
-                    img_apl = image.crop((start_x, start_y, end_x, end_y))
-                    outname = f'{name}_lod{lod}_{tile_x}_{tile_y}.jpg'
-                    print(f' >> Creating tile {outname}')
-                    img_apl.save(out_path / outname, quality=95, sampling=0)
+    """Script handler for "apl" format.
+
+    Recombine the game's 256 px tiles into the 1024 px tiles used by
+    the APL project. The converted images are saved to the target
+    directory in JPEG format.
+
+    Args:
+        temp_path (pathlib.Path): Directory containing the exported DDS
+            assets
+        out_path (pathlib.Path): Output directory
+
+    """
+    raise NotImplementedError('NYI')
 
 
 def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "merge" format."""
-    img_merged: Dict[str, Dict[int, Image.Image]] = _merge_tiles(temp_path)
-    for name, map_tiles in img_merged.items():
-        for lod, image in map_tiles.items():
-            filename = f'{name}_LOD{lod}.png'
-            image.save(out_path / filename)
+    """Script handler for "merge" format.
+
+    Create merged PNG images for every map and LOD level and save them
+    to the target directory.
+
+    Args:
+        temp_path (pathlib.Path): Directory containing the exported DDS
+            assets
+        out_path (pathlib.Path): Output directory
+
+    """
+    raise NotImplementedError('NYI')
 
 
 def main(format: str, dir: Optional[str], output: str, namelist: bool) -> None:
