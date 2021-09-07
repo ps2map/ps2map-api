@@ -28,12 +28,13 @@ own risk.
 # <https://github.com/RhettVX/forgelight-toolbox>
 
 import argparse
+import math
 import os
 import pathlib
 import re
 import sys
 import tempfile
-from typing import Iterable, List, Optional, Set
+from typing import Dict, Iterable, Iterator, List, Optional, Set, Sized, Tuple
 
 from DbgPack import AssetManager  # type: ignore
 from PIL import Image
@@ -61,6 +62,10 @@ PS2_EXCUTABLE_NAME = 'PlanetSide2_x64.exe'
 # Base size of in-game map tiles
 PS2_TILE_SIZE = 256
 APL_TILE_SIZE = 1024
+
+# Type aliases
+_TileMap = Dict[Tuple[int, int], pathlib.Path]
+_LodTileMap = Dict[Tuple[str, int], _TileMap]
 
 
 def _bytes_to_string(bytes_: bytes) -> str:
@@ -155,6 +160,124 @@ def _get_tile_namelist(paths: Iterable[pathlib.Path]) -> List[str]:
     return sorted(namelist)
 
 
+def _map_step_size(map_size: int, lod: int) -> int:
+    """Return the step size in the tile grid for the given map.
+
+    Args:
+        map_size (int): The base map size in map units
+        lod (int): The LOD level for which to calculate step size
+
+    Returns:
+        int: The coordinate distance between two tiles in the map grid
+
+    """
+    if lod == 0:
+        return 4
+    if lod == 1 or map_size <= 1024:
+        return 8
+    if lod == 2 or map_size <= 2048:
+        return 16
+    return 32
+
+
+def _map_grid_limits(map_size: int, lod: int) -> Tuple[int, int]:
+    """Return the map grid limits for a given map and LOD.
+
+    Args:
+        map_size (int): The base map size in map units
+        lod (int): The LOD level for which to calculate the grid limits
+
+    Returns:
+        Tuple[int, int]: The minimuim and maximum grid coordinates for
+            this map
+
+    """
+    # Return tuple represents (min, max) for both coordinate axes
+    step_size = _map_step_size(map_size, lod)
+    tiles_per_axis = int(math.sqrt(_map_tile_count(map_size, lod)))
+    half_size = step_size * (tiles_per_axis // 2)
+    if half_size <= 0:
+        return -step_size, -step_size
+    return -half_size, half_size - step_size
+
+
+def _iter_map_grid(map_size: int, lod: int
+                   ) -> Iterator[Tuple[int, int]]:
+    """Iterator over the given map's coordinate grid.
+
+    Args:
+        map_size (int): The base map size in map units
+        lod (int): The LOD level for which to calculate the grid limits
+
+    Yields:
+        Tuple[int, int, int, int]: The X and Y index in the grid,
+            followed by the X and Y coordinate of the corresponding
+            tile grid's origin point
+
+    """
+    step_size = _map_step_size(map_size, lod)
+    min_, max_ = _map_grid_limits(map_size, lod)
+    for start_y in range(min_, max_ + 1, step_size):
+        for start_x in range(min_, max_ + 1, step_size):
+            yield start_x, start_y
+
+
+def _group_tiles(path: pathlib.Path) -> _LodTileMap:
+    """Group the tiles in the given directory by map and LOD level.
+
+    Args:
+        path (pathlib.Path): The directory whose tiles to group
+
+    Return:
+        Dict[Tuple[str, int], _TileMap]: Mapping from a tuple of map
+            name and LOD to a mapping of tile coordinates to their
+            tile's path
+
+    """
+    print(' >> Grouping map tiles...')
+    lod_tiles: _LodTileMap = {}
+    for filename in os.listdir(path):
+        # Extract tile properties from the asset filename
+        chunks = filename.rsplit('.', maxsplit=1)[0].split('_')
+        name = chunks[0]
+        tile_x, tile_y = int(chunks[2]), int(chunks[3])
+        lod = int(chunks[4][-1])
+        # Get the tile mapping to store the tile in
+        tile_map: _TileMap = lod_tiles.get((name, lod), {})
+        if not tile_map:
+            lod_tiles[(name, lod)] = tile_map
+        # Add the tile
+        tile_map[tile_x, tile_y] = path / filename
+    return lod_tiles
+
+
+def _map_size(tiles: Sized) -> int:
+    """Return the base map size for a given map and LOD level.
+
+    Args:
+        tiles (Sized): Container for the map tiles
+
+    Return:
+        int: Size of the given map
+
+    """
+    return int(math.sqrt(len(tiles)) * PS2_TILE_SIZE)
+
+
+def _map_tile_count(map_size: int, lod: int) -> int:
+    """Return the number of map tiles for the given map.
+
+    Args:
+        map_size (int): The base map size in map units
+        lod (int): The LOD level for which to calculate the tile count
+
+    Returns:
+        int: The number of tiles in the given map's tile grid
+
+    """
+    return math.ceil(4 ** (int(math.log2(map_size)) - 8 - lod))
+
+
 def _unpack_files(manager: AssetManager, output_dir: pathlib.Path) -> None:
     """Unpack select assets from a *.pack2 archive.
 
@@ -243,7 +366,36 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         out_path (pathlib.Path): Output directory
 
     """
-    raise NotImplementedError('NYI')
+    # Group tiles by map name and lod level
+    grouped: _LodTileMap = _group_tiles(temp_path)
+    # Calculate the base map sizes (i.e. those for LOD 0)
+    base_sizes: Dict[str, int] = {}
+    for (map_name, lod), tiles in grouped.items():
+        if lod == 0:
+            base_sizes[map_name] = _map_size(tiles)
+    # Process each map LOD group
+    for (map_name, lod), tiles in grouped.items():
+        map_size = base_sizes[map_name]
+        print(f' >> Merging map tiles for "{map_name}" (LOD {lod})')
+        # Create a merged image for this map LOD group
+        num_tiles = _map_tile_count(map_size, lod)
+        merged_size = int(math.sqrt(num_tiles) * PS2_TILE_SIZE)
+        img_merged = Image.new('RGB', (merged_size, merged_size))
+        # Place map tiles in grid
+        _, max_x = _map_grid_limits(map_size, lod)
+        cur_x = cur_y = 0
+        for tile_x, tile_y in _iter_map_grid(map_size, lod):
+            tile_img = Image.open(tiles[(tile_x, tile_y)])
+            img_merged.paste(tile_img, (cur_x, cur_y))
+            cur_x += PS2_TILE_SIZE
+            # Jump to next grid row
+            if tile_x == max_x:
+                cur_y += PS2_TILE_SIZE
+                cur_x = 0
+        # Un-mirror the merged image
+        img_merged = img_merged.transpose(Image.FLIP_TOP_BOTTOM)
+        filename = f'{map_name}_LOD{lod}.png'
+        img_merged.save(out_path / filename)
 
 
 def main(format_: str, dir_: Optional[str], output: str, namelist: bool) -> None:
@@ -315,7 +467,7 @@ def main(format_: str, dir_: Optional[str], output: str, namelist: bool) -> None
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        'format_', default='raw', nargs='?',
+        'format_', default='merge', nargs='?',
         choices=['raw', 'convert', 'apl', 'merge'],
         help='The export format to use. raw: export files in 256 px DDS. '
         'convert: flip files and export them as 256 px PNGs. apl: '
