@@ -94,7 +94,7 @@ def _str_to_bytes(string: str) -> bytes:
     return bytes(string, 'utf-8')
 
 
-def _find_game_folder(dir_: Optional[str] = None) -> pathlib.Path:
+def _find_game_folder(dir_: Optional[pathlib.Path] = None) -> pathlib.Path:
     """Locate the PlanetSide 2 installation directory.
 
     This checks a number of common installation directories for the
@@ -102,10 +102,11 @@ def _find_game_folder(dir_: Optional[str] = None) -> pathlib.Path:
     can be used to use that location instead.
 
     Args:
-        dir_ (Optional[str]): Alternate installation directory to use
+        dir_ (Optional[pathlib.Path]): Alternate installation directory
+            to use
 
     Returns:
-        A pathlib.Path object pointing at the game's install directory
+        pathlib.Path: The asset directory of the PS2 installation
 
     Raises:
         FileNotFoundError: Raised if the the PlanetSide 2 installation
@@ -436,12 +437,12 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         img_merged.save(out_path / filename)
 
 
-def main(format_: str, dir_: Optional[str], output: List[str], namelist: bool) -> None:
+def main(format_: str, dir_: Optional[pathlib.Path],
+         output: pathlib.Path, namelist: bool) -> None:
     """Main script for tile extraction."""
     # Create the output directory if it does not exist yet
-    out_path = pathlib.Path(output[0])
-    if not out_path.exists():
-        os.makedirs(out_path)
+    if not output.exists():
+        os.makedirs(output)
 
     # Locate the PS2 installation and asset folder
     print('\nLocating PlanetSide 2 install directory...')
@@ -449,9 +450,12 @@ def main(format_: str, dir_: Optional[str], output: List[str], namelist: bool) -
         print(' >> No directory specified, searching common install paths')
     else:
         print(f' >> Using provided installation directory at "{dir_}"')
-    ps2_dir = _find_game_folder()
+    ps2_dir = _find_game_folder(dir_)
     print(' >> PlanetSide 2 executable found')
     asset_dir = ps2_dir / 'Resources' / 'Assets'
+    if not asset_dir.exists():
+        raise NotADirectoryError(
+            f'Game assets not found (expected at: {asset_dir})')
     print(f' >> Using game assets at "{asset_dir}"')
 
     # Scrape any *.pack2 data archives for matching assets
@@ -466,7 +470,7 @@ def main(format_: str, dir_: Optional[str], output: List[str], namelist: bool) -
         print('Unable to extract files due to empty namelist')
         sys.exit(1)
     if namelist:
-        with open(out_path / 'namelist.txt', 'w') as namelist_file:
+        with open(output / 'namelist.txt', 'w') as namelist_file:
             namelist_file.writelines((f'{s}\n' for s in names))
 
     # Unpack all assets in a temporary directory
@@ -489,17 +493,22 @@ def main(format_: str, dir_: Optional[str], output: List[str], namelist: bool) -
 
         # Recombine the small assets into larger blocks
         if format_ == 'raw':
-            _process_raw(temp_path, out_path)
+            _process_raw(temp_path, output)
         elif format_ == 'convert':
-            _process_convert(temp_path, out_path)
+            _process_convert(temp_path, output)
         elif format_ == 'apl':
-            _process_apl(temp_path, out_path)
+            _process_apl(temp_path, output)
         elif format_ == 'merge':
-            _process_merge(temp_path, out_path)
+            _process_merge(temp_path, output)
         else:
             raise RuntimeError(f'Unhandled format: {format_}')
 
         print('\ndone\n')
+
+
+def _arg_path(string: str) -> pathlib.Path:
+    """Argparse input handler for path-like arguments."""
+    return pathlib.Path(string)
 
 
 if __name__ == '__main__':
@@ -512,10 +521,10 @@ if __name__ == '__main__':
         'export files in 1024 px JPEG. merge: merge all tiles into a '
         'single large PNG image.')
     parser.add_argument(
-        '--dir_', '-d', nargs=1, default=None, type=str,
+        '--dir_', '-d', default=None, type=_arg_path,
         help='The directory containing the PlanetSide 2 executable.')
     parser.add_argument(
-        '--output', '-o', nargs=1, default='./map_assets', type=str,
+        '--output', '-o', default='./map_assets', type=_arg_path,
         help='Output directory to save the exported files to.')
     parser.add_argument(
         '--namelist', '-n', action='store_true',
