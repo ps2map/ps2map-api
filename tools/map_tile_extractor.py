@@ -51,6 +51,7 @@ FILE_UNPACK_BLACKLIST = ('assets', 'audio', 'data', 'locale', 'ui')
 # Common install directories for PS2 installations
 PS2_INSTALL_DIRECTORIES = [
     r'C:\Users\Public\Sony Online Entertainment\Installed Games\PlanetSide 2',
+    r'C:\Users\Public\Daybreak Game Company\Installed Games\PlanetSide 2',
     r'C:\Program Files (x86)\Steam\steamapps\common\PlanetSide 2',
     r'C:\Program Files\PlanetSide 2',
     r'D:\Steam\steamapps\common\PlanetSide 2',
