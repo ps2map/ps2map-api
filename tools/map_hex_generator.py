@@ -135,7 +135,7 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
             (f'{round(p.x + 4096, 3)},{round(-p.y + 4096, 3) - radius}'
              for p in outline))
         # Create and add SVG polygon
-        polygons.append(f'<polygon id="Base_{base_id}" points="{points}" />')
+        polygons.append(f'<polygon id="{base_id}" points="{points}" />')
     # Generate a single SVG from the base polygons
     return f'<svg viewBox="0 0 8192 8192">{"".join(polygons)}</svg>'
 
@@ -361,8 +361,9 @@ async def main(service_id: str, output_dir: str) -> None:
             auraxium.ps2.Zone, zone_id=','.join((str(i) for i in zone_ids)))
         for zone in zone_list:
             zone_svg = await get_base_svgs(client, zone.id)
-            filename = os.path.join(
-                output_dir, f'{zone.code.lower()}_hexes.svg')
+            if not os.path.exists(output_dir):
+                os.makedirs(output_dir)
+            filename = os.path.join(output_dir, f'{zone.code.lower()}.svg')
             with open(filename, 'w') as out_file:
                 out_file.write(zone_svg)
 
