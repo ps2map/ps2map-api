@@ -34,7 +34,7 @@
     {
         "id": 40,
         "name": "Koltyr",
-        "code": "koltyr",
+        "code": "quickload",
         "description": "The small island of Koltyr retains little tactical value in the Auraxian War, and factions will often send new recruits here to hone their combat skills.",
         "map_size": 4096,
         "lattice_links": []
@@ -42,7 +42,7 @@
     {
         "id": 299,
         "name": "Desolation",
-        "code": "desolation",
+        "code": "outfitwars",
         "description": "In recent months, a small, short-lived wormhole had begun periodically appearing near the planet of Auraxis. Over time, the timing and placement became somewhat predictable, enticing Empires to venture through with expeditionary forces, eager to explore or claim what was hidden beyond.",
         "map_size": 8192,
         "lattice_links": []
