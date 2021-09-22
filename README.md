@@ -1,12 +1,34 @@
-# APL API Host
+# PlanetSide 2 Map API
 
-Host for the REST and WebSocket API accessed by the front-end.
+Unofficial [PlanetSide 2](https://www.planetside2.com/) API for map-oriented applications.
+
+For information on the PlanetSide 2 map system and details on how to utilise the provided data, please refer to the repository [Wiki](https://github.com/leonhard-s/ps2-map-api/wiki).
+
+**This project has no affiliation with the PlanetSide 2 development team or Daybreak Game Company LLC.**
+
+## Overview
+
+The following section provides a brief overview of its components and their uses.
+
+- **`data/`**&nbsp; A static collection of map data for development purposes. Only to be used for development purposes; does not contain lattice link data of any sort.
+
+  > Note: *This endpoint is tentative and will be removed/reworked in future releases.*
+
+- **`public/`**&nbsp; Static game assets hosted by the API server. This includes facility outline polygons in SVG format (`data/hex` directory), as well as map tiles for all zones.
+
+  > Note: *The naming format used for map tiles will be reworked to match the in-game tile names in a future release. Additionally, this endpoint may be removed entirely as it contains extracted map assets.*
+
+- **`server/`**&nbsp; A Python FastAPI server for hosting the development data stored in this repository.
+
+- **`tests/`**&nbsp; Unit tests for the FastAPI server.
+
+- **`tools/`**&nbsp; Assorted scripts and utilities used for maintenance of the repository and associated apps. See the directory's README for details on the available scripts.
 
 ## Local Dev Version
 
 This version runs locally with no database or other setup needed. Clone this repo and run the following command to host the frontend testing data:
 
-    python -m apl_api
+    python -m server
 
 In the local dev version, the API will be hosted at <http://127.0.0.1:5000>.
 
