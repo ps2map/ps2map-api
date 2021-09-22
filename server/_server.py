@@ -28,7 +28,7 @@ class ApiHost:
     """Helper object to facilitate talking to the uvicorn server."""
 
     def __init__(self) -> None:
-        config = uvicorn.Config('apl_api.app:app', host='0.0.0.0',
+        config = uvicorn.Config('server.app:app', host='0.0.0.0',
                                 port=5000, log_level='info', loop='asyncio')
         server: Server = uvicorn.Server(config=config)  # type: ignore
         self._server = server

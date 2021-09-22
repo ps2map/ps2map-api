@@ -1,4 +1,4 @@
-"""Main script for launching the APL API component.
+"""Main script for launching the API host.
 
 This script sets up logging, checks for database availability and
 launches the API server.

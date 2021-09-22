@@ -32,7 +32,7 @@ app = fastapi.FastAPI(
     version=_version,
     description='A standalone, sanitised API for PlanetSide 2 maps.\n\n'
     'For additional information, please refer to the project repository at '
-    '<https://github.com/auto-pl/apl-api>.',
+    '<https://github.com/leonhard-s/ps2-map-api>.',
     docs_url=None,
     redoc_url='/docs')
 
