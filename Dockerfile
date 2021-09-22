@@ -16,4 +16,4 @@ COPY ./ ./
 EXPOSE 5000
 
 # Run the application
-CMD [ "python", "-m", "apl_api"]
+CMD [ "python", "-m", "server"]
