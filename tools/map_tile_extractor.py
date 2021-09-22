@@ -62,7 +62,7 @@ PS2_EXCUTABLE_NAME = 'PlanetSide2_x64.exe'
 
 # Base size of in-game map tiles
 PS2_TILE_SIZE = 256
-APL_TILE_SIZE = 1024
+REPO_TILE_SIZE = 1024
 
 # Type aliases
 _TileMap = Dict[Tuple[int, int], pathlib.Path]
@@ -360,11 +360,11 @@ def _process_convert(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         img.save(out_path / outname)
 
 
-def _process_apl(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "apl" format.
+def _process_repo(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
+    """Script handler for "repo" format.
 
     Recombine the game's 256 px tiles into the 1024 px tiles used by
-    the APL project. The converted images are saved to the target
+    the ps2-map-api repo. The converted images are saved to the target
     directory in JPEG format.
 
     Args:
@@ -388,20 +388,20 @@ def _process_apl(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         # Un-mirror the merged image
         img_merged = img_merged.transpose(Image.FLIP_TOP_BOTTOM)
         # Cut the merged image back into tiles
-        apl_grid_size = img_merged.width // APL_TILE_SIZE
-        for tile_y in range(0, apl_grid_size):
-            start_y = tile_y * APL_TILE_SIZE
-            end_y = start_y + APL_TILE_SIZE
-            if tile_y >= apl_grid_size // 2 and lod != 3:
+        repo_grid_size = img_merged.width // REPO_TILE_SIZE
+        for tile_y in range(0, repo_grid_size):
+            start_y = tile_y * REPO_TILE_SIZE
+            end_y = start_y + REPO_TILE_SIZE
+            if tile_y >= repo_grid_size // 2 and lod != 3:
                 tile_y += 1
-            for tile_x in range(0, apl_grid_size):
-                start_x = tile_x * APL_TILE_SIZE
-                end_x = start_x + APL_TILE_SIZE
-                if tile_x >= apl_grid_size // 2 and lod != 3:
+            for tile_x in range(0, repo_grid_size):
+                start_x = tile_x * REPO_TILE_SIZE
+                end_x = start_x + REPO_TILE_SIZE
+                if tile_x >= repo_grid_size // 2 and lod != 3:
                     tile_x += 1
                 img_tile = img_merged.crop((start_x, start_y, end_x, end_y))
-                filename = (f'lod{lod}_{tile_x - apl_grid_size // 2}_'
-                            f'{-tile_y + apl_grid_size // 2}.jpg')
+                filename = (f'lod{lod}_{tile_x - repo_grid_size // 2}_'
+                            f'{-tile_y + repo_grid_size // 2}.jpg')
                 if not (out_path / map_name.lower()).exists():
                     os.makedirs(out_path / map_name.lower())
                 img_tile.save(out_path / map_name.lower() / filename,
@@ -497,8 +497,8 @@ def main(format_: str, dir_: Optional[pathlib.Path],
             _process_raw(temp_path, output)
         elif format_ == 'convert':
             _process_convert(temp_path, output)
-        elif format_ == 'apl':
-            _process_apl(temp_path, output)
+        elif format_ == 'repo':
+            _process_repo(temp_path, output)
         elif format_ == 'merge':
             _process_merge(temp_path, output)
         else:
@@ -516,9 +516,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
         'format_', default='merge', nargs='?',
-        choices=['raw', 'convert', 'apl', 'merge'],
+        choices=['raw', 'convert', 'repo', 'merge'],
         help='The export format to use. raw: export files in 256 px DDS. '
-        'convert: flip files and export them as 256 px PNGs. apl: '
+        'convert: flip files and export them as 256 px PNGs. repo: '
         'export files in 1024 px JPEG. merge: merge all tiles into a '
         'single large PNG image.')
     parser.add_argument(

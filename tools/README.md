@@ -1,6 +1,6 @@
 # Tools and Scripts
 
-This directory contains utilities and helper scripts used to maintain the API host. They are generally standalone and not tied to the APL project unless specified otherwise.
+This directory contains utilities and helper scripts used to maintain the API host. They are generally standalone and not tied to the repository unless specified otherwise.
 
 The requirements for each tool are listed in the sections below. Alternatively you can install the requirements for all utilities using the `requirements.txt` file in this directory.
 
@@ -8,7 +8,7 @@ The requirements for each tool are listed in the sections below. Alternatively y
 
 A Python script for generating SVGs for the PlanetSide 2 continent maps.
 
-Like the rest of the APL project, this utility uses "base IDs". These generally match the in-game "map region" IDs.
+This utility uses "base IDs". These generally match the in-game "map region" IDs.
 
 This utility requires [`auraxium`](https://github.com/leonhard-s/auraxium) version 0.2.0b4 or greater.
 
@@ -49,7 +49,7 @@ This script supports four modes:
 
 - **raw**: Only extract the map tiles, leaving them as 256 px tiles in DDS format.
 - **convert**: Extract the map tiles and export them as 256 px tiles in PNG format.
-- ~~**apl**: Export the map tiles and save them as 1024 px JPEG images using the APL naming scheme.~~ APL will move to the in-game coordinate system soon. As a result, this mode is deprecated and will be replaced soon.
+- ~~**repo**: Export the map tiles and save them as 1024 px JPEG images using the repository's naming scheme.~~ This project will move to the in-game coordinate system soon. As a result, this mode is deprecated and will be replaced soon.
 - **merge**: Merge the map tiles into a single large PNG image.
 
 For detailed information on the command line switches available, please refer to the script's help (invoked via the `--help` switch).
