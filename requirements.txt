@@ -1,4 +1,4 @@
-auraxium
+auraxium >= 0.2.0b4
 aiofiles >= 0.6.0
 fastapi >= 0.62.0
 uvicorn >= 0.13.2
