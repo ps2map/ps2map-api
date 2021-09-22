@@ -13,7 +13,7 @@ import fastapi
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from . import endpoints, __version__ as _version
+from . import routes, __version__ as _version
 from ._logging import ForwardHandler
 
 # List of remote hosts for which CORS reponses headers should be included
@@ -45,11 +45,11 @@ app.add_middleware(
 app.mount('/static/tile', StaticFiles(directory='public/tile'), name='tile')
 app.mount('/static/hex', StaticFiles(directory='public/hex'), name='hex')
 
-# NOTE: The fragmentation of the endpoints is mostly to simplify adaptions, it
+# NOTE: The fragmentation of the routes is mostly to simplify adaptions, it
 # has a neglegible performance impact upon startup and is just as speedy as a
 # monolithic API application once it's set up and running.
 
 # Register the different path routers for the various endpoints
-for name in endpoints.__all__:
-    router = getattr(endpoints, name)
+for name in routes.__all__:
+    router = getattr(routes, name)
     app.include_router(router)

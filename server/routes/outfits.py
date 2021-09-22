@@ -1,4 +1,4 @@
-"""API endpoints for PS2 player outfits."""
+"""API routes for PS2 player outfits."""
 
 from typing import List, cast
 

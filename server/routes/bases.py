@@ -1,4 +1,4 @@
-"""API endpoints for map bases."""
+"""API routes for map bases."""
 
 import datetime
 import random

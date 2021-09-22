@@ -1,4 +1,4 @@
-"""API endpoints for PS2 game servers."""
+"""API routes for PS2 game servers."""
 
 import random
 from typing import List, cast

@@ -1,4 +1,4 @@
-"""API endpoints for PS2 continents/zones."""
+"""API routes for PS2 continents/zones."""
 
 import datetime
 import random
