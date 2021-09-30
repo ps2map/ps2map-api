@@ -101,17 +101,17 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
     return base_outlines
 
 
-async def get_base_svgs(client: auraxium.Client, continent_id: int,
-                        radius: float = 115.5) -> str:
-    """Creating a mapping of base IDs to serialised outline SVGs.
+async def get_base_polygons(client: auraxium.Client, continent_id: int,
+                            radius: float = 115.5) -> str:
+    """Creating a mapping of base IDs to serialised SVG polygons.
 
     This is the primary method exported by this module and allows
     generation of hex outlines for a given continent.
 
-    These outlines are provided via serialised SVG elements containing
-    a single closed polygon each.
+    This method only provides the serialised polygons. The enclosing
+    SVG tag must be added and customised by the caller.
 
-    The output SVG literals will have their Y coordinate flipped
+    The output polygons will have their Y coordinate flipped
     relative to the in-game coordinate system to match to the SVG
     coordinate system, which has the origin at the top left.
 
@@ -122,7 +122,7 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
             pixels. Defaults to 115.5.
 
     Returns:
-        str: Serialised SVG element containing the base polygons.
+        str: Serialised SVG polygons containing the base outlines.
 
     """
     # Get the base outlines as closed polygons
@@ -136,8 +136,8 @@ async def get_base_svgs(client: auraxium.Client, continent_id: int,
              for p in outline))
         # Create and add SVG polygon
         polygons.append(f'<polygon id="{base_id}" points="{points}" />')
-    # Generate a single SVG from the base polygons
-    return f'<svg viewBox="0 0 8192 8192">{"".join(polygons)}</svg>'
+    # Generate a single string from the base polygons
+    return "".join(polygons)
 
 
 def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
@@ -360,12 +360,25 @@ async def main(service_id: str, output_dir: str) -> None:
         zone_list = await client.find(
             auraxium.ps2.Zone, zone_id=','.join((str(i) for i in zone_ids)))
         for zone in zone_list:
-            zone_svg = await get_base_svgs(client, zone.id)
+            zone_polygons = await get_base_polygons(client, zone.id)
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
-            filename = os.path.join(output_dir, f'{zone.code.lower()}.svg')
+            name = zone.code.lower()
+            # Export standard SVG format
+            svg_data = ('<svg viewBox="0 0 8192 8192" '
+                        'xmlns="http://www.w3.org/2000/svg" version="1.1">'
+                        f'{zone_polygons}'
+                        '</svg>')
+            filename = os.path.join(output_dir, f'{name}.svg')
             with open(filename, 'w') as out_file:
-                out_file.write(zone_svg)
+                out_file.write(svg_data)
+            # Export minimal format (for inlining into HTML)
+            svg_data = ('<svg viewBox="0 0 8192 8192">'
+                        f'{zone_polygons}'
+                        '</svg>')
+            filename = os.path.join(output_dir, f'{name}-minimal.svg')
+            with open(filename, 'w') as out_file:
+                out_file.write(svg_data)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
