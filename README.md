@@ -86,3 +86,5 @@ The path syntax for accessing map hexes is as follows:
 Example:
 
     /static/hex/amerish.svg
+
+Map hexes are provided in two formats. The regular files use standard W3 SVG v1.1 headers, the `-minimal` variants only contain geometry data. The latter are to be used for automatic inlining into HTML documents.
