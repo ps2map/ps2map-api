@@ -11,7 +11,7 @@ from pydantic.types import PositiveInt
 from ..interfaces import ContinentInfo, ContinentStatus
 from ..types import FactionId, Population, ServerId
 from ._utils import static_from_json
-from .servers import _STATIC_SERVER_DATA as SERVERS
+from .servers import _STATIC_SERVER_DATA as SERVERS  # type: ignore
 
 router = fastapi.APIRouter(prefix='/continents')
 

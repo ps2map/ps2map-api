@@ -3,9 +3,9 @@
 import unittest
 
 from tools.map_tile_extractor import (  # pylint: disable=import-error
-    _map_tile_count as map_tile_count,
-    _map_step_size as map_step_size,
-    _map_grid_limits as map_grid_limits
+    _map_tile_count as map_tile_count,  # type: ignore
+    _map_step_size as map_step_size,  # type: ignore
+    _map_grid_limits as map_grid_limits  # type: ignore
 )
 
 
