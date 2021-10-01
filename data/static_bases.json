@@ -9,9 +9,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2102,
@@ -23,9 +23,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2103,
@@ -37,9 +37,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2104,
@@ -51,9 +51,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2105,
@@ -65,9 +65,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2106,
@@ -79,9 +79,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2107,
@@ -93,9 +93,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2108,
@@ -107,9 +107,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2109,
@@ -121,9 +121,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2201,
@@ -135,9 +135,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2202,
@@ -149,9 +149,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2203,
@@ -163,9 +163,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2301,
@@ -177,9 +177,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2302,
@@ -191,9 +191,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2303,
@@ -205,9 +205,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2304,
@@ -219,9 +219,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2305,
@@ -233,9 +233,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2306,
@@ -247,9 +247,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2307,
@@ -261,9 +261,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2308,
@@ -275,9 +275,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2309,
@@ -289,9 +289,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2310,
@@ -303,9 +303,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2311,
@@ -317,9 +317,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2312,
@@ -331,9 +331,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2313,
@@ -345,9 +345,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2402,
@@ -359,9 +359,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2404,
@@ -373,9 +373,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2405,
@@ -387,9 +387,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2406,
@@ -401,9 +401,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2407,
@@ -415,9 +415,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2408,
@@ -429,9 +429,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2409,
@@ -443,9 +443,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2410,
@@ -457,9 +457,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2411,
@@ -471,9 +471,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2412,
@@ -485,9 +485,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2413,
@@ -499,9 +499,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2414,
@@ -513,9 +513,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2415,
@@ -527,9 +527,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2416,
@@ -541,9 +541,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2418,
@@ -555,9 +555,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2419,
@@ -569,9 +569,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2420,
@@ -583,9 +583,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2421,
@@ -597,9 +597,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2422,
@@ -611,9 +611,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2425,
@@ -625,9 +625,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2427,
@@ -639,9 +639,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2428,
@@ -653,9 +653,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2429,
@@ -667,9 +667,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2430,
@@ -681,9 +681,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2431,
@@ -695,9 +695,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2433,
@@ -709,9 +709,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2436,
@@ -723,9 +723,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2437,
@@ -737,9 +737,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2438,
@@ -751,9 +751,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2440,
@@ -765,9 +765,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2443,
@@ -779,9 +779,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2447,
@@ -793,9 +793,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2448,
@@ -807,9 +807,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2449,
@@ -821,9 +821,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2453,
@@ -835,9 +835,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2454,
@@ -849,9 +849,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2455,
@@ -863,9 +863,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2456,
@@ -877,9 +877,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2457,
@@ -891,9 +891,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2458,
@@ -905,9 +905,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2459,
@@ -919,9 +919,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2460,
@@ -933,9 +933,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2461,
@@ -947,9 +947,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2462,
@@ -961,9 +961,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2463,
@@ -975,9 +975,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2464,
@@ -989,9 +989,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2465,
@@ -1003,9 +1003,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2466,
@@ -1017,9 +1017,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2467,
@@ -1031,9 +1031,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2468,
@@ -1045,9 +1045,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2469,
@@ -1059,9 +1059,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2470,
@@ -1073,9 +1073,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2471,
@@ -1087,9 +1087,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2472,
@@ -1101,9 +1101,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2473,
@@ -1115,9 +1115,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2474,
@@ -1129,9 +1129,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2475,
@@ -1143,9 +1143,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2476,
@@ -1157,9 +1157,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2477,
@@ -1171,9 +1171,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2478,
@@ -1185,9 +1185,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 2479,
@@ -1199,9 +1199,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4101,
@@ -1213,9 +1213,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4102,
@@ -1227,9 +1227,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4103,
@@ -1241,9 +1241,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4104,
@@ -1255,9 +1255,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4105,
@@ -1269,9 +1269,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4106,
@@ -1283,9 +1283,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4107,
@@ -1297,9 +1297,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4108,
@@ -1311,9 +1311,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4109,
@@ -1325,9 +1325,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4110,
@@ -1339,9 +1339,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4111,
@@ -1353,9 +1353,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4112,
@@ -1367,9 +1367,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4113,
@@ -1381,9 +1381,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4114,
@@ -1395,9 +1395,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4115,
@@ -1409,9 +1409,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4116,
@@ -1423,9 +1423,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4117,
@@ -1437,9 +1437,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4118,
@@ -1451,9 +1451,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4119,
@@ -1465,9 +1465,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4120,
@@ -1479,9 +1479,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4121,
@@ -1493,9 +1493,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4122,
@@ -1507,9 +1507,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4123,
@@ -1521,9 +1521,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4124,
@@ -1535,9 +1535,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4125,
@@ -1549,9 +1549,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4126,
@@ -1563,9 +1563,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4127,
@@ -1577,9 +1577,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4130,
@@ -1591,9 +1591,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4131,
@@ -1605,9 +1605,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4132,
@@ -1619,9 +1619,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4133,
@@ -1633,9 +1633,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4134,
@@ -1647,9 +1647,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4135,
@@ -1661,9 +1661,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4136,
@@ -1675,9 +1675,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4137,
@@ -1689,9 +1689,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4138,
@@ -1703,9 +1703,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4139,
@@ -1717,9 +1717,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4140,
@@ -1731,9 +1731,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4141,
@@ -1745,9 +1745,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4142,
@@ -1759,9 +1759,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4143,
@@ -1773,9 +1773,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4150,
@@ -1787,9 +1787,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4151,
@@ -1801,9 +1801,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4152,
@@ -1815,9 +1815,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4153,
@@ -1829,9 +1829,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4160,
@@ -1843,9 +1843,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4161,
@@ -1857,9 +1857,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4162,
@@ -1871,9 +1871,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4163,
@@ -1885,9 +1885,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4170,
@@ -1899,9 +1899,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4171,
@@ -1913,9 +1913,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4172,
@@ -1927,9 +1927,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4173,
@@ -1941,9 +1941,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4180,
@@ -1955,9 +1955,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4181,
@@ -1969,9 +1969,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4182,
@@ -1983,9 +1983,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4183,
@@ -1997,9 +1997,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4190,
@@ -2011,9 +2011,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4191,
@@ -2025,9 +2025,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4192,
@@ -2039,9 +2039,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4193,
@@ -2053,9 +2053,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4200,
@@ -2067,9 +2067,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4201,
@@ -2081,9 +2081,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4202,
@@ -2095,9 +2095,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4203,
@@ -2109,9 +2109,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4210,
@@ -2123,9 +2123,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4211,
@@ -2137,9 +2137,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4212,
@@ -2151,9 +2151,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4213,
@@ -2165,9 +2165,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4220,
@@ -2179,9 +2179,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4221,
@@ -2193,9 +2193,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4222,
@@ -2207,9 +2207,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4223,
@@ -2221,9 +2221,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4230,
@@ -2235,9 +2235,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4240,
@@ -2249,9 +2249,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4250,
@@ -2263,9 +2263,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4260,
@@ -2277,9 +2277,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4261,
@@ -2291,9 +2291,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4262,
@@ -2305,9 +2305,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4263,
@@ -2319,9 +2319,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4264,
@@ -2333,9 +2333,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4265,
@@ -2347,9 +2347,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4266,
@@ -2361,9 +2361,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4267,
@@ -2375,9 +2375,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4268,
@@ -2389,9 +2389,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4269,
@@ -2403,9 +2403,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4270,
@@ -2417,9 +2417,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 4271,
@@ -2431,9 +2431,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6001,
@@ -2445,9 +2445,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6002,
@@ -2459,9 +2459,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6003,
@@ -2473,9 +2473,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6101,
@@ -2487,9 +2487,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6102,
@@ -2501,9 +2501,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6103,
@@ -2515,9 +2515,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6111,
@@ -2529,9 +2529,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6112,
@@ -2543,9 +2543,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6113,
@@ -2557,9 +2557,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6121,
@@ -2571,9 +2571,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6122,
@@ -2585,9 +2585,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6123,
@@ -2599,9 +2599,9 @@
         ],
         "type_id": 3,
         "type_name": "Bio Lab",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6201,
@@ -2613,9 +2613,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6202,
@@ -2627,9 +2627,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6203,
@@ -2641,9 +2641,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6204,
@@ -2655,9 +2655,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6205,
@@ -2669,9 +2669,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6206,
@@ -2683,9 +2683,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6207,
@@ -2697,9 +2697,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6208,
@@ -2711,9 +2711,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6209,
@@ -2725,9 +2725,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6301,
@@ -2739,9 +2739,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6302,
@@ -2753,9 +2753,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6303,
@@ -2767,9 +2767,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6304,
@@ -2781,9 +2781,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6305,
@@ -2795,9 +2795,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6306,
@@ -2809,9 +2809,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6307,
@@ -2823,9 +2823,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6308,
@@ -2837,9 +2837,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6309,
@@ -2851,9 +2851,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6310,
@@ -2865,9 +2865,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6311,
@@ -2879,9 +2879,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6312,
@@ -2893,9 +2893,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6313,
@@ -2907,9 +2907,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6314,
@@ -2921,9 +2921,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6316,
@@ -2935,9 +2935,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6317,
@@ -2949,9 +2949,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6318,
@@ -2963,9 +2963,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6319,
@@ -2977,9 +2977,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6320,
@@ -2991,9 +2991,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6323,
@@ -3005,9 +3005,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6324,
@@ -3019,9 +3019,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6325,
@@ -3033,9 +3033,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6326,
@@ -3047,9 +3047,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6328,
@@ -3061,9 +3061,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6329,
@@ -3075,9 +3075,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6330,
@@ -3089,9 +3089,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6331,
@@ -3103,9 +3103,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6332,
@@ -3117,9 +3117,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6333,
@@ -3131,9 +3131,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6334,
@@ -3145,9 +3145,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6335,
@@ -3159,9 +3159,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6336,
@@ -3173,9 +3173,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6337,
@@ -3187,9 +3187,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6338,
@@ -3201,9 +3201,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6339,
@@ -3215,9 +3215,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6340,
@@ -3229,9 +3229,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6341,
@@ -3243,9 +3243,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6342,
@@ -3257,9 +3257,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6343,
@@ -3271,9 +3271,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6344,
@@ -3285,9 +3285,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6345,
@@ -3299,9 +3299,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6346,
@@ -3313,9 +3313,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6347,
@@ -3327,9 +3327,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6348,
@@ -3341,9 +3341,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6349,
@@ -3355,9 +3355,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6350,
@@ -3369,9 +3369,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6351,
@@ -3383,9 +3383,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6352,
@@ -3397,9 +3397,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6353,
@@ -3411,9 +3411,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6354,
@@ -3425,9 +3425,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6355,
@@ -3439,9 +3439,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6356,
@@ -3453,9 +3453,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6357,
@@ -3467,9 +3467,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6358,
@@ -3481,9 +3481,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6359,
@@ -3495,9 +3495,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6360,
@@ -3509,9 +3509,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6361,
@@ -3523,9 +3523,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6362,
@@ -3537,9 +3537,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 6363,
@@ -3551,9 +3551,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18001,
@@ -3565,9 +3565,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18002,
@@ -3579,9 +3579,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18003,
@@ -3593,37 +3593,51 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18004,
         "continent_id": 8,
         "name": "Aurora Materials Lab",
         "map_pos": [
-            -357.9702,
-            1523.074
+            -501.545166,
+            1431.570068
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18005,
         "continent_id": 8,
-        "name": "Apex Genetics",
+        "name": "Mani Containment Site",
         "map_pos": [
             409.8246,
             1099.279
         ],
-        "type_id": 6,
-        "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "type_id": 11,
+        "type_name": "Containment Site",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18006,
+        "continent_id": 8,
+        "name": "Stillwater Watch",
+        "map_pos": [
+            1174.458,
+            1871.567
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18007,
@@ -3635,9 +3649,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18008,
@@ -3649,9 +3663,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18010,
@@ -3663,9 +3677,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18011,
@@ -3677,9 +3691,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18013,
@@ -3691,9 +3705,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18014,
@@ -3705,9 +3719,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18015,
@@ -3719,9 +3733,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18016,
@@ -3733,9 +3747,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18017,
@@ -3747,9 +3761,23 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18018,
+        "continent_id": 8,
+        "name": "Northpoint Ruins",
+        "map_pos": [
+            1121.946,
+            2612.332
+        ],
+        "type_id": 9,
+        "type_name": "Construction Outpost",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18019,
@@ -3761,9 +3789,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18020,
@@ -3775,23 +3803,23 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18022,
         "continent_id": 8,
-        "name": "Andvari Ruins",
+        "name": "Andvari Containment Site",
         "map_pos": [
             -2490.0,
             82.0
         ],
-        "type_id": 9,
-        "type_name": "Construction Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "type_id": 11,
+        "type_name": "Containment Site",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18024,
@@ -3803,9 +3831,9 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18025,
@@ -3817,9 +3845,9 @@
         ],
         "type_id": 4,
         "type_name": "Tech Plant",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18027,
@@ -3831,9 +3859,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18028,
@@ -3845,9 +3873,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18029,
@@ -3859,9 +3887,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18030,
@@ -3873,20 +3901,6 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 10,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
-    },
-    {
-        "id": 18031,
-        "continent_id": 8,
-        "name": "The Shattered Warpgate",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 0,
-        "type_name": "No Man's Land",
         "resource_amount": 0,
         "resource_id": null,
         "resource_name": null
@@ -3901,9 +3915,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18033,
@@ -3915,9 +3929,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18034,
@@ -3929,9 +3943,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18036,
@@ -3943,9 +3957,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18037,
@@ -3957,9 +3971,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18038,
@@ -3971,9 +3985,9 @@
         ],
         "type_id": 5,
         "type_name": "Large Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18046,
@@ -3985,9 +3999,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18048,
@@ -3999,9 +4013,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18049,
@@ -4013,37 +4027,51 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18058,
         "continent_id": 8,
-        "name": "Mani Processing Plant",
+        "name": "Steelshore Processing",
         "map_pos": [
             -211.8569,
             2416.213
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
+    },
+    {
+        "id": 18059,
+        "continent_id": 8,
+        "name": "Steelshore Reconstruction",
+        "map_pos": [
+            304.5212,
+            2578.249
+        ],
+        "type_id": 6,
+        "type_name": "Small Outpost",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18060,
         "continent_id": 8,
-        "name": "Mani Lake Outpost",
+        "name": "Esper Research Station",
         "map_pos": [
             -42.99902,
             1860.761
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18062,
@@ -4055,9 +4083,9 @@
         ],
         "type_id": 7,
         "type_name": "Warpgate",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18063,
@@ -4069,9 +4097,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18067,
@@ -4083,9 +4111,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 25,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18068,
@@ -4097,9 +4125,9 @@
         ],
         "type_id": 6,
         "type_name": "Small Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18204,
@@ -4111,9 +4139,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18205,
@@ -4125,9 +4153,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18206,
@@ -4139,9 +4167,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18207,
@@ -4153,9 +4181,9 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 10,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18208,
@@ -4167,37 +4195,37 @@
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18209,
         "continent_id": 8,
         "name": "Tapp Waystation",
         "map_pos": [
-            -1785.58,
-            -426.41
+            -1751.916504,
+            -342.569336
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 5,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18210,
         "continent_id": 8,
         "name": "Untapped Reservoir",
         "map_pos": [
-            -499.824646,
-            669.816833
+            -407.94,
+            757.12
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18249,
@@ -4223,37 +4251,37 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 5,
-        "resource_id": 1,
-        "resource_name": "Auraxium"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18251,
         "continent_id": 8,
         "name": "Vidar Observation Site",
         "map_pos": [
-            1434.519165,
-            910.731567
+            2176.018066,
+            1342.113403
         ],
         "type_id": 9,
         "type_name": "Construction Outpost",
-        "resource_amount": 5,
-        "resource_id": 3,
-        "resource_name": "Polystellarite"
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18252,
         "continent_id": 8,
-        "name": "Excavion DS-01E",
+        "name": "Ymir Containment Site",
         "map_pos": [
             1556.34,
             -2047.06
         ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
+        "type_id": 11,
+        "type_name": "Containment Site",
+        "resource_amount": 0,
+        "resource_id": null,
+        "resource_name": null
     },
     {
         "id": 18253,
@@ -4265,426 +4293,34 @@
         ],
         "type_id": 2,
         "type_name": "Amp Station",
-        "resource_amount": 25,
-        "resource_id": 2,
-        "resource_name": "Synthium"
-    },
-    {
-        "id": 400014,
-        "continent_id": 40,
-        "name": "Koltyr Northern Warpgate",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 7,
-        "type_name": "Warpgate",
         "resource_amount": 0,
         "resource_id": null,
         "resource_name": null
     },
     {
-        "id": 400015,
-        "continent_id": 40,
-        "name": "Koltyr Eastern Warpgate",
+        "id": 18261,
+        "continent_id": 8,
+        "name": "Spral Oasis",
         "map_pos": [
-            0.0,
-            0.0
+            1098.23,
+            -1454.66
         ],
-        "type_id": 7,
-        "type_name": "Warpgate",
+        "type_id": 9,
+        "type_name": "Construction Outpost",
         "resource_amount": 0,
         "resource_id": null,
         "resource_name": null
     },
     {
-        "id": 400016,
-        "continent_id": 40,
-        "name": "Koltyr Southern Warpgate",
+        "id": 18262,
+        "continent_id": 8,
+        "name": "The Shattered Warpgate",
         "map_pos": [
             0.0,
             0.0
         ],
-        "type_id": 7,
-        "type_name": "Warpgate",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400017,
-        "continent_id": 40,
-        "name": "Zorja",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 2,
-        "type_name": "Amp Station",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400018,
-        "continent_id": 40,
-        "name": "Xander",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 3,
-        "type_name": "Bio Lab",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400019,
-        "continent_id": 40,
-        "name": "Svarog",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 4,
-        "type_name": "Tech Plant",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400020,
-        "continent_id": 40,
-        "name": "Koltyr Tech Plant Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400021,
-        "continent_id": 40,
-        "name": "Koltyr Biolab Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400022,
-        "continent_id": 40,
-        "name": "Koltyr Amp Station Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400014,
-        "continent_id": 40,
-        "name": "Koltyr Northern Warpgate",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 7,
-        "type_name": "Warpgate",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400015,
-        "continent_id": 40,
-        "name": "Koltyr Eastern Warpgate",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 7,
-        "type_name": "Warpgate",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400016,
-        "continent_id": 40,
-        "name": "Koltyr Southern Warpgate",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 7,
-        "type_name": "Warpgate",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400017,
-        "continent_id": 40,
-        "name": "Zorja",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 2,
-        "type_name": "Amp Station",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400018,
-        "continent_id": 40,
-        "name": "Xander",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 3,
-        "type_name": "Bio Lab",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400019,
-        "continent_id": 40,
-        "name": "Svarog",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 4,
-        "type_name": "Tech Plant",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400020,
-        "continent_id": 40,
-        "name": "Koltyr Tech Plant Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400021,
-        "continent_id": 40,
-        "name": "Koltyr Biolab Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 400022,
-        "continent_id": 40,
-        "name": "Koltyr Amp Station Outpost",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 5,
-        "type_name": "Large Outpost",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18215,
-        "continent_id": "299",
-        "name": "Nothern Command Center",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 21,
-        "type_name": "Command Center",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18216,
-        "continent_id": "299",
-        "name": "Southwest Command Center",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 21,
-        "type_name": "Command Center",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18217,
-        "continent_id": "299",
-        "name": "Southeast Command Center",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 21,
-        "type_name": "Command Center",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18221,
-        "continent_id": "299",
-        "name": "Relic Akka",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18222,
-        "continent_id": "299",
-        "name": "Relic Bane",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18224,
-        "continent_id": "299",
-        "name": "Relic Chiron",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18225,
-        "continent_id": "299",
-        "name": "Relic Deimos",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18226,
-        "continent_id": "299",
-        "name": "Relic Etna",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18227,
-        "continent_id": "299",
-        "name": "Relic Feros",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18228,
-        "continent_id": "299",
-        "name": "Relic Gamma",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18229,
-        "continent_id": "299",
-        "name": "Relic Hosk",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
-        "resource_amount": 0,
-        "resource_id": null,
-        "resource_name": null
-    },
-    {
-        "id": 18230,
-        "continent_id": "299",
-        "name": "Relic Ibri",
-        "map_pos": [
-            0.0,
-            0.0
-        ],
-        "type_id": 22,
-        "type_name": "Relic",
+        "type_id": 0,
+        "type_name": "No Man's Land",
         "resource_amount": 0,
         "resource_id": null,
         "resource_name": null
