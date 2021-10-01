@@ -5,12 +5,12 @@ import unittest
 from typing import Any, Tuple
 
 from tools.map_hex_generator import (  # pylint: disable=import-error
-    _Point as Point,
-    _Tile as Tile,
-    _get_hex_corner as get_hex_corner,
-    _get_hex_edge as get_hex_edge,
-    _radius_to_size as radius_to_size,
-    _tile_to_point as tile_to_point
+    _Point as Point,  # type: ignore
+    _Tile as Tile,  # type: ignore
+    _get_hex_corner as get_hex_corner,  # type: ignore
+    _get_hex_edge as get_hex_edge,  # type: ignore
+    _radius_to_size as radius_to_size,  # type: ignore
+    _tile_to_point as tile_to_point  # type: ignore
 )
 
 

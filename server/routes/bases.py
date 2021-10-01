@@ -11,8 +11,8 @@ from pydantic.types import PositiveInt
 from ..interfaces import BaseInfo, BaseStatus
 from ..types import FactionId, OutfitId, Population, ServerId
 from ._utils import static_from_json
-from .outfits import _STATIC_OUTFIT_DATA as OUTFITS
-from .servers import _STATIC_SERVER_DATA as SERVERS
+from .outfits import _STATIC_OUTFIT_DATA as OUTFITS  # type: ignore
+from .servers import _STATIC_SERVER_DATA as SERVERS  # type: ignore
 
 
 router = fastapi.APIRouter(prefix='/bases')
