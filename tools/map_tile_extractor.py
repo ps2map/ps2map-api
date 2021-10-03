@@ -62,7 +62,6 @@ PS2_EXCUTABLE_NAME = 'PlanetSide2_x64.exe'
 
 # Base size of in-game map tiles
 PS2_TILE_SIZE = 256
-REPO_TILE_SIZE = 1024
 
 # Type aliases
 _TileMap = Dict[Tuple[int, int], pathlib.Path]
@@ -360,12 +359,11 @@ def _process_convert(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         img.save(out_path / outname)
 
 
-def _process_repo(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
-    """Script handler for "repo" format.
+def _process_convert_web(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
+    """Script handler for "convert_web" format.
 
-    Recombine the game's 256 px tiles into the 1024 px tiles used by
-    the ps2-map-api repo. The converted images are saved to the target
-    directory in JPEG format.
+    This reads all extracted DDS assets, flips them, and exports them
+    to the target directory in JPEG format with lowercase filenames.
 
     Args:
         temp_path (pathlib.Path): Directory containing the exported DDS
@@ -373,39 +371,15 @@ def _process_repo(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         out_path (pathlib.Path): Output directory
 
     """
-    # Group tiles by map name and lod level
-    grouped: _LodTileMap = _group_tiles(temp_path)
-    # Calculate the base map sizes (i.e. those for LOD 0)
-    base_sizes: Dict[str, int] = {}
-    for (map_name, lod), tiles in grouped.items():
-        if lod == 0:
-            base_sizes[map_name] = _map_size(tiles)
-    # Process each map LOD group
-    for (map_name, lod), tiles in grouped.items():
-        print(f' >> Regrouping tiles for "{map_name}" (LOD {lod})')
-        map_size = base_sizes[map_name]
-        img_merged = _merge_assets(map_size, lod, tiles)
-        # Un-mirror the merged image
-        img_merged = img_merged.transpose(Image.FLIP_TOP_BOTTOM)
-        # Cut the merged image back into tiles
-        repo_grid_size = img_merged.width // REPO_TILE_SIZE
-        for tile_y in range(0, repo_grid_size):
-            start_y = tile_y * REPO_TILE_SIZE
-            end_y = start_y + REPO_TILE_SIZE
-            if tile_y >= repo_grid_size // 2 and lod != 3:
-                tile_y += 1
-            for tile_x in range(0, repo_grid_size):
-                start_x = tile_x * REPO_TILE_SIZE
-                end_x = start_x + REPO_TILE_SIZE
-                if tile_x >= repo_grid_size // 2 and lod != 3:
-                    tile_x += 1
-                img_tile = img_merged.crop((start_x, start_y, end_x, end_y))
-                filename = (f'lod{lod}_{tile_x - repo_grid_size // 2}_'
-                            f'{-tile_y + repo_grid_size // 2}.jpg')
-                if not (out_path / map_name.lower()).exists():
-                    os.makedirs(out_path / map_name.lower())
-                img_tile.save(out_path / map_name.lower() / filename,
-                              quality=95, subsampling=0)
+    files = os.listdir(temp_path)
+    total = len(files)
+    for index, filename in enumerate(files):
+        print(f' >> Converting file {index+1} of {total}')
+        outname = (filename.rsplit('.', maxsplit=1)[0] + '.jpeg').lower()
+        img = Image.open(temp_path / filename)
+        img = img.transpose(Image.FLIP_TOP_BOTTOM)
+        img = img.convert('RGB')
+        img.save(out_path / outname, quality=80, subsampling=0)
 
 
 def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
@@ -497,8 +471,8 @@ def main(format_: str, dir_: Optional[pathlib.Path],
             _process_raw(temp_path, output)
         elif format_ == 'convert':
             _process_convert(temp_path, output)
-        elif format_ == 'repo':
-            _process_repo(temp_path, output)
+        elif format_ == 'convert_web':
+            _process_convert_web(temp_path, output)
         elif format_ == 'merge':
             _process_merge(temp_path, output)
         else:
@@ -516,10 +490,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
         'format_', default='merge', nargs='?',
-        choices=['raw', 'convert', 'repo', 'merge'],
+        choices=['raw', 'convert', 'convert_web', 'merge'],
         help='The export format to use. raw: export files in 256 px DDS. '
-        'convert: flip files and export them as 256 px PNGs. repo: '
-        'export files in 1024 px JPEG. merge: merge all tiles into a '
+        'convert: flip files and export them as 256 px PNGs. convert_web: '
+        'flip files and export as 256 px JPEG. merge: merge all tiles into a '
         'single large PNG image.')
     parser.add_argument(
         '--dir_', '-d', default=None, type=_arg_path,

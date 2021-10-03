@@ -34,6 +34,7 @@ A Python script for extracting PlanetSide 2 map tile textures.
 Note that this utility requires a local installation of PlanetSide 2 to work. By default, it will search the following common directories for PS2 installations:
 
 - C:\Users\Public\Sony Online Entertainment\Installed Games\PlanetSide 2
+- C:\Users\Public\Daybreak Game Company\Installed Games\PlanetSide 2
 - C:\Program Files (x86)\Steam\steamapps\common\PlanetSide 2
 - C:\Program Files\PlanetSide 2
 - D:\Steam\steamapps\common\PlanetSide 2
@@ -49,7 +50,7 @@ This script supports four modes:
 
 - **raw**: Only extract the map tiles, leaving them as 256 px tiles in DDS format.
 - **convert**: Extract the map tiles and export them as 256 px tiles in PNG format.
-- ~~**repo**: Export the map tiles and save them as 1024 px JPEG images using the repository's naming scheme.~~ This project will move to the in-game coordinate system soon. As a result, this mode is deprecated and will be replaced soon.
+- **convert_web**: Export the map tiles and save them as 256 px JPEG images with lowercase filenames. This format is primarily intended to be consumed by the [PS2 Map Viewer](https://github.com/leonhard-s/ps2-map-viewer/) repo and may be subject to change.
 - **merge**: Merge the map tiles into a single large PNG image.
 
 For detailed information on the command line switches available, please refer to the script's help (invoked via the `--help` switch).
