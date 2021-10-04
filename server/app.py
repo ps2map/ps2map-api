@@ -42,7 +42,7 @@ app.add_middleware(
     allow_origins=_ORIGINS)
 
 # Add static file routes
-app.mount('/static/tile', StaticFiles(directory='public/tile'), name='tile')
+app.mount('/static/tile', StaticFiles(directory='public/tiles'), name='tile')
 app.mount('/static/hex', StaticFiles(directory='public/hex'), name='hex')
 
 # NOTE: The fragmentation of the routes is mostly to simplify adaptions, it
