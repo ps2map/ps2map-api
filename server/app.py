@@ -44,6 +44,7 @@ app.add_middleware(
 # Add static file routes
 app.mount('/static/tile', StaticFiles(directory='public/tiles'), name='tile')
 app.mount('/static/hex', StaticFiles(directory='public/hex'), name='hex')
+app.mount('/static/minimap', StaticFiles(directory='public/minimap'), name='minimap')
 
 # NOTE: The fragmentation of the routes is mostly to simplify adaptions, it
 # has a neglegible performance impact upon startup and is just as speedy as a
