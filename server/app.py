@@ -28,7 +28,7 @@ _uvicorn_log.handlers = [ForwardHandler(_api_log)]
 
 # Create the API application
 app = fastapi.FastAPI(
-    title='AutoPL API',
+    title='PS2 Map API',
     version=_version,
     description='A standalone, sanitised API for PlanetSide 2 maps.\n\n'
     'For additional information, please refer to the project repository at '
