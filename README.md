@@ -14,9 +14,7 @@ The following section provides a brief overview of its components and their uses
 
   > Note: *This endpoint is tentative and will be removed/reworked in future releases.*
 
-- **`public/`**&nbsp; Static game assets hosted by the API server. This includes facility outline polygons in SVG format (`data/hex` directory), as well as map tiles for all zones.
-
-  > Note: *The naming format used for map tiles will be reworked to match the in-game tile names in a future release. Additionally, this endpoint may be removed entirely as it contains extracted map assets.*
+- **`public/`**&nbsp; Static game assets hosted by the API server. This includes facility outline polygons in SVG format (`data/hex` directory), full-continent minimap textures (`data/minimap` directory), as well as map tiles for all zones (`data/tiles` directory).
 
 - **`server/`**&nbsp; A Python FastAPI server for hosting the development data stored in this repository.
 
@@ -46,32 +44,7 @@ API consumers are also expected to aggressively cache these items due to their l
 
 The map is broken up into tiles of different qualities. This is referred to as the LOD (level-of-detail), with 0 being the highest quality available (8192 px) and higher LOD values halving resolution with each increment; currently the lowest resolution is LOD level 3 (1024 px).
 
-```py
-# Number of terrain tiles for a given LOD level:
-MAX_LOD = 3
-def tiles_by_lod(lod: int) -> int:
-    assert 0 <= lod <= MAX_LOD
-    return 2 ** (MAX_LOD - lod)
-
-# Size of an individual tile for a given LOD level:
-BASE_MAP_SIZE = 8192
-def tile_size_by_lod(lod: int) -> int:
-    return  BASE_MAP_SIZE / tiles_by_lod(lod)
-```
-
-The map tile coordinates originate in the centre and are Cartesian indices with the unit vectors `(1,0)` and `(0,1)` corresponding to east and north respectively.
-
-**Important:** LOD level 3, which only has a single tile, uses the coordinates `(0, 0)`.
-
-The path syntax for accessing tiles is as follows:
-
-    /static/tile/<code>/lod<lod>_<tileX>_<tileY>.jpg
-
-The `<code>` placeholder represents a map-specific asset identifier, generally the lowercase version of the map name. It is recommended to use the `ContinentInfo.code` field from the REST API rather than hard-coding the names if possible.
-
-Tile endpoit example:
-
-    /static/tile/amerish/lod1_2_-2.jpg
+For additional information on the map tile format used by the game and implementation examples, please refer to the repository Wiki page on this topic: [Map Tile Format](https://github.com/leonhard-s/ps2-map-api/wiki/Map-Tile-Format)
 
 ### Map Hexes
 
