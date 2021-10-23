@@ -52,7 +52,7 @@ if __name__ == '__main__':
         log.addHandler(sh_)
 
     # Run utility
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
     loop.create_task(main(**kwargs))
     try:
         loop.run_forever()
