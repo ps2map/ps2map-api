@@ -14,7 +14,7 @@ The following section provides a brief overview of its components and their uses
 
   > Note: *This endpoint is tentative and will be removed/reworked in future releases.*
 
-- **`public/`**&nbsp; Static game assets hosted by the API server. This includes facility outline polygons in SVG format (`data/hex` directory), full-continent minimap textures (`data/minimap` directory), as well as map tiles for all zones (`data/tiles` directory).
+- **`public/`**&nbsp; Static game assets hosted by the API server. This includes facility outline polygons in SVG format (`hex` subdirectory), full-continent minimap textures (`minimap` subdirectory), as well as map tiles for all zones (`tiles` subdirectory).
 
 - **`server/`**&nbsp; A Python FastAPI server for hosting the development data stored in this repository.
 
