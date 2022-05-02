@@ -34,7 +34,7 @@ import pathlib
 import re
 import sys
 import tempfile
-from typing import Dict, Iterable, Iterator, List, Optional, Set, Sized, Tuple
+from typing import Iterable, Iterator, Sized
 
 from DbgPack import AssetManager  # type: ignore
 from PIL import Image
@@ -64,8 +64,8 @@ PS2_EXCUTABLE_NAME = 'PlanetSide2_x64.exe'
 PS2_TILE_SIZE = 256
 
 # Type aliases
-_TileMap = Dict[Tuple[int, int], pathlib.Path]
-_LodTileMap = Dict[Tuple[str, int], _TileMap]
+_TileMap = dict[tuple[int, int], pathlib.Path]
+_LodTileMap = dict[tuple[str, int], _TileMap]
 
 
 def _bytes_to_string(bytes_: bytes) -> str:
@@ -94,7 +94,7 @@ def _str_to_bytes(string: str) -> bytes:
     return bytes(string, 'utf-8')
 
 
-def _find_game_folder(dir_: Optional[pathlib.Path] = None) -> pathlib.Path:
+def _find_game_folder(dir_: pathlib.Path | None = None) -> pathlib.Path:
     """Locate the PlanetSide 2 installation directory.
 
     This checks a number of common installation directories for the
@@ -102,7 +102,7 @@ def _find_game_folder(dir_: Optional[pathlib.Path] = None) -> pathlib.Path:
     can be used to use that location instead.
 
     Args:
-        dir_ (Optional[pathlib.Path]): Alternate installation directory
+        dir_ (pathlib.Path | None): Alternate installation directory
             to use
 
     Returns:
@@ -134,21 +134,21 @@ def _find_game_folder(dir_: Optional[pathlib.Path] = None) -> pathlib.Path:
         'containing the "PlanetSide2_x64.exe" executable')
 
 
-def _get_tile_namelist(paths: Iterable[pathlib.Path]) -> List[str]:
+def _get_tile_namelist(paths: Iterable[pathlib.Path]) -> list[str]:
     """Generate a list of tile-like filenames from the given paths.
 
     These are filenames whose naming pattern matches that of map tile
     assets.
 
     Args:
-        paths (List[pathlib.Path]): List of files to scrape
+        paths (list[pathlib.Path]): List of files to scrape
 
     Return:
-        List[str]: A list of filenames matching the map tile format
+        list[str]: A list of filenames matching the map tile format
 
     """
     tile_asset_pattern = re.compile(_str_to_bytes(TILE_ASSET_REGEX))
-    namelist: Set[str] = set()
+    namelist: set[str] = set()
     # Process asset definitions
     manager = AssetManager(list(paths))
     for asset in manager:
@@ -181,7 +181,7 @@ def _map_step_size(map_size: int, lod: int) -> int:
     return 32
 
 
-def _map_grid_limits(map_size: int, lod: int) -> Tuple[int, int]:
+def _map_grid_limits(map_size: int, lod: int) -> tuple[int, int]:
     """Return the map grid limits for a given map and LOD.
 
     Args:
@@ -189,7 +189,7 @@ def _map_grid_limits(map_size: int, lod: int) -> Tuple[int, int]:
         lod (int): The LOD level for which to calculate the grid limits
 
     Returns:
-        Tuple[int, int]: The minimuim and maximum grid coordinates for
+        tuple[int, int]: The minimuim and maximum grid coordinates for
             this map
 
     """
@@ -203,7 +203,7 @@ def _map_grid_limits(map_size: int, lod: int) -> Tuple[int, int]:
 
 
 def _iter_map_grid(map_size: int, lod: int
-                   ) -> Iterator[Tuple[int, int]]:
+                   ) -> Iterator[tuple[int, int]]:
     """Iterator over the given map's coordinate grid.
 
     Args:
@@ -211,7 +211,7 @@ def _iter_map_grid(map_size: int, lod: int
         lod (int): The LOD level for which to calculate the grid limits
 
     Yields:
-        Tuple[int, int, int, int]: The X and Y index in the grid,
+        tuple[int, int, int, int]: The X and Y index in the grid,
             followed by the X and Y coordinate of the corresponding
             tile grid's origin point
 
@@ -250,7 +250,7 @@ def _group_tiles(path: pathlib.Path) -> _LodTileMap:
         path (pathlib.Path): The directory whose tiles to group
 
     Return:
-        Dict[Tuple[str, int], _TileMap]: Mapping from a tuple of map
+        dict[tuple[str, int], _TileMap]: Mapping from a tuple of map
             name and LOD to a mapping of tile coordinates to their
             tile's path
 
@@ -397,7 +397,7 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
     # Group tiles by map name and lod level
     grouped: _LodTileMap = _group_tiles(temp_path)
     # Calculate the base map sizes (i.e. those for LOD 0)
-    base_sizes: Dict[str, int] = {}
+    base_sizes: dict[str, int] = {}
     for (map_name, lod), tiles in grouped.items():
         if lod == 0:
             base_sizes[map_name] = _map_size(tiles)
@@ -412,7 +412,7 @@ def _process_merge(temp_path: pathlib.Path, out_path: pathlib.Path) -> None:
         img_merged.save(out_path / filename)
 
 
-def main(format_: str, dir_: Optional[pathlib.Path],
+def main(format_: str, dir_: pathlib.Path | None,
          output: pathlib.Path, namelist: bool) -> None:
     """Main script for tile extraction."""
     # Create the output directory if it does not exist yet
@@ -445,8 +445,8 @@ def main(format_: str, dir_: Optional[pathlib.Path],
         print('Unable to extract files due to empty namelist')
         sys.exit(1)
     if namelist:
-        with open(output / 'namelist.txt', 'w') as namelist_file:
-            namelist_file.writelines((f'{s}\n' for s in names))
+        with open(output / 'namelist.txt', 'w', encoding='utf-8') as file_:
+            file_.writelines((f'{s}\n' for s in names))
 
     # Unpack all assets in a temporary directory
     print('\nExtracting assets...')

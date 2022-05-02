@@ -2,7 +2,7 @@
 
 import math
 import unittest
-from typing import Any, Tuple
+from typing import Any
 
 from tools.map_hex_generator import (  # pylint: disable=import-error
     _Point as Point,  # type: ignore
@@ -17,8 +17,8 @@ from tools.map_hex_generator import (  # pylint: disable=import-error
 class HexGenTest(unittest.TestCase):
     """Coordinate conversions and other shenanigans."""
 
-    def _good_enuf(self, tuple_a: Tuple[Any, ...],
-                   tuple_b: Tuple[Any, ...]) -> None:
+    def _good_enuf(self, tuple_a: tuple[Any, ...],
+                   tuple_b: tuple[Any, ...]) -> None:
         """Helper function for testing tuples with some fuzziness.
 
         "Fuzziness" being floating point errors due to trigonometry.

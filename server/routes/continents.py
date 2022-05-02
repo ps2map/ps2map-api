@@ -2,7 +2,7 @@
 
 import datetime
 import random
-from typing import List, cast
+from typing import cast
 
 import fastapi
 from fastapi.params import Query
@@ -11,6 +11,8 @@ from pydantic.types import PositiveInt
 from ..interfaces import ContinentInfo, ContinentStatus
 from ..types import FactionId, Population, ServerId
 from ._utils import static_from_json
+
+# HACK: Load static development data
 from .servers import _STATIC_SERVER_DATA as SERVERS  # type: ignore
 
 router = fastapi.APIRouter(prefix='/continents')
@@ -19,8 +21,8 @@ _STATIC_CONTINENT_DATA = static_from_json(
     ContinentInfo, 'static_continents.json')
 
 
-@router.get('/info', response_model=List[ContinentInfo])  # type: ignore
-async def continent_info() -> List[ContinentInfo]:
+@router.get('/info', response_model=list[ContinentInfo])
+async def continent_info() -> list[ContinentInfo]:
     """Return static continent data.
 
     This includes properties like the continent name or description.
@@ -30,7 +32,7 @@ async def continent_info() -> List[ContinentInfo]:
     return list(_STATIC_CONTINENT_DATA.values())
 
 
-@router.get('/status', response_model=List[ContinentStatus])  # type: ignore
+@router.get('/status', response_model=list[ContinentStatus])
 async def continent_status(
     server_id: PositiveInt = Query(  # type: ignore
         ...,
@@ -38,7 +40,7 @@ async def continent_status(
         description='Unique identifier of the server for which to return a '
         'continent status digest.'
     )
-) -> List[ContinentStatus]:
+) -> list[ContinentStatus]:
     """Return a momentary status digest for all continents.
 
     This endpoint will likely be moved to or replicated in a WebSocket
@@ -47,7 +49,7 @@ async def continent_status(
     if server_id not in SERVERS:
         msg = f'Unknown server ID: {server_id}'
         raise fastapi.HTTPException(status_code=404, detail=msg)
-    data: List[ContinentStatus] = []
+    data: list[ContinentStatus] = []
     for continent in _STATIC_CONTINENT_DATA.values():
         status = 'locked' if random.random() < 0.6 else 'open'
         locked = bool(status == 'locked')

@@ -16,6 +16,7 @@ between threads.
 import asyncio
 import logging
 import threading
+from typing import Any
 
 import uvicorn
 
@@ -28,7 +29,7 @@ class ApiHost:
     """Helper object to facilitate talking to the uvicorn server."""
 
     def __init__(self) -> None:
-        config = uvicorn.Config(  # type: ignore
+        config: Any = uvicorn.Config(  # type: ignore
             'server.app:app', host='0.0.0.0', port=5000,
             log_level='info', loop='asyncio')
         server: Server = uvicorn.Server(config=config)  # type: ignore

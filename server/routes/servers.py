@@ -1,7 +1,7 @@
 """API routes for PS2 game servers."""
 
 import random
-from typing import List, cast
+from typing import cast
 
 import fastapi
 
@@ -15,8 +15,8 @@ router = fastapi.APIRouter(prefix='/servers')
 _STATIC_SERVER_DATA = static_from_json(ServerInfo, 'static_servers.json')
 
 
-@router.get('/info', response_model=List[ServerInfo])  # type: ignore
-async def server_info() -> List[ServerInfo]:
+@router.get('/info', response_model=list[ServerInfo])
+async def server_info() -> list[ServerInfo]:
     """Return the list of servers.
 
     This payload contains unchanging properties like the server name or
@@ -26,14 +26,14 @@ async def server_info() -> List[ServerInfo]:
     return list(_STATIC_SERVER_DATA.values())
 
 
-@router.get('/status', response_model=List[ServerStatus])  # type: ignore
-async def server_status() -> List[ServerStatus]:
+@router.get('/status', response_model=list[ServerStatus])
+async def server_status() -> list[ServerStatus]:
     """Return a momentary status digest for all servers.
 
     This endpoint will likely be moved to or replicated in a WebSocket
     endpoint in future versions.
     """
-    data: List[ServerStatus] = []
+    data: list[ServerStatus] = []
     for server in _STATIC_SERVER_DATA.values():
         # Make up random data
         status = 'online' if random.random() < 0.9 else 'locked'

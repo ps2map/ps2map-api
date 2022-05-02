@@ -6,7 +6,7 @@ type hints themselves.
 """
 
 import socket
-from typing import Any, List, Optional
+from typing import Any
 
 from uvicorn.config import Config
 from uvicorn.server import ServerState
@@ -31,16 +31,16 @@ class Server:
     def __init__(self, config: Config) -> None:
         ...
 
-    def run(self, sockets: Optional[List[socket.SocketIO]] = None) -> None:
+    def run(self, sockets: list[socket.SocketIO] | None = None) -> None:
         """Synchronous wrapper for ``Server.serve()``."""
         ...
 
-    async def serve(self, sockets: Optional[List[socket.SocketIO]] = None
+    async def serve(self, sockets: list[socket.SocketIO] | None = None
                     ) -> None:
         """Main server hosting routine."""
         ...
 
-    async def startup(self, sockets: Optional[List[socket.SocketIO]] = None
+    async def startup(self, sockets: list[socket.SocketIO] | None = None
                       ) -> None:
         """Server startup routine."""
         ...
@@ -56,7 +56,7 @@ class Server:
         """
         ...
 
-    async def shutdown(self, sockets: Optional[List[socket.SocketIO]] = None
+    async def shutdown(self, sockets: list[socket.SocketIO] | None = None
                        ) -> None:
         """Server shutdown routine."""
         ...

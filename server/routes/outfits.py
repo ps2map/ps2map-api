@@ -1,6 +1,6 @@
 """API routes for PS2 player outfits."""
 
-from typing import List, cast
+from typing import cast
 
 import fastapi
 from fastapi.params import Query
@@ -14,14 +14,14 @@ router = fastapi.APIRouter(prefix='/outfits')
 _STATIC_OUTFIT_DATA = static_from_json(OutfitInfo, 'static_outfits.json')
 
 
-@router.get('/info', response_model=List[OutfitInfo])  # type: ignore
+@router.get('/info', response_model=list[OutfitInfo])
 async def outfit_info(
-    outfit_id: List[int] = Query(  # type: ignore
+    outfit_id: list[int] = Query(  # type: ignore
         ...,
         title='Outfit ID',
         description='Unique identifier of the outfit to return. May be '
         'specified multiple times to retrieve data for multiple outfits.')
-) -> List[OutfitInfo]:
+) -> list[OutfitInfo]:
     """Return static data for the given outfit.
 
     This includes basic fields for display on the map, like the outfit
@@ -29,7 +29,7 @@ async def outfit_info(
     returned data.
     """
     # Retrieve server data
-    data: List[OutfitInfo] = []
+    data: list[OutfitInfo] = []
     for id_ in outfit_id:
         try:
             data.append(_STATIC_OUTFIT_DATA[cast(OutfitId, id_)])

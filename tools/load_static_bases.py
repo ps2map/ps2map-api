@@ -11,7 +11,7 @@ import argparse
 import asyncio
 import json
 import os
-from typing import Any, Dict, List
+from typing import Any
 
 import auraxium
 
@@ -19,7 +19,7 @@ import auraxium
 async def main(service_id: str, output_dir: str) -> None:
     """Asynchronous component of the script component."""
     zone_ids = [2, 4, 6, 8]
-    bases: List[Dict[str, Any]] = []
+    bases: list[dict[str, Any]] = []
     async with auraxium.Client(service_id=service_id) as client:
         regions_list = await client.find(
             auraxium.ps2.MapRegion, results=10_000,
@@ -38,7 +38,8 @@ async def main(service_id: str, output_dir: str) -> None:
             'resource_name': None
         })
     bases_sorted = sorted(bases, key=lambda x: x['id'])
-    with open(os.path.join(output_dir, 'static_bases.json'), 'w') as outfile:
+    with open(os.path.join(output_dir, 'static_bases.json'),
+              'w', encoding='utf-8') as outfile:
         json.dump(bases_sorted, outfile, indent=4)
 
 if __name__ == '__main__':

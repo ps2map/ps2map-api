@@ -4,7 +4,7 @@ Types are not enforced as of this version.
 """
 
 import datetime
-from typing import List, Literal, Optional, Tuple
+from typing import Literal
 
 import pydantic
 from pydantic import Field
@@ -36,7 +36,7 @@ class BaseInfo(pydantic.BaseModel):
         title='Display Name',
         description='Display name of the base.',
         example='Cobalt Geological Outpost')
-    map_pos: Tuple[float, float] = Field(
+    map_pos: tuple[float, float] = Field(
         title='Map Position',
         description='A two-value tuple containing the X and Y coordinates at '
         'which the base marker should be placed on the map.',
@@ -56,12 +56,12 @@ class BaseInfo(pydantic.BaseModel):
         description='The amount of outfit resources awarded for capturing '
         'this base.',
         example=10)
-    resource_id: Optional[ResourceId] = Field(
+    resource_id: ResourceId | None = Field(
         title='Resource ID',
         description='Unique identifier of the outfit resource type awarded '
         'for capturing this base.',
         example=2)
-    resource_name: Optional[str] = Field(
+    resource_name: str | None = Field(
         title='Resource Name',
         description='Display name of the outfit resource type awarded for '
         'capturing this base.',
@@ -96,13 +96,13 @@ class BaseStatus(pydantic.BaseModel):
         description='A mapping of faction identifiers to the current '
         'population estimate.',
         example={'vs': 37, 'nc': 28, 'tr': 13, 'nso': 5})
-    owning_faction: Optional[FactionId] = Field(
+    owning_faction: FactionId | None = Field(
         title='Owning Faction',
         description='Unique identifier of the faction currently in control of '
         'the facility. Locked or otherwise inaccessible facilities will '
         'return NULL rather than 0.',
         example=2)
-    owning_outfit: Optional[OutfitId] = Field(example=None)
+    owning_outfit: OutfitId | None = Field(example=None)
     held_since: int = Field(example=_startup_time)
 
     class Config:
@@ -146,7 +146,7 @@ class ContinentInfo(pydantic.BaseModel):
         description='Base size of the map in in-game units. This is equal to '
         '8192 for most continents.',
         example=8192)
-    lattice_links: List[Tuple[int, int]] = Field(
+    lattice_links: list[tuple[int, int]] = Field(
         title='Lattice Links',
         description='A list of two-value integer tuples representing base '
         'connectivity. The integers represent the base IDs, the order of the '
@@ -188,7 +188,7 @@ class ContinentStatus(pydantic.BaseModel):
         'continent. More values may be added, use comparisons to the string '
         '`"locked"` to determine whether the continent is open.',
         example='open')
-    locked_by: Optional[int] = Field(
+    locked_by: int | None = Field(
         title='Locked By',
         description='For continents whose `status` is `"locked"`, this field '
         'specifies which empire locked the continent. NULL for open '
@@ -199,12 +199,12 @@ class ContinentStatus(pydantic.BaseModel):
         title='Alert Active Flag',
         description='Whether there is an ongoing alert on the continent.',
         example=True)
-    alert_started: Optional[int] = Field(
+    alert_started: int | None = Field(
         title='Alert Start Timestamp',
         description='UTC timestamp of when the ongoing alert started. NULL '
         'whenever the `alert_active` flag is false.',
         example=_startup_time)
-    alert_ends: Optional[int] = Field(
+    alert_ends: int | None = Field(
         title='Alert End Timestamp',
         description='UTC timestamp of when the ongoing alert is scheduled to '
         'end. NULL whenever the `alert_active` flag is false.',
@@ -266,7 +266,7 @@ class ServerStatus(pydantic.BaseModel):
         description='A mapping of faction identifiers to the current '
         'population estimate.',
         example={'vs': 251, 'nc': 221, 'tr': 246, 'nso': 16})
-    open_continents: List[ContinentId] = Field(example=[2, 6])
+    open_continents: list[ContinentId] = Field(example=[2, 6])
 
     class Config:
         """Pydantic model configuration."""
@@ -286,7 +286,7 @@ class OutfitInfo(pydantic.BaseModel):
     id: OutfitId = Field(
         title='Outfit ID',
         description='Unique identifier of this outfit.',
-        example=37578635483296804)
+        example=37564049462661850)
     faction_id: FactionId = Field(
         title='Faction ID',
         description='Unique identifier of the faction this outfit is on.',
@@ -299,11 +299,11 @@ class OutfitInfo(pydantic.BaseModel):
     name: str = Field(
         title='Outfit Name',
         description='The custom name of this outfit.',
-        example='Yet Another Cobalt Outfit')
-    tag: Optional[OutfitTag] = Field(
+        example='Urge to Confess')
+    tag: OutfitTag | None = Field(
         title='Outfit Tag',
         description='The unique tag of the outfit.',
-        example='YACO')
+        example='URGE')
 
     class Config:
         """Pydantic model configuration."""

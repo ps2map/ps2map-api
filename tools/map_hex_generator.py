@@ -25,7 +25,7 @@ import argparse
 import asyncio
 import math
 import os
-from typing import Dict, Iterable, Iterator, List, NamedTuple, Set, Tuple
+from typing import Iterable, Iterator, NamedTuple
 
 import auraxium
 
@@ -64,7 +64,7 @@ class _Tile(NamedTuple):
 
 
 async def get_base_outlines(client: auraxium.Client, continent_id: int,
-                            radius: float) -> Dict[int, List[_Point]]:
+                            radius: float) -> dict[int, list[_Point]]:
     """Retrieve all base outlines for the given continent.
 
     This returns a mapping of base IDs to closed polygons representing
@@ -76,7 +76,7 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
         radius (float): Arbitrary scaling factor for hexes
 
     Returns:
-        Dict[int, List[_Point]]: A mapping of base IDs to a polygon
+        dict[int, list[_Point]]: A mapping of base IDs to a polygon
             representing its outline.
 
     """
@@ -84,7 +84,7 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
     map_hexes = await client.find(
         auraxium.ps2.MapHex, results=10_000, zone_id=continent_id)
     # Group the hexes by their base ID
-    base_tiles: Dict[int, List[_Tile]] = {}
+    base_tiles: dict[int, list[_Tile]] = {}
     for hex_ in map_hexes:
         base_id = hex_.data.map_region_id
         try:
@@ -92,7 +92,7 @@ async def get_base_outlines(client: auraxium.Client, continent_id: int,
         except KeyError:
             base_tiles[base_id] = [_Tile(hex_.data.x, hex_.data.y)]
     # Create the outlines for each base
-    base_outlines: Dict[int, List[_Point]] = {}
+    base_outlines: dict[int, list[_Point]] = {}
     for base_id, hexes in base_tiles.items():
         # Get the map hex outlines for this base
         outlines = _get_hexes_outline(hexes, radius, 1e-2)
@@ -128,7 +128,7 @@ async def get_base_polygons(client: auraxium.Client, continent_id: int,
     # Get the base outlines as closed polygons
     outlines = await get_base_outlines(client, continent_id, radius)
     # Create SVG elements for each
-    polygons: List[str] = []
+    polygons: list[str] = []
     for base_id, outline in outlines.items():
         # Get polygon points
         points = ' '.join(
@@ -140,26 +140,26 @@ async def get_base_polygons(client: auraxium.Client, continent_id: int,
     return "".join(polygons)
 
 
-def _connect_outlines(outlines: List[Tuple[_Point, _Point]]) -> List[_Point]:
+def _connect_outlines(outlines: list[tuple[_Point, _Point]]) -> list[_Point]:
     """Connect a set of outlines into a closed polygon.
 
     This mangles the input outlines list; be sure to pass a copy if you
     still need to use the original elsewhere.
 
     Args:
-        outlines (List[Tuple[_Point, _Point]]): The outlines to connect
+        outlines (list[tuple[_Point, _Point]]): The outlines to connect
 
     Raises:
         ValueError: Raised if the outlines are disjoint or not closed
 
     Returns:
-        List[_Point]: Closed outlines
+        list[_Point]: Closed outlines
 
     """
     # Remove outline ordering; these sets will only ever hold two items
-    lines: List[Set[_Point]] = [set(t) for t in outlines]
+    lines: list[set[_Point]] = [set(t) for t in outlines]
     # Output polygon
-    polygon: List[_Point] = []
+    polygon: list[_Point] = []
     # Populate with first segment
     polygon.extend(lines.pop())
     # Container for currently active points (i.e. loose ends in the poly line)
@@ -224,7 +224,7 @@ def _get_hex_corner(origin: _Point, radius: float, corner_idx: int) -> _Point:
 
 
 def _get_hex_edge(origin: _Point, radius: float,
-                  edge_idx: int) -> Tuple[_Point, _Point]:
+                  edge_idx: int) -> tuple[_Point, _Point]:
     """Return an edge of a given hexagon.
 
     Edge indices are assigned counterclockwise with index 0 being the
@@ -240,7 +240,7 @@ def _get_hex_edge(origin: _Point, radius: float,
         ValueError: Raised if the radius is negative or zero
 
     Returns:
-        Tuple[_Point, _Point]: A tuple of the two points of the edge
+        tuple[_Point, _Point]: A tuple of the two points of the edge
 
     """
     if radius <= 0.0:
@@ -278,7 +278,7 @@ def _get_hex_neighbours(hex_: _Tile) -> Iterator[_Tile]:
 
 def _get_hexes_outline(hexes: Iterable[_Tile], radius: float,
                        precision: float = 1e-12
-                       ) -> List[Tuple[_Point, _Point]]:
+                       ) -> list[tuple[_Point, _Point]]:
     """Return the exterior edges of the given list of tiles.
 
     This loops over every hex in the group and checks its neighbours
@@ -293,11 +293,11 @@ def _get_hexes_outline(hexes: Iterable[_Tile], radius: float,
             points. Defaults to 1e-12.
 
     Returns:
-        List[Tuple[_Point, _Point]]: An unsorted list of exterior edges
+        list[tuple[_Point, _Point]]: An unsorted list of exterior edges
 
     """
     # Create a cache of all hexes
-    members: Set[_Tile] = set(hexes)
+    members: set[_Tile] = set(hexes)
     # Create a list of all edges between member hexagons and those neighbours
     # that are not part of the group
     edges = [_get_hex_edge(_tile_to_point(h, radius), radius, i)
@@ -306,10 +306,10 @@ def _get_hexes_outline(hexes: Iterable[_Tile], radius: float,
     # Round coordinates
     digits = max(-int(math.log10(precision)), 0)
     return [tuple(_Point(round(p.x, digits), round(p.y, digits)) for p in e)
-            for e in edges]  # type: ignore
+            for e in edges]
 
 
-def _radius_to_size(radius: float) -> Tuple[float, float]:
+def _radius_to_size(radius: float) -> tuple[float, float]:
     """Return the width and height of a hexagon based on its radius.
 
     This should be really simple, but I regret to admit that I have
@@ -320,7 +320,7 @@ def _radius_to_size(radius: float) -> Tuple[float, float]:
         radius (float): The radius of the hexagon
 
     Returns:
-        Tuple[float, float]: The width and height of the hexagon
+        tuple[float, float]: The width and height of the hexagon
 
     Raises:
         ValueError: Raised if the radius is negative or zero
@@ -370,14 +370,14 @@ async def main(service_id: str, output_dir: str) -> None:
                         f'{zone_polygons}'
                         '</svg>')
             filename = os.path.join(output_dir, f'{name}.svg')
-            with open(filename, 'w') as out_file:
+            with open(filename, 'w', encoding='utf-8') as out_file:
                 out_file.write(svg_data)
             # Export minimal format (for inlining into HTML)
             svg_data = ('<svg viewBox="0 0 8192 8192">'
                         f'{zone_polygons}'
                         '</svg>')
             filename = os.path.join(output_dir, f'{name}-minimal.svg')
-            with open(filename, 'w') as out_file:
+            with open(filename, 'w', encoding='utf-8') as out_file:
                 out_file.write(svg_data)
 
 if __name__ == '__main__':
