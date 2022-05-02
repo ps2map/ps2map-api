@@ -35,7 +35,7 @@ class ApiHost:
         self._server = server
         self._thread = threading.Thread(target=self._server.run)
         # Daemon threads are stopped once all non-Daemon threads have exited.
-        self._thread.setDaemon(True)
+        self._thread.daemon = True
 
     async def restart(self) -> None:
         """Restart the underlying API server.
