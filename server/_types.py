@@ -26,6 +26,8 @@ class Server:
     force_exit: bool
     last_notified: int
 
+    #pylint: disable=unused-argument,unnecessary-ellipsis
+
     def __init__(self, config: Config) -> None:
         ...
 
