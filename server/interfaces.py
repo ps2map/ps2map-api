@@ -13,7 +13,7 @@ from .types import (BaseId, BaseTypeId, ContinentId, FactionId, Population,
                     OutfitId, OutfitTag, ResourceId, ServerId)
 
 # Used for example timestamps
-_now = int(datetime.datetime.now().timestamp())
+_startup_time = int(datetime.datetime.now().timestamp())
 
 
 class BaseInfo(pydantic.BaseModel):
@@ -103,7 +103,7 @@ class BaseStatus(pydantic.BaseModel):
         'return NULL rather than 0.',
         example=2)
     owning_outfit: Optional[OutfitId] = Field(example=None)
-    held_since: int = Field(example=_now)
+    held_since: int = Field(example=_startup_time)
 
     class Config:
         """Pydantic model configuration."""
@@ -203,12 +203,12 @@ class ContinentStatus(pydantic.BaseModel):
         title='Alert Start Timestamp',
         description='UTC timestamp of when the ongoing alert started. NULL '
         'whenever the `alert_active` flag is false.',
-        example=_now)
+        example=_startup_time)
     alert_ends: Optional[int] = Field(
         title='Alert End Timestamp',
         description='UTC timestamp of when the ongoing alert is scheduled to '
         'end. NULL whenever the `alert_active` flag is false.',
-        example=_now + 5400)
+        example=_startup_time + 5400)
 
     class Config:
         """Pydantic model configuration."""
