@@ -4,7 +4,7 @@ Types are not enforced as of this version.
 """
 
 import datetime
-from typing import Literal
+import typing
 
 import pydantic
 from pydantic import Field
@@ -56,12 +56,12 @@ class BaseInfo(pydantic.BaseModel):
         description='The amount of outfit resources awarded for capturing '
         'this base.',
         example=10)
-    resource_id: ResourceId | None = Field(
+    resource_id: typing.Optional[ResourceId] = Field(
         title='Resource ID',
         description='Unique identifier of the outfit resource type awarded '
         'for capturing this base.',
         example=2)
-    resource_name: str | None = Field(
+    resource_name: typing.Optional[str] = Field(
         title='Resource Name',
         description='Display name of the outfit resource type awarded for '
         'capturing this base.',
@@ -96,13 +96,13 @@ class BaseStatus(pydantic.BaseModel):
         description='A mapping of faction identifiers to the current '
         'population estimate.',
         example={'vs': 37, 'nc': 28, 'tr': 13, 'nso': 5})
-    owning_faction: FactionId | None = Field(
+    owning_faction: typing.Optional[FactionId] = Field(
         title='Owning Faction',
         description='Unique identifier of the faction currently in control of '
         'the facility. Locked or otherwise inaccessible facilities will '
         'return NULL rather than 0.',
         example=2)
-    owning_outfit: OutfitId | None = Field(example=None)
+    owning_outfit: typing.Optional[OutfitId] = Field(example=None)
     held_since: int = Field(example=_startup_time)
 
     class Config:
@@ -182,13 +182,13 @@ class ContinentStatus(pydantic.BaseModel):
         description='A mapping of faction identifiers to the current '
         'population estimate.',
         example={'vs': 123, 'nc': 112, 'tr': 126, 'nso': 8})
-    status: Literal['open', 'locked'] = Field(
+    status: typing.Literal['open', 'locked'] = Field(
         title='Status',
         description='A string value representing the current status of the '
         'continent. More values may be added, use comparisons to the string '
         '`"locked"` to determine whether the continent is open.',
         example='open')
-    locked_by: int | None = Field(
+    locked_by: typing.Optional[int] = Field(
         title='Locked By',
         description='For continents whose `status` is `"locked"`, this field '
         'specifies which empire locked the continent. NULL for open '
@@ -199,12 +199,12 @@ class ContinentStatus(pydantic.BaseModel):
         title='Alert Active Flag',
         description='Whether there is an ongoing alert on the continent.',
         example=True)
-    alert_started: int | None = Field(
+    alert_started: typing.Optional[int] = Field(
         title='Alert Start Timestamp',
         description='UTC timestamp of when the ongoing alert started. NULL '
         'whenever the `alert_active` flag is false.',
         example=_startup_time)
-    alert_ends: int | None = Field(
+    alert_ends: typing.Optional[int] = Field(
         title='Alert End Timestamp',
         description='UTC timestamp of when the ongoing alert is scheduled to '
         'end. NULL whenever the `alert_active` flag is false.',
@@ -232,7 +232,7 @@ class ServerInfo(pydantic.BaseModel):
         title='Display Name',
         description='Display name of the server.',
         example='Cobalt')
-    region: Literal['Asia', 'EU', 'US West', 'US East'] = Field(
+    region: typing.Literal['Asia', 'EU', 'US West', 'US East'] = Field(
         title='Server Region',
         description='Geographical location of the server.',
         example='EU')
@@ -256,7 +256,7 @@ class ServerStatus(pydantic.BaseModel):
         title='Server ID',
         description='Unique identifier of the server being updated',
         example=40)
-    status: Literal['online', 'locked'] = Field(
+    status: typing.Literal['online', 'locked'] = Field(
         title='Server Status',
         description='Current status of the server. The literals listed as the '
         'type are tentative and may change in future versions.',
@@ -300,7 +300,7 @@ class OutfitInfo(pydantic.BaseModel):
         title='Outfit Name',
         description='The custom name of this outfit.',
         example='Urge to Confess')
-    tag: OutfitTag | None = Field(
+    tag: typing.Optional[OutfitTag] = Field(
         title='Outfit Tag',
         description='The unique tag of the outfit.',
         example='URGE')
