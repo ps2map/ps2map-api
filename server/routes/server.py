@@ -7,7 +7,7 @@ from ..models import Server
 router = fastapi.APIRouter(prefix='/server')
 
 
-@router.get('/', response_model=list[Server])
+@router.get('', response_model=list[Server])
 async def server() -> list[Server]:
     """Return the list of servers.
 

@@ -8,7 +8,7 @@ from ..models import Base
 router = fastapi.APIRouter(prefix='/base')
 
 
-@router.get('/', response_model=list[Base])
+@router.get('', response_model=list[Base])
 async def base(
     continent_id: int = Query(  # type: ignore
         ...,

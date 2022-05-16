@@ -7,7 +7,7 @@ from ..models import Continent
 router = fastapi.APIRouter(prefix='/continent')
 
 
-@router.get('/', response_model=list[Continent])
+@router.get('', response_model=list[Continent])
 async def continent() -> list[Continent]:
     """Return static continent data.
 
