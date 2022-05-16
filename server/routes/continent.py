@@ -4,6 +4,7 @@ import fastapi
 
 from ..database import Database, model_factory
 from ..models import Continent
+from ..sql import GET_CONTINENT_ALL
 
 router = fastapi.APIRouter(prefix='/continent')
 
@@ -25,6 +26,6 @@ async def continent() -> list[Continent]:
     """
     async with Database().pool.connection() as conn:
         async with conn.cursor() as cur:
-            await cur.execute('SELECT * FROM "API_static"."Continent";')
+            await cur.execute(GET_CONTINENT_ALL)
             bases = await cur.fetchall()
     return [model_factory(Continent, b) for b in bases]

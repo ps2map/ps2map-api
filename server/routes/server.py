@@ -4,6 +4,7 @@ import fastapi
 
 from ..database import Database, model_factory
 from ..models import Server
+from ..sql import GET_SERVER_ALL_TRACKED
 
 router = fastapi.APIRouter(prefix='/server')
 
@@ -17,7 +18,6 @@ async def server() -> list[Server]:
     """
     async with Database().pool.connection() as conn:
         async with conn.cursor() as cur:
-            await cur.execute('SELECT "id", "name", "region", "platform" '
-                              'FROM "API_static"."Server";')
+            await cur.execute(GET_SERVER_ALL_TRACKED)
             bases = await cur.fetchall()
     return [model_factory(Server, b) for b in bases]
