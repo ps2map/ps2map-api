@@ -6,25 +6,23 @@ from ._model import Field, FrozenModel
 
 
 class Server(FrozenModel):
-    """Static server information.
-
-    This contins unchanging properties of a server such as its name or
-    region. These values generally only change with server mergers or
-    other major infrastructure changes and should be heavily cached by
-    API consumers.
-    """
+    """Static server information."""
 
     id: int = Field(
         title='ID',
-        description='The ID of the server.',
+        description='Unique ID of the server.',
         example=13)
     name: str = Field(
         title='Name',
-        description='The name of the server.',
+        description='Canonical name of the continent.',
         example='Cobalt')
     region: str = Field(
         title='Server Region',
-        description='Physical location of the game server in the world.',
+        description='Physical location of the game server in the world.\n\n'
+                    'This field is only intended for display purposes and is '
+                    'neither necessarily accurate nor localized.\n\n'
+                    'Note that this field may be localzed in future API '
+                    'versions.',
         example='Europe')
     platform: typing.Literal['pc', 'ps4'] = Field(
         title='Server Platform',
