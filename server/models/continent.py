@@ -3,7 +3,7 @@
 from ._model import Field, FrozenModel
 
 
-class ContinentInfo(FrozenModel):
+class Continent(FrozenModel):
     """Static continent information.
 
     This contains unchanging properties of a continent such as its

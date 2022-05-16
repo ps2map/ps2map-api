@@ -4,12 +4,12 @@ These are used internally by the API server, but also define the data
 model of any payloads returned by the API.
 """
 
-from .base import BaseInfo
-from .continent import ContinentInfo
-from .server import ServerInfo
+from .base import Base
+from .continent import Continent
+from .server import Server
 
 __all__ = [
-    'BaseInfo',
-    'ContinentInfo',
-    'ServerInfo',
+    'Base',
+    'Continent',
+    'Server',
 ]

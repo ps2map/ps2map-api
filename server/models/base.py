@@ -5,7 +5,7 @@ import typing
 from ._model import Field, FrozenModel
 
 
-class BaseInfo(FrozenModel):
+class Base(FrozenModel):
     """Static base information.
 
     This contains unchanging properties of a base, such as its name,
@@ -26,10 +26,13 @@ class BaseInfo(FrozenModel):
         title='Name',
         description='The name of the base.',
         example='The Crown')
-    map_pos: tuple[float, float] = Field(
+    map_pos: list[float] = Field(
         title='Map Position',
-        description='The position of the base on the map.',
-        example=(305.3803, -130.915))
+        description='The position of the base on the map in the form '
+                    '[x, y]. This uses map coordinates, with the origin in '
+                    'the centre of the map, and the positive x-axis pointing '
+                    'east, and the positive y-axis pointing north.',
+        example=[305.3803, -130.915])
     type_id: int = Field(
         title='Type ID',
         description='The ID of the base type.',

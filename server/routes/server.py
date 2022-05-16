@@ -2,13 +2,13 @@
 
 import fastapi
 
-from ..models import ServerInfo
+from ..models import Server
 
-router = fastapi.APIRouter(prefix='/servers')
+router = fastapi.APIRouter(prefix='/server')
 
 
-@router.get('/info', response_model=list[ServerInfo])
-async def server_info() -> list[ServerInfo]:
+@router.get('/', response_model=list[Server])
+async def server() -> list[Server]:
     """Return the list of servers.
 
     This payload contains unchanging properties like the server name or

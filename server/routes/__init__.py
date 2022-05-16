@@ -1,8 +1,8 @@
 """Endpoint definitions for the API."""
 
-from .bases import router as bases
-from .continents import router as continents
-from .servers import router as servers
+from .base import router as base
+from .continent import router as continent
+from .server import router as server
 
 # NOTE: app.py expects this __all__ export to only contain routers. Non-router
 # things will make it very sad.
@@ -11,7 +11,7 @@ from .servers import router as servers
 # things in the __all__ list necessary.
 
 __all__ = [
-    'bases',
-    'continents',
-    'servers'
+    'base',
+    'continent',
+    'server'
 ]

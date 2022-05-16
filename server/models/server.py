@@ -5,7 +5,7 @@ import typing
 from ._model import Field, FrozenModel
 
 
-class ServerInfo(FrozenModel):
+class Server(FrozenModel):
     """Static server information.
 
     This contins unchanging properties of a server such as its name or

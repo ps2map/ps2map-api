@@ -2,13 +2,13 @@
 
 import fastapi
 
-from ..models import ContinentInfo
+from ..models import Continent
 
-router = fastapi.APIRouter(prefix='/continents')
+router = fastapi.APIRouter(prefix='/continent')
 
 
-@router.get('/info', response_model=list[ContinentInfo])
-async def continent_info() -> list[ContinentInfo]:
+@router.get('/', response_model=list[Continent])
+async def continent() -> list[Continent]:
     """Return static continent data.
 
     This includes properties like the continent name or description.
