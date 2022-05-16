@@ -10,11 +10,10 @@ router = fastapi.APIRouter(prefix='/server')
 
 @router.get('', response_model=list[Server])
 async def server() -> list[Server]:
-    """Return the list of servers.
+    """Static endpoint returning all tracked servers.
 
-    This payload contains unchanging properties like the server name or
-    region. API consumers are expected to aggressively cache the
-    returned data as they will only change with major game updates.
+    This endpoint only returns servers that are actively tracked by the
+    map API and for which real-time map data is available.
     """
     async with Database().pool.connection() as conn:
         async with conn.cursor() as cur:

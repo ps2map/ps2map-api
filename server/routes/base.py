@@ -17,11 +17,14 @@ async def base(
         description='Unique ID of the continent for which to return base '
         'information.'),
 ) -> list[Base]:
-    """Return the list of bases for a given continent.
+    """Static endpoint returning bases on a per-continent basis.
 
-    This payload contains unchanging properties like the base name or
-    type. API consumers are expected to aggressively cache the returned
-    data as they will only change with major game updates.
+    This data only changes with major game updates such as continent
+    reworks, lattice tweaks, or outfit resource reward adjustments.
+
+    API consumers are encouraged to cache this data locally, only
+    updating their cache intermittently to stay up-to-date with game
+    updates, e.g. once per day/week.
     """
     async with Database().pool.connection() as conn:
         async with conn.cursor() as cur:
