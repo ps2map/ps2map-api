@@ -2,7 +2,6 @@
 
 from .bases import router as bases
 from .continents import router as continents
-from .outfits import router as outfit
 from .servers import router as servers
 
 # NOTE: app.py expects this __all__ export to only contain routers. Non-router
@@ -14,6 +13,5 @@ from .servers import router as servers
 __all__ = [
     'bases',
     'continents',
-    'outfit',
     'servers'
 ]

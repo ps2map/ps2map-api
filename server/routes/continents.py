@@ -1,10 +1,8 @@
 """API routes for PS2 continents/zones."""
 
 import fastapi
-from fastapi.params import Query
 
-from ..interfaces import ContinentInfo, ContinentStatus
-from ..types import ServerId
+from ..interfaces import ContinentInfo
 
 router = fastapi.APIRouter(prefix='/continents')
 
@@ -18,21 +16,3 @@ async def continent_info() -> list[ContinentInfo]:
     as they will only change with major game updates.
     """
     return []
-
-
-@router.get('/status', response_model=list[ContinentStatus])
-async def continent_status(
-    server_id: ServerId = Query(  # type: ignore
-        ...,
-        title='Server ID',
-        description='Unique identifier of the server for which to return a '
-        'continent status digest.'
-    )
-) -> list[ContinentStatus]:
-    """Return a momentary status digest for all continents.
-
-    This endpoint will likely be moved to or replicated in a WebSocket
-    endpoint in future versions.
-    """
-    data: list[ContinentStatus] = []
-    return data

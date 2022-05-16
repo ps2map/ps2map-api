@@ -2,7 +2,7 @@
 
 import fastapi
 
-from ..interfaces import ServerInfo, ServerStatus
+from ..interfaces import ServerInfo
 
 router = fastapi.APIRouter(prefix='/servers')
 
@@ -16,14 +16,3 @@ async def server_info() -> list[ServerInfo]:
     returned data as they will only change with major game updates.
     """
     return []
-
-
-@router.get('/status', response_model=list[ServerStatus])
-async def server_status() -> list[ServerStatus]:
-    """Return a momentary status digest for all servers.
-
-    This endpoint will likely be moved to or replicated in a WebSocket
-    endpoint in future versions.
-    """
-    data: list[ServerStatus] = []
-    return data
