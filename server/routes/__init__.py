@@ -13,5 +13,5 @@ from .server import router as server
 __all__ = [
     'base',
     'continent',
-    'server'
+    'server',
 ]

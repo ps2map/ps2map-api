@@ -6,10 +6,12 @@ accessing API data.
 """
 
 from ._pool_singleton import Connection, Cursor, Database, Pool
+from .factories import model_factory
 
 __all__ = [
     'Connection',
     'Cursor',
     'Database',
     'Pool',
+    'model_factory',
 ]
