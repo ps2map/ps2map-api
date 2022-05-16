@@ -12,8 +12,9 @@ import asyncio
 import logging
 import os
 
+import uvicorn
+
 from .database import Database
-from ._server import ApiHost
 
 log = logging.getLogger('api')
 
@@ -52,10 +53,12 @@ async def main(db_host: str, db_port: int, db_user: str, db_pass: str,
     Database().create_pool(db_host, db_port, db_user,  db_pass, db_name)
     log.info('Database connection successful')
     # Starting API server
-    host = ApiHost()
     log.info('Starting uvicorn server...')
-    await host.start()
 
+    config = uvicorn.Config(  # type: ignore
+        'server.app:app', host='0.0.0.0', port=5000,
+        log_level='info', loop='asyncio')
+    await uvicorn.Server(config=config).serve()  # type: ignore
 
 if __name__ == '__main__':
     asyncio.set_event_loop_policy(
