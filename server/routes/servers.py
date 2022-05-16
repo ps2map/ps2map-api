@@ -2,7 +2,7 @@
 
 import fastapi
 
-from ..interfaces import ServerInfo
+from ..models import ServerInfo
 
 router = fastapi.APIRouter(prefix='/servers')
 

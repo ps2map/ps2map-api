@@ -3,7 +3,7 @@
 import fastapi
 from fastapi.params import Query
 
-from ..interfaces import BaseInfo
+from ..models import BaseInfo
 from ..types import BaseId
 
 router = fastapi.APIRouter(prefix='/bases')

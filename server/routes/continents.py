@@ -2,7 +2,7 @@
 
 import fastapi
 
-from ..interfaces import ContinentInfo
+from ..models import ContinentInfo
 
 router = fastapi.APIRouter(prefix='/continents')
 
