@@ -31,3 +31,18 @@ class Continent(FrozenModel):
                 'the Auraxian war, where research and exploration were the '
                 'most valued pursuits, and the factions weren\'t fully '
                 'divided.')
+
+
+class LatticeLink(FrozenModel):
+    """A lattice link between two bases."""
+
+    base_id_a: int = Field(
+        title='Base ID',
+        description='ID of the first base in the link. This will always be '
+                    'the base with the lower ID.',
+        example=2402)
+    base_id_b: int = Field(
+        title='Base ID',
+        description='ID of the second base in the link. This will always be '
+                    'the base with the higher ID.',
+        example=2410)

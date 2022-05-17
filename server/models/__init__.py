@@ -5,11 +5,12 @@ model of any payloads returned by the API.
 """
 
 from .base import Base
-from .continent import Continent
+from .continent import Continent, LatticeLink
 from .server import Server
 
 __all__ = [
     'Base',
     'Continent',
+    'LatticeLink',
     'Server',
 ]

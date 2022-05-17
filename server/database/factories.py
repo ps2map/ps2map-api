@@ -8,13 +8,13 @@ import typing
 
 import pydantic
 
-from ..models import Base, Continent, Server
+from ..models import Base, Continent, LatticeLink, Server
 
 __all__ = [
     'model_factory',
 ]
 
-_ModelTypes = Base | Continent | Server
+_ModelTypes = Base | Continent | LatticeLink | Server
 _Model = typing.TypeVar('_Model', bound=_ModelTypes)
 
 

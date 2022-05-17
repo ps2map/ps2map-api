@@ -6,6 +6,7 @@ __all__ = [
     'GET_BASE_BY_CONTINENT',
     'GET_CONTINENT_ALL',
     'GET_CONTINENT_ALL_TRACKED',
+    'GET_LATTICE_LINK_BY_CONTINENT',
     'GET_SERVER_ALL_TRACKED',
 ]
 
@@ -22,4 +23,5 @@ def _get_sql(filename: str) -> str:
 GET_BASE_BY_CONTINENT = _get_sql('get_Base_byContinent.sql')
 GET_CONTINENT_ALL = _get_sql('get_Continent_all.sql')
 GET_CONTINENT_ALL_TRACKED = _get_sql('get_Continent_allTracked.sql')
+GET_LATTICE_LINK_BY_CONTINENT = _get_sql('get_LatticeLink_byContinent.sql')
 GET_SERVER_ALL_TRACKED = _get_sql('get_Server_allTracked.sql')
