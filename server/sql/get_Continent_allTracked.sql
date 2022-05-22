@@ -8,5 +8,5 @@ SELECT
 FROM
     "API_static"."Continent"
 WHERE
-    "tracking_enabled" = true
+    "hidden" = false
 ;
