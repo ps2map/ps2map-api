@@ -31,6 +31,13 @@ class Continent(FrozenModel):
                 'the Auraxian war, where research and exploration were the '
                 'most valued pursuits, and the factions weren\'t fully '
                 'divided.')
+    map_size: int = Field(
+        title='Map size',
+        description='The physical size of the continent in metres.\n\n'
+                    'Continents are assumed to be square, so a value of 8192 '
+                    'corresponds to a 8192m x 8192m. Note that the actual '
+                    'playable area is smaller as this includes the '
+                    'out-of-bounds zones along the edges of the map.')
 
 
 class LatticeLink(FrozenModel):
