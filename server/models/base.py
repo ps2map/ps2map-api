@@ -1,5 +1,6 @@
 """Data model definitions for map bases and related payloads."""
 
+import datetime
 import typing
 
 from ._model import Field, FrozenModel
@@ -96,3 +97,38 @@ class Base(FrozenModel):
                     'As with base types, resources names may be localized in '
                     'future API versions.',
         example='polystellarite')
+
+
+class BaseStatus(FrozenModel):
+    """Base ownership information."""
+
+    base_id: int = Field(
+        title='ID',
+        description='Unique ID of the base.',
+        example=2203)
+    server_id: int = Field(
+        title='Server ID',
+        description='Unique ID of the server for which the base status is '
+        'provided.',
+        example=10)
+    owning_faction_id: int = Field(
+        title='Owning Faction ID',
+        description='Unique ID of the faction that owns the base.\n\n'
+                    'This field will generally be one of the three primary '
+                    'factions, i.e. TR, VC, and NC. NSO cannot currently '
+                    'capture bases in their name and will not appear in this '
+                    'field.\n\n'
+                    'Additionally, this field may be set to 0 for bases for '
+                    'which no base ownership information is available, '
+                    'generally during API outages or other infrastructure '
+                    'issues.\n\n'
+                    'Finally, a value of -1 indicates that the base is '
+                    'currently unclaimed/disabled, as happens during low-pop '
+                    'alerts with reduced base availability.',
+        example=2)
+    owned_since: datetime.datetime = Field(
+        title='Owned Since',
+        description='Timestamp of the time the given base was claimed by its '
+                    'current owning faction.\n\n'
+                    'This field returns a string in ISO 8601 format.',
+        example=datetime.datetime.now())
