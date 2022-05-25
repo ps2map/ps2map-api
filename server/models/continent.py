@@ -43,13 +43,29 @@ class Continent(FrozenModel):
 class LatticeLink(FrozenModel):
     """A lattice link between two bases."""
 
-    base_id_a: int = Field(
+    base_a_id: int = Field(
         title='Base ID',
         description='ID of the first base in the link. This will always be '
                     'the base with the lower ID.',
         example=2402)
-    base_id_b: int = Field(
+    base_b_id: int = Field(
         title='Base ID',
         description='ID of the second base in the link. This will always be '
                     'the base with the higher ID.',
         example=2410)
+    map_pos_a_x: float = Field(
+        title='Position X',
+        description='X position of the first base in the link.',
+        example=900.0)
+    map_pos_a_y: float = Field(
+        title='Position Y',
+        description='Y position of the first base in the link.',
+        example=-1605.0)
+    map_pos_b_x: float = Field(
+        title='Position X',
+        description='X position of the second base in the link.',
+        example=658.5)
+    map_pos_b_y: float = Field(
+        title='Position Y',
+        description='Y position of the second base in the link.',
+        example=-1710.0)

@@ -2,7 +2,7 @@
 
 from .base import router as base
 from .continent import router as continent
-from .lattice_link import router as lattice_link
+from .lattice import router as lattice
 from .server import router as server
 
 # NOTE: app.py expects this __all__ export to only contain routers. Non-router
@@ -14,6 +14,6 @@ from .server import router as server
 __all__ = [
     'base',
     'continent',
-    'lattice_link',
+    'lattice',
     'server',
 ]
