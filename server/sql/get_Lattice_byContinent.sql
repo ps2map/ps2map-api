@@ -6,7 +6,7 @@ SELECT
     "map_pos_a_y",
     "map_pos_b_x",
     "map_pos_b_y"
-FROM 
+FROM
     "API_static"."ContinentLattice"
 WHERE
     "continent_id" = %s
