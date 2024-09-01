@@ -61,8 +61,12 @@ async def main(db_host: str, db_port: int, db_user: str, db_pass: str,
     await uvicorn.Server(config=config).serve()  # type: ignore
 
 if __name__ == '__main__':
-    asyncio.set_event_loop_policy(
-        asyncio.WindowsSelectorEventLoopPolicy())
+    loop_policy: asyncio.AbstractEventLoopPolicy
+    if os.name == 'nt':
+        loop_policy = asyncio.WindowsSelectorEventLoopPolicy()
+    else:
+        loop_policy = asyncio.DefaultEventLoopPolicy()
+    asyncio.set_event_loop_policy(loop_policy)
     # Get default values from environment
     def_service_id = os.getenv('PS2MAP_SERVICE_ID', 's:example')
     def_db_host = os.getenv('PS2MAP_DB_HOST', DEFAULT_DB_HOST)
