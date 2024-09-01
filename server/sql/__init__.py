@@ -4,6 +4,7 @@ import pathlib
 
 __all__ = [
     'GET_BASE_BY_CONTINENT',
+    'GET_BASE_STATUS',
     'GET_CONTINENT_ALL',
     'GET_CONTINENT_ALL_TRACKED',
     'GET_LATTICE_BY_CONTINENT',

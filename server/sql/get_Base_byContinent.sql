@@ -12,7 +12,7 @@ SELECT
     "resource_name",
     "resource_code"
 FROM
-    "API_static"."BaseInfo"
+    "api"."base"
 WHERE
     "continent_id" = %s
 ;

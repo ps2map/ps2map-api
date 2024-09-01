@@ -111,7 +111,7 @@ class BaseStatus(FrozenModel):
         description='Unique ID of the server for which the base status is '
         'provided.',
         example=10)
-    owning_faction_id: int = Field(
+    owning_faction_id: int | None = Field(
         title='Owning Faction ID',
         description='Unique ID of the faction that owns the base.\n\n'
                     'This field will generally be one of the three primary '
@@ -126,7 +126,7 @@ class BaseStatus(FrozenModel):
                     'currently unclaimed/disabled, as happens during low-pop '
                     'alerts with reduced base availability.',
         example=2)
-    owned_since: datetime.datetime = Field(
+    owned_since: datetime.datetime | None = Field(
         title='Owned Since',
         description='Timestamp of the time the given base was claimed by its '
                     'current owning faction.\n\n'

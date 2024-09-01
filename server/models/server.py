@@ -23,7 +23,7 @@ class Server(FrozenModel):
                     'neither necessarily accurate nor localized.\n\n'
                     'Note that this field may be localzed in future API '
                     'versions.',
-        example='Europe')
+        example='EU')
     platform: typing.Literal['pc', 'ps4'] = Field(
         title='Server Platform',
         description='Game platform the server is available to.',

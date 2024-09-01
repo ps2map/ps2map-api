@@ -6,5 +6,5 @@ SELECT
     "description",
     "map_size"
 FROM
-    "API_static"."Continent"
+    "api"."continent"
 ;

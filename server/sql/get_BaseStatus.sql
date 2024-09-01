@@ -4,11 +4,7 @@ SELECT
 	"owning_faction_id",
 	"owned_since"
 FROM
-	"API_dynamic"."BaseOwnership"
-LEFT JOIN
-	"API_static"."Base"
-	ON
-		"base_id" = "id"
+	"api"."base_ownership"
 WHERE
 	"continent_id" = %s
 AND

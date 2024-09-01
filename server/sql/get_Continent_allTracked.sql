@@ -6,7 +6,5 @@ SELECT
     "description",
     "map_size"
 FROM
-    "API_static"."Continent"
-WHERE
-    "hidden" = false
+    "api"."continent"
 ;
