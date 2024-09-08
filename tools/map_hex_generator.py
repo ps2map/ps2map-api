@@ -190,8 +190,8 @@ def _connect_outlines(outlines: list[tuple[_Point, _Point]]) -> list[_Point]:
         else:
             # This is executed if no intersection was found between the active
             # endpoints and the input lines.
-            raise RuntimeError(
-                'Unable to close hex outline, input might be disjoint?')
+            lines.clear()
+            print(f'Unable to close hex outlines ({len(lines)} input segments)')
     return polygon
 
 
@@ -355,12 +355,14 @@ def _tile_to_point(tile: _Tile, radius: float) -> _Point:
 
 async def main(service_id: str, output_dir: str) -> None:
     """Asynchronous component of the script component."""
-    zone_ids = [2, 4, 6, 8]
+    zone_ids = [2, 4, 6, 8, 344]
     async with auraxium.Client(service_id=service_id) as client:
         zone_list = await client.find(
             auraxium.ps2.Zone, zone_id=','.join((str(i) for i in zone_ids)))
         for zone in zone_list:
-            zone_polygons = await get_base_polygons(client, zone.id)
+            hex_height = zone.hex_size
+            hex_radius = hex_height / math.sqrt(3)
+            zone_polygons = await get_base_polygons(client, zone.id, hex_radius)
             if not os.path.exists(output_dir):
                 os.makedirs(output_dir)
             name = zone.code.lower()
