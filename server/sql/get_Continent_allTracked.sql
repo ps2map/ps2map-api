@@ -7,4 +7,12 @@ SELECT
     "map_size"
 FROM
     "api"."continent"
+WHERE
+    "name" IN (
+        'Indar',
+        'Esamir',
+        'Amerish',
+        'Hossin',
+        'Oshur'
+    )
 ;
