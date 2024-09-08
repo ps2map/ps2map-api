@@ -14,6 +14,6 @@ WHERE
         'Emerald',
         'SolTech',
         'Genudine',
-        'Ceres',
+        'Ceres'
     )
 ;
