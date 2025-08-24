@@ -8,12 +8,10 @@ FROM
     "api"."server"
 WHERE
     "name" IN (
-        'Connery',
-        'Miller',
-        'Cobalt',
-        'Emerald',
-        'SolTech',
+        'Ceres',
         'Genudine',
-        'Ceres'
+        'Osprey',
+        'SolTech',
+        'Wainwright'
     )
 ;

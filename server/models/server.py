@@ -15,7 +15,7 @@ class Server(FrozenModel):
     name: str = Field(
         title='Name',
         description='Canonical name of the continent.',
-        example='Cobalt')
+        example='Osprey')
     region: str = Field(
         title='Server Region',
         description='Physical location of the game server in the world.\n\n'
